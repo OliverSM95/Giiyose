@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d61beb88-2afe-4425-ba6f-4fd74d950e33" name="Changes" comment="Adding Events package: includes&#10;-Fishing&#10;-Gathering&#10;-Trading&#10;-Hunting&#10;- Menu Functions">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/events/MenuFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/MenuFunctions.java" afterDir="false" />
-    </list>
+    <list default="true" id="d61beb88-2afe-4425-ba6f-4fd74d950e33" name="Changes" comment="Adding Events package: includes&#10;-Fishing&#10;-Gathering&#10;-Trading&#10;-Hunting&#10;- Menu Functions" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -64,7 +61,14 @@
       <option name="project" value="LOCAL" />
       <updated>1717082157615</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Adding Events package: includes&#10;-Fishing&#10;-Gathering&#10;-Trading&#10;-Hunting&#10;- Menu Functions">
+      <created>1717083288572</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1717083288572</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
