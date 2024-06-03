@@ -1,6 +1,8 @@
-import events.MenuFunctions;
+package main;
 
-public class Main {
+import ui.MenuFunctions;
+
+public class MainGame {
     public static void main(String[] args) {
 
 

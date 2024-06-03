@@ -1,4 +1,4 @@
 package events;
 
-public class Fishing {
+public class Fishing extends Event{
 }
