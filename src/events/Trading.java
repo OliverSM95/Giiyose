@@ -1,4 +1,4 @@
 package events;
 
-public class Trading {
+public class Trading extends Event {
 }

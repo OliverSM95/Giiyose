@@ -1,4 +1,4 @@
 package events;
 
-public class Hunting {
+public class Hunting extends Event {
 }
