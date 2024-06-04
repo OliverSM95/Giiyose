@@ -86,6 +86,9 @@ public class MainGame extends JFrame {
     }
 
     public static void main(String[] args) {
+
+        MenuFunctions.creditsMenu();
+
         SwingUtilities.invokeLater(MainGame::new);
     }
 }

@@ -1,5 +1,7 @@
 package ui;
 
+import main.MainGame;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -44,5 +46,87 @@ public class MenuFunctions {
 
 
     }
+
+
+    public static void mainMenu(){
+
+
+        JFrame frame = new JFrame();
+        frame.setSize(400,400);
+
+        JPanel panel = new JPanel();
+        panel.setSize(400,400);
+    panel.setLayout(null);
+    frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+
+
+        JButton startButton = new JButton("Start");
+
+        startButton.setBounds(20,10,85, 30);
+
+
+        JButton creditsButton = new JButton("Credits");// credits button
+
+        creditsButton.setBounds(150,10,85, 30);
+
+
+
+
+
+    startButton.addActionListener(e -> {
+
+        SwingUtilities.invokeLater(MainGame::new);
+    });
+
+    creditsButton.addActionListener(e -> {
+        creditsMenu();
+    });
+
+
+
+        panel.add(startButton);
+        frame.add(panel);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        frame.setVisible(true);
+
+    }
+
+    public static void creditsMenu(){
+
+        JFrame credFrame = new JFrame();
+        credFrame.setSize(400,400);
+        credFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        JPanel credPanel = new JPanel();
+        credPanel.setLayout(null);
+        credPanel.setSize(400,400);
+
+        JLabel Title = new JLabel("Giiyose Credits");// thanks for playing message
+        Title.setFont(new Font("Arial", Font.BOLD, 40)); // Set font size to 40
+        Title.setBounds(40,-110,400,300);
+
+
+        JLabel creditMembers1 = new JLabel("Lead Software Designer: Oliver Simm");
+
+        creditMembers1.setFont(new Font("Arial",Font.PLAIN,10));
+
+        creditMembers1.setBounds(20,-10,400,400);
+        credPanel.add(creditMembers1);
+
+        JLabel creditMembers2 = new JLabel("Lead Development Engineer: Efe Bolukbasi ");
+
+        creditMembers2.setFont(new Font("Arial",Font.PLAIN,10));
+
+        creditMembers2.setBounds(20,10,400,400);
+        credPanel.add(creditMembers2);
+
+
+
+        credPanel.add(Title);
+        credFrame.add(credPanel);
+        credFrame.setVisible(true);
+    }
+
+
 
 }
