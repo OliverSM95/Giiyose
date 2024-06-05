@@ -69,6 +69,8 @@ public class MainGame extends JFrame {
         gbc.gridy = 2;
         panel.add(minigameButton, gbc);
 
+        System.out.println(player.getInventory().getItems());
+
         return panel;
     }
 
