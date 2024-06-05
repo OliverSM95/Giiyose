@@ -24,12 +24,13 @@ public class MenuFunctions {
 
         JFrame frame = new JFrame();
         frame.setSize(400,400);
-
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JPanel panel = new JPanel();
         panel.setSize(300,400);
         JTextArea acknowledgements = new JTextArea("We acknowledge that we are on the traditional territory"+" of many nations including the Mississaugas of the Credit,"+"the Anishnabeg, the Chippewa, the Haudenosaunee and the Wendat peoples"+" and is now home to many diverse First Nations, Inuit and Métis peoples.");
         acknowledgements.setSize(300,160);
         acknowledgements.setBackground(Color.orange);
+
 
 
         acknowledgements.setLineWrap(true);// make words stay in panel
@@ -38,6 +39,16 @@ public class MenuFunctions {
 
         JScrollPane scrollPane = new JScrollPane(acknowledgements);
 
+        // add button that continues to the main menu
+        JButton continueToMainMenu = new JButton("Continue");
+        continueToMainMenu.addActionListener(e -> {
+            mainMenu();
+            frame.setVisible(false);
+        });
+
+        continueToMainMenu.setBounds(20,30,100,20);
+
+        panel.add(continueToMainMenu);
         panel.add(scrollPane);
         frame.add(panel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -76,6 +87,7 @@ public class MenuFunctions {
     startButton.addActionListener(e -> {
 
         SwingUtilities.invokeLater(MainGame::new);
+        frame.setVisible(false);
     });
 
     creditsButton.addActionListener(e -> {

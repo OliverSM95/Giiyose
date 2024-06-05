@@ -1,5 +1,7 @@
 package main;
 
+import events.Event;
+import events.Hunting;
 import player.Player;
 import village.Village;
 import ui.MenuFunctions;
@@ -87,8 +89,10 @@ public class MainGame extends JFrame {
 
     public static void main(String[] args) {
 
-        MenuFunctions.creditsMenu();
+ //       MenuFunctions.creditsMenu();
+//MenuFunctions.landAcknowledgementMenu();
+   //     SwingUtilities.invokeLater(MainGame::new);
+        Hunting.bisonEncounter();
 
-        SwingUtilities.invokeLater(MainGame::new);
     }
 }
