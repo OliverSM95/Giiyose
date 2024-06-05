@@ -19,7 +19,7 @@ public class MenuFunctions {
         acknowledgements.setBackground(Color.orange);
 
 
-        acknowledgements.setLineWrap(true);// make words stay in panel
+        acknowledgements.setLineWrap(true); // make words stay in panel
         acknowledgements.setWrapStyleWord(true);
         acknowledgements.setEditable(false); // Make it read-only if you don't want users to edit the text
 
