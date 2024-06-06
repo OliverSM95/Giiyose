@@ -9,6 +9,14 @@ public class Inventory {
 
     public Inventory() {
         items = new HashMap<>();
+        initializeDefaultItems();
+    }
+
+    private void initializeDefaultItems() {
+        items.put("coins", 25);
+        items.put("wood", 10);
+        items.put("stone", 10);
+        items.put("gold", 5);
     }
 
     public void addItem(String item, int quantity) {
@@ -16,13 +24,9 @@ public class Inventory {
     }
 
     public void removeItem(String item, int quantity) {
-        if (items.containsKey(item)) {
-            int currentQuantity = items.get(item);
-            if (currentQuantity <= quantity) {
-                items.remove(item);
-            } else {
-                items.put(item, currentQuantity - quantity);
-            }
+        items.put(item, items.getOrDefault(item, 0) - quantity);
+        if (items.get(item) <= 0) {
+            items.remove(item);
         }
     }
 
@@ -31,6 +35,6 @@ public class Inventory {
     }
 
     public Map<String, Integer> getItems() {
-        return new HashMap<>(items);
+        return items;
     }
 }

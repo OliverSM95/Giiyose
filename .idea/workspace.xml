@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d61beb88-2afe-4425-ba6f-4fd74d950e33" name="Changes" comment="Working on Trading and Gathering">
+    <list default="true" id="d61beb88-2afe-4425-ba6f-4fd74d950e33" name="Changes" comment="Basic Trading and Fishing &#10;Inventory Set with Default Constructor">
+      <change afterPath="$PROJECT_DIR$/pictures/fishing_village.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/events/Fishing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/Fishing.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/events/Trading.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/Trading.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/MainGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/MainGame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/player/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/player/Inventory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/player/Player.java" afterDir="false" />
     </list>
@@ -44,20 +44,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Fishing.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.MainGame.executor": "Run",
-    "Application.Trading.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "efeupdates",
-    "kotlin-language-version-configured": "true",
-    "settings.editor.selected.configurable": "configurable.group.editor"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Fishing.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainGame.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Trading.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;efeupdates&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.editor&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\My Drive\Giiyose\pictures" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -98,7 +103,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717593968624</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Basic Trading and Fishing &#10;Inventory Set with Default Constructor">
+      <option name="closed" value="true" />
+      <created>1717596583597</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1717596583597</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -115,6 +128,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added packages&#10;Cleaned up" />
     <MESSAGE value="Working on Trading and Gathering" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working on Trading and Gathering" />
+    <MESSAGE value="Basic Trading and Fishing &#10;Inventory Set with Default Constructor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Basic Trading and Fishing &#10;Inventory Set with Default Constructor" />
   </component>
 </project>

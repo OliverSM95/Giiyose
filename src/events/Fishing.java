@@ -10,10 +10,13 @@ public class Fishing extends Event {
 
     private Player player;
     private Random random;
+    private int fishAttempts;
+    private static final int MAX_ATTEMPTS = 5;
 
     public Fishing(Player player) {
         this.player = player;
         this.random = new Random();
+        this.fishAttempts = 0;
         setupUI();
     }
 
@@ -26,7 +29,7 @@ public class Fishing extends Event {
         fishButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                performFishing();
+                performFishing(fishButton);
             }
         });
 
@@ -34,15 +37,22 @@ public class Fishing extends Event {
         fishingMenu.setVisible(true);
     }
 
-    private void performFishing() {
+    private void performFishing(JButton fishButton) {
+        if (fishAttempts >= MAX_ATTEMPTS) {
+            JOptionPane.showMessageDialog(null, "You have reached the maximum fishing attempts for today.");
+            fishButton.setEnabled(false);
+            return;
+        }
+
         int outcome = random.nextInt(3); // 0, 1, or 2
-        if (outcome == 0 || outcome == 1) {
+        if (outcome == 0) {
             JOptionPane.showMessageDialog(null, "You caught a fish!");
             player.getInventory().addItem("fish", 1);
         } else {
-            JOptionPane.showMessageDialog(null, "You caught trash.");
-            player.getInventory().addItem("trash", 1);
+            JOptionPane.showMessageDialog(null, "You didn't catch anything.");
         }
+
+        fishAttempts++;
     }
 
     public static void main(String[] args) {

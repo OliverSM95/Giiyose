@@ -4,12 +4,16 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Map;
 import player.Inventory;
 import player.Player;
 
 public class Trading extends Event {
 
     private Player player;
+    private JFrame tradingMenu;
+    private JFrame tradeOptionsMenu;
+    private JTextArea inventoryDisplay;
 
     public Trading(Player player) {
         this.player = player;
@@ -17,34 +21,97 @@ public class Trading extends Event {
     }
 
     private void setupUI() {
-        JFrame tradingMenu = new JFrame("Trading Menu");
-        tradingMenu.setSize(300, 300);
+        tradingMenu = new JFrame("Trading Menu");
+        tradingMenu.setSize(500, 500);
         tradingMenu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        tradingMenu.setLayout(new GridLayout(3, 1));
+        tradingMenu.setLayout(new BorderLayout());
+        tradingMenu.setLocationRelativeTo(null); // Center the window
+
+        inventoryDisplay = new JTextArea();
+        inventoryDisplay.setEditable(false);
+        updateInventoryDisplay();
+
+        JPanel buttonPanel = new JPanel(new GridLayout(4, 1));
 
         JLabel instructionLabel = new JLabel("Choose an action:");
         JButton buyButton = new JButton("Buy");
         JButton sellButton = new JButton("Sell");
+        JButton quitButton = new JButton("Quit");
 
         buyButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                performTrade(true);
+                showTradeOptions(true);
             }
         });
 
         sellButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                performTrade(false);
+                showTradeOptions(false);
             }
         });
 
-        tradingMenu.add(instructionLabel);
-        tradingMenu.add(buyButton);
-        tradingMenu.add(sellButton);
+        quitButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                tradingMenu.dispose();
+            }
+        });
+
+        buttonPanel.add(instructionLabel);
+        buttonPanel.add(buyButton);
+        buttonPanel.add(sellButton);
+        buttonPanel.add(quitButton);
+
+        tradingMenu.add(buttonPanel, BorderLayout.CENTER);
+        tradingMenu.add(new JScrollPane(inventoryDisplay), BorderLayout.EAST);
 
         tradingMenu.setVisible(true);
+    }
+
+    private void showTradeOptions(boolean isBuying) {
+        tradeOptionsMenu = new JFrame(isBuying ? "Buy Options" : "Sell Options");
+        tradeOptionsMenu.setSize(500, 500);
+        tradeOptionsMenu.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        tradeOptionsMenu.setLayout(new BorderLayout());
+        tradeOptionsMenu.setLocationRelativeTo(null); // Center the window
+
+        JTextArea optionsInventoryDisplay = new JTextArea();
+        optionsInventoryDisplay.setEditable(false);
+        optionsInventoryDisplay.setText(inventoryDisplay.getText());
+
+        JPanel buttonPanel = new JPanel(new GridLayout(4, 1));
+
+        JLabel instructionLabel = new JLabel(isBuying ? "Select an item to buy:" : "Select an item to sell:");
+        JButton tradeButton = new JButton(isBuying ? "Buy 1 Fish for 2 Trash" : "Sell 1 Fish for 2 Trash");
+        JButton backButton = new JButton("Back");
+
+        tradeButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                performTrade(isBuying);
+                optionsInventoryDisplay.setText(inventoryDisplay.getText());
+            }
+        });
+
+        backButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                tradeOptionsMenu.dispose();
+                tradingMenu.setVisible(true);
+            }
+        });
+
+        buttonPanel.add(instructionLabel);
+        buttonPanel.add(tradeButton);
+        buttonPanel.add(backButton);
+
+        tradeOptionsMenu.add(buttonPanel, BorderLayout.CENTER);
+        tradeOptionsMenu.add(new JScrollPane(optionsInventoryDisplay), BorderLayout.EAST);
+
+        tradeOptionsMenu.setVisible(true);
+        tradingMenu.setVisible(false);
     }
 
     private void performTrade(boolean isBuying) {
@@ -66,6 +133,15 @@ public class Trading extends Event {
                 JOptionPane.showMessageDialog(null, "Not enough fish to trade.");
             }
         }
+        updateInventoryDisplay();
+    }
+
+    private void updateInventoryDisplay() {
+        StringBuilder inventoryText = new StringBuilder("Inventory:\n");
+        for (Map.Entry<String, Integer> entry : player.getInventory().getItems().entrySet()) {
+            inventoryText.append(entry.getKey()).append(": ").append(entry.getValue()).append("\n");
+        }
+        inventoryDisplay.setText(inventoryText.toString());
     }
 
     public static void main(String[] args) {
