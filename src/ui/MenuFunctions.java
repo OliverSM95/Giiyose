@@ -95,7 +95,7 @@ public class MenuFunctions {
     });
 
 
-
+        panel.add(creditsButton);
         panel.add(startButton);
         frame.add(panel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
