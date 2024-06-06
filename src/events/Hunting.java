@@ -28,6 +28,7 @@ public class Hunting extends Event {
         huntingFrame.setResizable(false);
         huntingFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         huntingFrame.setLayout(null);
+        huntingFrame.setLocationRelativeTo(null);
 
         // Custom JPanel with background image
         JPanel huntPanel = new JPanel() {
@@ -140,8 +141,7 @@ public class Hunting extends Event {
         huntingFrameWolf.setResizable(false);
         huntingFrameWolf.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         huntingFrameWolf.setLayout(null);
-
-        // Custom JPanel with background image
+        huntingFrameWolf.setLocationRelativeTo(null);        // Custom JPanel with background image
         JPanel huntPanel = new JPanel() {
             private Image backgroundImage = new ImageIcon("src/wolfbackground.jpeg").getImage();
 
