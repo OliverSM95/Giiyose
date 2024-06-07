@@ -4,13 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d61beb88-2afe-4425-ba6f-4fd74d950e33" name="Changes" comment="Output bugfix">
-      <change afterPath="$PROJECT_DIR$/src/Images/pixil-frame-0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/events/entity/Entity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/events/entity/gamePlayer.java" afterDir="false" />
+    <list default="true" id="d61beb88-2afe-4425-ba6f-4fd74d950e33" name="Changes" comment="Added modifier for gathering game to add sprites">
+      <change afterPath="$PROJECT_DIR$/src/Images/BoSpriteDown2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Images/BoSpriteDown3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Images/BoSpriteUp1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Images/BoSpriteUp2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Images/BoSpriteUp3.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Images/pixil-frame-0.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/BoSpriteDown1.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/events/GatherGamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/GatherGamePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/MainGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/MainGame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +117,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717720476790</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added modifier for gathering game to add sprites">
+      <option name="closed" value="true" />
+      <created>1717730809595</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1717730809595</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -134,7 +144,8 @@
     <MESSAGE value="add credit menu" />
     <MESSAGE value="Added moving sprite to gathering game and implemented gameplay loop [60fps]" />
     <MESSAGE value="Output bugfix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Output bugfix" />
+    <MESSAGE value="Added modifier for gathering game to add sprites" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added modifier for gathering game to add sprites" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

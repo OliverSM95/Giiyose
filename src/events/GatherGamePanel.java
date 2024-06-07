@@ -24,6 +24,7 @@ public class GatherGamePanel extends JPanel implements Runnable{
     KeyHandler keyH = new KeyHandler();
 
     // add FPS and Time
+    public final int FPS =60;
     Thread gameThread;
 
     gamePlayer player = new gamePlayer(this,keyH);
@@ -35,8 +36,12 @@ public class GatherGamePanel extends JPanel implements Runnable{
     int playerY = 100;
     int playerSpeed =4;
 
-    public GatherGamePanel() {
 
+    /*
+    Default constructor for Game Panel
+     */
+    public GatherGamePanel() {
+        // use inherited methods from JPanel Class
         this.setPreferredSize(new Dimension(screenWidth, screenHeight));
         this.setBackground(Color.BLACK);
         this.setDoubleBuffered(true); // used for better rendering
@@ -46,10 +51,10 @@ public class GatherGamePanel extends JPanel implements Runnable{
 
     public  void startGameThread(){
         gameThread = new Thread(this);// passing GatherGamePanel class to thread
-        gameThread.start();
+        gameThread.start();//start game timer loop
     }
 
-    public final int FPS =60;
+
 
 
     @Override
@@ -62,10 +67,10 @@ public class GatherGamePanel extends JPanel implements Runnable{
         //create game loop
         while(gameThread != null) {
 
+            //fps system setting a 1/60 seconds delay between frames
             currentTime = System.nanoTime();
             delta += (currentTime - lastTime)/drawInterval;
             lastTime = currentTime;
-
             if(delta >= 1) {
                 // update information
                 update();
@@ -77,21 +82,18 @@ public class GatherGamePanel extends JPanel implements Runnable{
 
         }}
 
-
-
     public void update(){// update player position when key pressed
 
-        player.update();
+        player.update();// call function from gamePlayer Class, located in entity package
     }
 
 
     public void paintComponent(Graphics g){
 
     super.paintComponent(g);
-
     Graphics2D g2 = (Graphics2D) g;// change graphic g to Graphics 2d
 
-        player.draw(g2);
+        player.draw(g2);// call draw function from [src/entity/gamePlayer.java]
 
     g2.dispose();// used to save memory
     }
