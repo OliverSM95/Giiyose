@@ -4,18 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d61beb88-2afe-4425-ba6f-4fd74d950e33" name="Changes" comment="added bison and wolf classes">
-      <change afterPath="$PROJECT_DIR$/src/events/KeyHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-06-06_10_36_a_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-06-06_10_36_a_m___Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bison.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/bison.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bisonbackground.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/bisonbackground.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/events/GatherGamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/GatherGamePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/events/Gathering.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/Gathering.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/events/Hunting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/Hunting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/MainGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/MainGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/wolf.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/wolf.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/wolfbackground.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/wolfbackground.jpeg" afterDir="false" />
+    <list default="true" id="d61beb88-2afe-4425-ba6f-4fd74d950e33" name="Changes" comment="Added moving sprite to gathering game and implemented gameplay loop [60fps]">
+      <change beforePath="$PROJECT_DIR$/src/events/KeyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/KeyHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +94,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717514923437</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added moving sprite to gathering game and implemented gameplay loop [60fps]">
+      <option name="closed" value="true" />
+      <created>1717720416805</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1717720416805</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -121,7 +119,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added packages&#10;Cleaned up" />
     <MESSAGE value="add credit menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="add credit menu" />
+    <MESSAGE value="Added moving sprite to gathering game and implemented gameplay loop [60fps]" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added moving sprite to gathering game and implemented gameplay loop [60fps]" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
