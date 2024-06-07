@@ -2,7 +2,7 @@
 ===========================================
  Giiyose
  ---------------
- Created by Oliver Simm & Efe Bulakbusi
+ Created by Oliver Simm & Efe Bolukbasi
  Grade 12 ICS4U - Lawrence Park
  Mrs.Zheng
 ===========================================
@@ -117,6 +117,7 @@ public class MainGame extends JFrame {
 
          */
         Gathering.gatheringGame();
+
 
 
 

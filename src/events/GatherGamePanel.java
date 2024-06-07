@@ -1,5 +1,7 @@
 package events;
 
+import events.entity.gamePlayer;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
@@ -10,7 +12,7 @@ public class GatherGamePanel extends JPanel implements Runnable{
     //screen Settings
     final int originalTileSize = 16;
     final int scale =3; // set scale for 16x16 sprites
-    final int tileSize = originalTileSize * scale; // scale tile size
+    public final int tileSize = originalTileSize * scale; // scale tile size
     // number of tiles on the screen (4:3) ratio
     final int maxScreenColum = 16;
     final int maxScreenRow = 12;
@@ -23,6 +25,8 @@ public class GatherGamePanel extends JPanel implements Runnable{
 
     // add FPS and Time
     Thread gameThread;
+
+    gamePlayer player = new gamePlayer(this,keyH);
 
 
 
@@ -76,16 +80,8 @@ public class GatherGamePanel extends JPanel implements Runnable{
 
 
     public void update(){// update player position when key pressed
-    if(keyH.upPressed){
-        playerY -= playerSpeed;
 
-    }else if(keyH.downPressed){
-        playerY += playerSpeed;
-    }else if(keyH.leftPressed){
-        playerX -= playerSpeed;
-    }else if(keyH.rightPressed){
-        playerX += playerSpeed;
-    }
+        player.update();
     }
 
 
@@ -94,8 +90,9 @@ public class GatherGamePanel extends JPanel implements Runnable{
     super.paintComponent(g);
 
     Graphics2D g2 = (Graphics2D) g;// change graphic g to Graphics 2d
-    g2.setColor(Color.WHITE);
-    g2.fillRect(playerX, playerY, tileSize, tileSize);
+
+        player.draw(g2);
+
     g2.dispose();// used to save memory
     }
 }
