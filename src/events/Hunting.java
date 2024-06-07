@@ -32,7 +32,7 @@ public class Hunting extends Event {
 
         // Custom JPanel with background image
         JPanel huntPanel = new JPanel() {
-            private Image backgroundImage = new ImageIcon("src/bisonbackground.jpg").getImage();
+            private Image backgroundImage = new ImageIcon("src/Images/bisonbackground.jpg").getImage();
 
             @Override
             protected void paintComponent(Graphics g) {
@@ -45,7 +45,7 @@ public class Hunting extends Event {
 
 
         // Bison Picture
-        ImageIcon bisonImage = new ImageIcon("src/bison.png");
+        ImageIcon bisonImage = new ImageIcon("src/Images/bison.png");
         JLabel bisonLabel = new JLabel(bisonImage);
         bisonLabel.setBounds(50, 100, 540, 360);
         huntPanel.add(bisonLabel);
@@ -143,7 +143,7 @@ public class Hunting extends Event {
         huntingFrameWolf.setLayout(null);
         huntingFrameWolf.setLocationRelativeTo(null);        // Custom JPanel with background image
         JPanel huntPanel = new JPanel() {
-            private Image backgroundImage = new ImageIcon("src/wolfbackground.jpeg").getImage();
+            private Image backgroundImage = new ImageIcon("src/Images/wolfbackground.jpeg").getImage();
 
             @Override
             protected void paintComponent(Graphics g) {
@@ -156,7 +156,7 @@ public class Hunting extends Event {
 
 
         // Wolf Picture
-        ImageIcon WolfImage = new ImageIcon("src/Wolf.png");
+        ImageIcon WolfImage = new ImageIcon("src/Images/Wolf.png");
         JLabel WolfLabel = new JLabel(WolfImage);
         WolfLabel.setBounds(50, 110, 540, 360);
         huntPanel.add(WolfLabel);

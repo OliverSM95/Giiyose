@@ -12,6 +12,8 @@
 package main;
 
 import events.Event;
+import events.GatherGamePanel;
+import events.Gathering;
 import events.Hunting;
 import player.Player;
 import village.Village;
@@ -104,6 +106,7 @@ public class MainGame extends JFrame {
  //       MenuFunctions.creditsMenu();
 //MenuFunctions.landAcknowledgementMenu();
    //     SwingUtilities.invokeLater(MainGame::new);
+        /*
         Random rand = new Random();
         int randomVal = rand.nextInt(0,2);
         if(randomVal ==0){
@@ -111,6 +114,10 @@ public class MainGame extends JFrame {
         }else {
             Hunting.wolfEncounter();
         }
+
+         */
+        Gathering.gatheringGame();
+
 
 
     }

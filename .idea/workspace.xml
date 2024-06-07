@@ -5,10 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d61beb88-2afe-4425-ba6f-4fd74d950e33" name="Changes" comment="added bison and wolf classes">
-      <change afterPath="$PROJECT_DIR$/src/events/GatherGamePanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/events/KeyHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-06-06_10_36_a_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-06-06_10_36_a_m___Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bison.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/bison.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bisonbackground.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/bisonbackground.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/events/GatherGamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/GatherGamePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/events/Gathering.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/Gathering.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/events/Hunting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/Hunting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/MainGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/MainGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/wolf.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/wolf.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/wolfbackground.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/wolfbackground.jpeg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +69,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\coding\Java Projects\Giiyose\src\Images" />
       <recent name="D:\coding\Java Projects\Giiyose\src" />
     </key>
   </component>
