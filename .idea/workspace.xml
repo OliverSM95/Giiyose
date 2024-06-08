@@ -4,21 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d61beb88-2afe-4425-ba6f-4fd74d950e33" name="Changes" comment="added up and down payer sprite positions including walking">
-      <change afterPath="$PROJECT_DIR$/images/BoSpriteLeft2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/BoSpriteLeft3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/BoSpriteLeftIdle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/BoSpriteRight2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/BoSpriteRight3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/BoSpriteRightIde.png" afterDir="false" />
+    <list default="true" id="d61beb88-2afe-4425-ba6f-4fd74d950e33" name="Changes" comment="wefouh">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Giiyose.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Giiyose.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Images/BoSpriteDown1.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/BoSpriteDown1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Images/BoSpriteDown2.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/BoSpriteDown2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Images/BoSpriteDown3.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/BoSpriteDown3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Images/BoSpriteUp1.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/BoSpriteUp1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Images/BoSpriteUp2.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/BoSpriteUp2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Images/BoSpriteUp3.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/BoSpriteUp3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/BoSpriteDown1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/entity/BoImages/BoSpriteDown1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/BoSpriteDown2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/entity/BoImages/BoSpriteDown2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/BoSpriteDown3.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/entity/BoImages/BoSpriteDown3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/BoSpriteLeft2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/entity/BoImages/BoSpriteLeft2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/BoSpriteLeft3.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/entity/BoImages/BoSpriteLeft3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/BoSpriteLeftIdle.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/entity/BoImages/BoSpriteLeftIdle.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/BoSpriteRight2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/entity/BoImages/BoSpriteRight2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/BoSpriteRight3.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/entity/BoImages/BoSpriteRight3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/BoSpriteRightIde.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/entity/BoImages/BoSpriteRightIde.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/BoSpriteUp1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/entity/BoImages/BoSpriteUp1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/BoSpriteUp2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/entity/BoImages/BoSpriteUp2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/BoSpriteUp3.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/entity/BoImages/BoSpriteUp3.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/events/entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/entity/Entity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/events/entity/gamePlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/entity/gamePlayer.java" afterDir="false" />
     </list>
@@ -84,6 +83,8 @@
       <recent name="D:\coding\Java Projects\Giiyose\res\src\player" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\coding\Java Projects\Giiyose\src\events\entity\BoImages" />
+      <recent name="D:\coding\Java Projects\Giiyose\src\events\entity" />
       <recent name="D:\coding\Java Projects\Giiyose\images" />
       <recent name="D:\coding\Java Projects\Giiyose\src\Images" />
       <recent name="D:\coding\Java Projects\Giiyose\src" />
@@ -106,7 +107,7 @@
       <option name="presentableId" value="Default" />
       <updated>1717081882095</updated>
       <workItem from="1717802609897" duration="2471000" />
-      <workItem from="1717859626179" duration="886000" />
+      <workItem from="1717859626179" duration="2206000" />
     </task>
     <task id="LOCAL-00001" summary="Added packages&#10;Cleaned up">
       <option name="closed" value="true" />
@@ -155,7 +156,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717736717251</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="wefouh">
+      <option name="closed" value="true" />
+      <created>1717864541495</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1717864541495</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,7 +188,8 @@
     <MESSAGE value="Output bugfix" />
     <MESSAGE value="Added modifier for gathering game to add sprites" />
     <MESSAGE value="added up and down payer sprite positions including walking" />
-    <option name="LAST_COMMIT_MESSAGE" value="added up and down payer sprite positions including walking" />
+    <MESSAGE value="wefouh" />
+    <option name="LAST_COMMIT_MESSAGE" value="wefouh" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

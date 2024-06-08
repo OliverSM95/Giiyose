@@ -31,20 +31,23 @@ public class gamePlayer extends Entity{
 
     public void getPlayerImage(){
 
-        try{
-            up1 = ImageIO.read(getClass().getResourceAsStream("images/BoSpriteUp2.png"));
-            up2 = ImageIO.read(getClass().getResourceAsStream("images/BoSpriteUp3.png"));
+        try {
+            System.out.println(getClass().getResource("/events/entity/BoImages/BoSpriteUp2.png"));
+            idleDown = ImageIO.read(getClass().getResource("/events/entity/BoImages/BoSpriteDown1.png"));
 
-            down1 = ImageIO.read(getClass().getResourceAsStream("images/BoSpriteDown2.png"));
-            down2 = ImageIO.read(getClass().getResourceAsStream("images/BoSpriteDown3.png"));
+            up1 = ImageIO.read(getClass().getResourceAsStream("/events/entity/BoImages/BoSpriteUp2.png"));
+            up2 = ImageIO.read(getClass().getResourceAsStream("/events/entity/BoImages/BoSpriteUp3.png"));
 
-            left1 = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("images/BoSpriteLeft2.png")));
-            left2 = ImageIO.read(getClass().getResourceAsStream("images/BoSpriteLeft3.png"));
+            down1 = ImageIO.read(getClass().getResourceAsStream("/events/entity/BoImages/BoSpriteDown2.png"));
+            down2 = ImageIO.read(getClass().getResourceAsStream("/events/entity/BoImages/BoSpriteDown3.png"));
 
-            right1 = ImageIO.read(getClass().getResourceAsStream("images/BoSpriteRight2.png"));
-            right2 = ImageIO.read(getClass().getResourceAsStream("images/BoSpriteRight3.png"));
-        }catch (IOException e){
+            left1 = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/events/entity/images/BoSpriteLeft2.png")));
+            left2 = ImageIO.read(getClass().getResourceAsStream("/events/entity/BoImages/BoSpriteLeft3.png"));
 
+            right1 = ImageIO.read(getClass().getResourceAsStream("/events/entity/BoImages/BoSpriteRight2.png"));
+            right2 = ImageIO.read(getClass().getResourceAsStream("/events/entity/BoImages/BoSpriteRight3.png"));
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
@@ -75,9 +78,13 @@ public class gamePlayer extends Entity{
             case "down" -> down1;
             case "left" -> left1;
             case "right" -> right1;
-            default -> null;
+            default -> idleDown;
         };
-        g2.drawImage(image,x,y,gp.tileSize,gp.tileSize,null);
+        if (image != null) {
+            g2.drawImage(image, x, y, gp.tileSize, gp.tileSize, null);
+        } else {
+            System.out.println("Image is null for direction: " + direction);
+        }
     }
 
 }
