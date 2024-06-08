@@ -19,6 +19,7 @@ public class KeyHandler implements KeyListener {
         if (code == KeyEvent.VK_W) {
             upPressed = true;
 
+
         }else if (code == KeyEvent.VK_S) {
             downPressed = true;
 

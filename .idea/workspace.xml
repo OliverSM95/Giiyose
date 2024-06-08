@@ -4,15 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d61beb88-2afe-4425-ba6f-4fd74d950e33" name="Changes" comment="Added modifier for gathering game to add sprites">
-      <change afterPath="$PROJECT_DIR$/src/Images/BoSpriteDown2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Images/BoSpriteDown3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Images/BoSpriteUp1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Images/BoSpriteUp2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Images/BoSpriteUp3.png" afterDir="false" />
+    <list default="true" id="d61beb88-2afe-4425-ba6f-4fd74d950e33" name="Changes" comment="added up and down payer sprite positions including walking">
+      <change afterPath="$PROJECT_DIR$/images/BoSpriteLeft2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/BoSpriteLeft3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/BoSpriteLeftIdle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/BoSpriteRight2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/BoSpriteRight3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/BoSpriteRightIde.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Images/pixil-frame-0.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/BoSpriteDown1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/events/GatherGamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/GatherGamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Giiyose.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Giiyose.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Images/BoSpriteDown1.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/BoSpriteDown1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Images/BoSpriteDown2.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/BoSpriteDown2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Images/BoSpriteDown3.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/BoSpriteDown3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Images/BoSpriteUp1.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/BoSpriteUp1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Images/BoSpriteUp2.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/BoSpriteUp2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Images/BoSpriteUp3.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/BoSpriteUp3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/events/entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/entity/Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/events/entity/gamePlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/entity/gamePlayer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,15 +65,26 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;efeupdates&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/coding/Java Projects/Giiyose/res/player&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.editor&quot;
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.editor&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\coding\Java Projects\Giiyose\res\player" />
+      <recent name="D:\coding\Java Projects\Giiyose\res\src\player" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\coding\Java Projects\Giiyose\images" />
       <recent name="D:\coding\Java Projects\Giiyose\src\Images" />
       <recent name="D:\coding\Java Projects\Giiyose\src" />
     </key>
@@ -73,7 +92,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
       </set>
     </attachedChunks>
   </component>
@@ -85,6 +105,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1717081882095</updated>
+      <workItem from="1717802609897" duration="2471000" />
+      <workItem from="1717859626179" duration="886000" />
     </task>
     <task id="LOCAL-00001" summary="Added packages&#10;Cleaned up">
       <option name="closed" value="true" />
@@ -125,8 +147,19 @@
       <option name="project" value="LOCAL" />
       <updated>1717730809595</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added up and down payer sprite positions including walking">
+      <option name="closed" value="true" />
+      <created>1717736717251</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1717736717251</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -145,7 +178,8 @@
     <MESSAGE value="Added moving sprite to gathering game and implemented gameplay loop [60fps]" />
     <MESSAGE value="Output bugfix" />
     <MESSAGE value="Added modifier for gathering game to add sprites" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added modifier for gathering game to add sprites" />
+    <MESSAGE value="added up and down payer sprite positions including walking" />
+    <option name="LAST_COMMIT_MESSAGE" value="added up and down payer sprite positions including walking" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
