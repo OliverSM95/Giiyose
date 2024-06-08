@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d61beb88-2afe-4425-ba6f-4fd74d950e33" name="Changes" comment="test">
+    <list default="true" id="d61beb88-2afe-4425-ba6f-4fd74d950e33" name="Changes" comment="bo sprites with walking animation added">
+      <change afterPath="$PROJECT_DIR$/src/events/entity/BoImages/BoSpriteRight2Fixed.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/events/entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/entity/Entity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/events/entity/gamePlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/entity/gamePlayer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -95,7 +95,7 @@
       <option name="presentableId" value="Default" />
       <updated>1717081882095</updated>
       <workItem from="1717802609897" duration="2471000" />
-      <workItem from="1717859626179" duration="3935000" />
+      <workItem from="1717859626179" duration="5476000" />
     </task>
     <task id="LOCAL-00001" summary="Added packages&#10;Cleaned up">
       <option name="closed" value="true" />
@@ -160,7 +160,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717865720699</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="bo sprites with walking animation added">
+      <option name="closed" value="true" />
+      <created>1717867469799</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1717867469799</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -186,7 +194,8 @@
     <MESSAGE value="added up and down payer sprite positions including walking" />
     <MESSAGE value="wefouh" />
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="bo sprites with walking animation added" />
+    <option name="LAST_COMMIT_MESSAGE" value="bo sprites with walking animation added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

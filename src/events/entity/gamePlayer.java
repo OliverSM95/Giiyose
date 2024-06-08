@@ -33,7 +33,7 @@ public class gamePlayer extends Entity{
     public void getPlayerImage(){
 
         try {
-            System.out.println(getClass().getResource("/events/entity/BoImages/BoSpriteUp2.png"));
+            // load walking animation images
 
             up1 = ImageIO.read(getClass().getResourceAsStream("/events/entity/BoImages/BoSpriteUp2.png"));
             up2 = ImageIO.read(getClass().getResourceAsStream("/events/entity/BoImages/BoSpriteUp3.png"));
@@ -44,7 +44,7 @@ public class gamePlayer extends Entity{
             left1 = ImageIO.read(getClass().getResourceAsStream("/events/entity/BoImages/BoSpriteLeft2.png"));
             left2 = ImageIO.read(getClass().getResourceAsStream("/events/entity/BoImages/BoSpriteLeft3.png"));
 
-            right1 = ImageIO.read(getClass().getResourceAsStream("/events/entity/BoImages/BoSpriteRight2.png"));
+            right1 = ImageIO.read(getClass().getResourceAsStream("/events/entity/BoImages/BoSpriteRight2Fixed.png"));
             right2 = ImageIO.read(getClass().getResourceAsStream("/events/entity/BoImages/BoSpriteRight3.png"));
         } catch (IOException e) {
             e.printStackTrace();
