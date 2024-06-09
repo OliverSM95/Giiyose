@@ -1,5 +1,20 @@
+/*
+===========================================
+ Giiyose
+ ---------------
+ Created by Oliver Simm & Efe Bolukbasi
+ Grade 12 ICS4U - Lawrence Park
+ Mrs.Zheng
+===========================================
+ */
+
+
 package main;
 
+import events.Event;
+import events.GatherGamePanel;
+import events.Gathering;
+import events.Hunting;
 import player.Player;
 import village.Village;
 import ui.MenuFunctions;
@@ -7,6 +22,7 @@ import ui.GameBoardPanel;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.Random;
 
 public class MainGame extends JFrame {
     private Player player;
@@ -88,6 +104,24 @@ public class MainGame extends JFrame {
     }
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(MainGame::new);
+
+ //       MenuFunctions.creditsMenu();
+//MenuFunctions.landAcknowledgementMenu();
+   //     SwingUtilities.invokeLater(MainGame::new);
+        /*
+        Random rand = new Random();
+        int randomVal = rand.nextInt(0,2);
+        if(randomVal ==0){
+            Hunting.bisonEncounter();
+        }else {
+            Hunting.wolfEncounter();
+        }
+
+         */
+        Gathering.gatheringGame();
+
+
+
+
     }
 }

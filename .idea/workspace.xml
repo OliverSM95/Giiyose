@@ -4,13 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d61beb88-2afe-4425-ba6f-4fd74d950e33" name="Changes" comment="Basic Trading and Fishing &#10;Inventory Set with Default Constructor">
-      <change afterPath="$PROJECT_DIR$/pictures/fishing_village.jpg" afterDir="false" />
+    <list default="true" id="d61beb88-2afe-4425-ba6f-4fd74d950e33" name="Changes" comment="Background Map Added with changeable Map">
+      <change afterPath="$PROJECT_DIR$/src/events/CollisionChecker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/events/entity/backgroundTiles/dirtSprite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/events/entity/backgroundTiles/treeOnGrassSprite.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/events/Fishing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/Fishing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/events/Trading.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/Trading.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/player/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/player/Inventory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/player/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/events/GatherGamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/GatherGamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/events/entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/entity/Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/events/entity/Tiles/tileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/entity/Tiles/tileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/events/entity/gamePlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/entity/gamePlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/events/entity/maps/mapTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/entity/maps/mapTest.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,34 +42,53 @@
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="2hBygmxC0XJDCxsx4e6ZjNodTNU" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;Application.Fishing.executor&quot;: &quot;Run&quot;,
     &quot;Application.Main.executor&quot;: &quot;Run&quot;,
     &quot;Application.MainGame.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Trading.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;efeupdates&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.editor&quot;
+    &quot;last_opened_file_path&quot;: &quot;D:/coding/Java Projects/Giiyose/res/player&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.editor&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\coding\Java Projects\Giiyose\res\player" />
+      <recent name="D:\coding\Java Projects\Giiyose\res\src\player" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="G:\My Drive\Giiyose\pictures" />
+      <recent name="D:\coding\Java Projects\Giiyose\src\events\entity\backgroundTiles" />
+      <recent name="D:\coding\Java Projects\Giiyose\src\events\entity\maps" />
+      <recent name="D:\coding\Java Projects\Giiyose\src\events\entity\BoImages" />
+      <recent name="D:\coding\Java Projects\Giiyose\src\events\entity" />
+      <recent name="D:\coding\Java Projects\Giiyose\images" />
     </key>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
       </set>
     </attachedChunks>
   </component>
@@ -78,6 +100,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1717081882095</updated>
+      <workItem from="1717802609897" duration="2471000" />
+      <workItem from="1717859626179" duration="6839000" />
+      <workItem from="1717947473801" duration="12503000" />
     </task>
     <task id="LOCAL-00001" summary="Added packages&#10;Cleaned up">
       <option name="closed" value="true" />
@@ -87,32 +112,90 @@
       <option name="project" value="LOCAL" />
       <updated>1717421497588</updated>
     </task>
-    <task id="LOCAL-00002" summary="Added packages&#10;Cleaned up">
-      <option name="closed" value="true" />
-      <created>1717423613390</created>
+    <task id="LOCAL-00002" summary="add credit menu">
+      <created>1717514923437</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1717423613390</updated>
+      <updated>1717514923437</updated>
     </task>
-    <task id="LOCAL-00003" summary="Working on Trading and Gathering">
+    <task id="LOCAL-00003" summary="Added moving sprite to gathering game and implemented gameplay loop [60fps]">
       <option name="closed" value="true" />
-      <created>1717593968624</created>
+      <created>1717720416805</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1717593968624</updated>
+      <updated>1717720416805</updated>
     </task>
-    <task id="LOCAL-00004" summary="Basic Trading and Fishing &#10;Inventory Set with Default Constructor">
+    <task id="LOCAL-00004" summary="Output bugfix">
       <option name="closed" value="true" />
-      <created>1717596583597</created>
+      <created>1717720476790</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1717596583597</updated>
+      <updated>1717720476790</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added modifier for gathering game to add sprites">
+      <option name="closed" value="true" />
+      <created>1717730809595</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1717730809595</updated>
+    </task>
+    <task id="LOCAL-00006" summary="added up and down payer sprite positions including walking">
+      <option name="closed" value="true" />
+      <created>1717736717251</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1717736717251</updated>
+    </task>
+    <task id="LOCAL-00007" summary="wefouh">
+      <option name="closed" value="true" />
+      <created>1717864541495</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1717864541495</updated>
+    </task>
+    <task id="LOCAL-00008" summary="test">
+      <option name="closed" value="true" />
+      <created>1717865720699</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1717865720699</updated>
+    </task>
+    <task id="LOCAL-00009" summary="bo sprites with walking animation added">
+      <option name="closed" value="true" />
+      <created>1717867469799</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1717867469799</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Bo walking animation fixed [right]">
+      <option name="closed" value="true" />
+      <created>1717875898676</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1717875898676</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Background Map Added with changeable Map">
+      <option name="closed" value="true" />
+      <created>1717954363592</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1717954363592</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -127,8 +210,36 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added packages&#10;Cleaned up" />
-    <MESSAGE value="Working on Trading and Gathering" />
-    <MESSAGE value="Basic Trading and Fishing &#10;Inventory Set with Default Constructor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Basic Trading and Fishing &#10;Inventory Set with Default Constructor" />
+    <MESSAGE value="add credit menu" />
+    <MESSAGE value="Added moving sprite to gathering game and implemented gameplay loop [60fps]" />
+    <MESSAGE value="Output bugfix" />
+    <MESSAGE value="Added modifier for gathering game to add sprites" />
+    <MESSAGE value="added up and down payer sprite positions including walking" />
+    <MESSAGE value="wefouh" />
+    <MESSAGE value="test" />
+    <MESSAGE value="bo sprites with walking animation added" />
+    <MESSAGE value="Bo walking animation fixed [right]" />
+    <MESSAGE value="Background Map Added with changeable Map" />
+    <option name="LAST_COMMIT_MESSAGE" value="Background Map Added with changeable Map" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/events/Hunting.java</url>
+          <line>102</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/events/Hunting.java</url>
+          <line>193</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
