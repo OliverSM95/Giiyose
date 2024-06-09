@@ -15,17 +15,27 @@ public class gamePlayer extends Entity{
     GatherGamePanel gp;
     KeyHandler keyH;
 
+    // values use to centre payer in middle of camera
+    public final int screenX;
+    public final int screenY;
+
     public gamePlayer( GatherGamePanel gp, KeyHandler keyH ) {
 
         this.gp = gp;
         this.keyH = keyH;
+
+        screenX = gp.screenWidth/2 - (gp.tileSize/2);
+        screenY = gp.screenHeight/2 - (gp.tileSize/2);
+
+        hitBox = new Rectangle(8,16,32,32); // setting player hit box size
+
         setDefaultValues();
         getPlayerImage();
     }
     public void setDefaultValues(){
-        x=100;
-        y=100;
-        speed=4;
+        worldX = gp.tileSize *23;
+        worldY = gp.tileSize *21;
+        speed = 4;
         direction = "down";
     }
 
@@ -57,17 +67,32 @@ public class gamePlayer extends Entity{
         if(keyH.upPressed ==true || keyH.downPressed ==true || keyH.leftPressed ==true || keyH.rightPressed ==true){
             if(keyH.upPressed){
                 direction = "up";
-                y -= speed;
-
             }else if(keyH.downPressed){
                 direction = "down";
-                y += speed;
             }else if(keyH.leftPressed){
                 direction = "left";
-                x -= speed;
             }else if(keyH.rightPressed){
                 direction = "right";
-                x += speed;
+            }
+            // add collisions (check tile collision)
+            collisionOn = false;
+            gp.cChecker.checkTile(this);
+            //if collision is false, player can move
+            if(collisionOn ==false){
+                switch(direction){
+                    case "up":
+                        worldY -= speed;
+                        break;
+                    case "down":
+                        worldY += speed;
+                        break;
+                    case "left":
+                        worldX -= speed;
+                          break;
+                    case "right":
+                        worldX += speed;
+                          break;
+                }
             }
 
             spriteCounter++;
@@ -124,11 +149,9 @@ public class gamePlayer extends Entity{
                     image = right2;
                 }
                 break;
+        }
 
-
-        };
-
-            g2.drawImage(image, x, y, gp.tileSize, gp.tileSize, null);
+            g2.drawImage(image, screenX, screenY, gp.tileSize, gp.tileSize, null);
 
     }
 

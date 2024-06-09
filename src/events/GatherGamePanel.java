@@ -21,6 +21,13 @@ public class GatherGamePanel extends JPanel implements Runnable{
    public  final int screenWidth = tileSize*maxScreenColum;//768 pixels
    public final int screenHeight = tileSize*maxScreenRow;//576 pixels
 
+
+    // World Settings
+    public final  int maxWorldCol=50;
+    public final  int maxWorldRow=50;
+    public final int worldWidth = tileSize*maxWorldCol;
+    public final int worldHeight = tileSize*maxWorldRow;
+
     //instantiate background tile manager
     tileManager tileM = new tileManager(this);
 
@@ -31,8 +38,12 @@ public class GatherGamePanel extends JPanel implements Runnable{
     public final int FPS =60;
     Thread gameThread;
 
+    //instantiate collision checker
+    public CollisionChecker cChecker = new CollisionChecker(this);
+
+
     //initiate new gamePlayer
-    gamePlayer player = new gamePlayer(this,keyH);
+   public  gamePlayer player = new gamePlayer(this,keyH);
 
 
 
