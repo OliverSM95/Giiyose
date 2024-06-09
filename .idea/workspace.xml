@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d61beb88-2afe-4425-ba6f-4fd74d950e33" name="Changes" comment="Background Map Added with changeable Map">
-      <change afterPath="$PROJECT_DIR$/src/events/CollisionChecker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/events/entity/backgroundTiles/dirtSprite.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/events/entity/backgroundTiles/treeOnGrassSprite.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/events/GatherGamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/GatherGamePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/events/entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/entity/Entity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/events/entity/Tiles/tileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/entity/Tiles/tileManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/events/entity/gamePlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/entity/gamePlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/events/entity/maps/mapTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/entity/maps/mapTest.txt" afterDir="false" />
-    </list>
+    <list default="true" id="d61beb88-2afe-4425-ba6f-4fd74d950e33" name="Changes" comment="Background Map Added with changeable Map" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
