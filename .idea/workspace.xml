@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d61beb88-2afe-4425-ba6f-4fd74d950e33" name="Changes" comment="bo sprites with walking animation added">
-      <change afterPath="$PROJECT_DIR$/src/events/entity/BoImages/BoSpriteRight2Fixed.png" afterDir="false" />
+    <list default="true" id="d61beb88-2afe-4425-ba6f-4fd74d950e33" name="Changes" comment="Bo walking animation fixed [right]">
+      <change afterPath="$PROJECT_DIR$/src/events/entity/Tiles/tile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/events/entity/Tiles/tileManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/events/entity/backgroundTiles/grassSprite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/events/entity/backgroundTiles/waterSprite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/events/entity/maps/mapTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/events/GatherGamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/GatherGamePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/events/entity/gamePlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/entity/gamePlayer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -71,11 +76,11 @@
       <recent name="D:\coding\Java Projects\Giiyose\res\src\player" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\coding\Java Projects\Giiyose\src\events\entity\maps" />
+      <recent name="D:\coding\Java Projects\Giiyose\src\events\entity\backgroundTiles" />
       <recent name="D:\coding\Java Projects\Giiyose\src\events\entity\BoImages" />
       <recent name="D:\coding\Java Projects\Giiyose\src\events\entity" />
       <recent name="D:\coding\Java Projects\Giiyose\images" />
-      <recent name="D:\coding\Java Projects\Giiyose\src\Images" />
-      <recent name="D:\coding\Java Projects\Giiyose\src" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -95,7 +100,8 @@
       <option name="presentableId" value="Default" />
       <updated>1717081882095</updated>
       <workItem from="1717802609897" duration="2471000" />
-      <workItem from="1717859626179" duration="5476000" />
+      <workItem from="1717859626179" duration="6839000" />
+      <workItem from="1717947473801" duration="5016000" />
     </task>
     <task id="LOCAL-00001" summary="Added packages&#10;Cleaned up">
       <option name="closed" value="true" />
@@ -168,7 +174,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717867469799</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Bo walking animation fixed [right]">
+      <option name="closed" value="true" />
+      <created>1717875898676</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1717875898676</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,7 +209,8 @@
     <MESSAGE value="wefouh" />
     <MESSAGE value="test" />
     <MESSAGE value="bo sprites with walking animation added" />
-    <option name="LAST_COMMIT_MESSAGE" value="bo sprites with walking animation added" />
+    <MESSAGE value="Bo walking animation fixed [right]" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bo walking animation fixed [right]" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -213,6 +228,11 @@
           <url>file://$PROJECT_DIR$/src/events/Hunting.java</url>
           <line>193</line>
           <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/events/entity/Tiles/tileManager.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

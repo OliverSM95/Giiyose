@@ -1,5 +1,6 @@
 package events;
 
+import events.entity.Tiles.tileManager;
 import events.entity.gamePlayer;
 
 import javax.swing.*;
@@ -14,11 +15,14 @@ public class GatherGamePanel extends JPanel implements Runnable{
     final int scale =3; // set scale for 16x16 sprites
     public final int tileSize = originalTileSize * scale; // scale tile size
     // number of tiles on the screen (4:3) ratio
-    final int maxScreenColum = 16;
-    final int maxScreenRow = 12;
+    public final int maxScreenColum = 16;
+    public final int maxScreenRow = 12;
     // set Jframe sizes
-    final int screenWidth = tileSize*maxScreenColum;//768 pixels
-    final int screenHeight = tileSize*maxScreenRow;//576 pixels
+   public  final int screenWidth = tileSize*maxScreenColum;//768 pixels
+   public final int screenHeight = tileSize*maxScreenRow;//576 pixels
+
+    //instantiate background tile manager
+    tileManager tileM = new tileManager(this);
 
     //add key handler
     KeyHandler keyH = new KeyHandler();
@@ -27,14 +31,12 @@ public class GatherGamePanel extends JPanel implements Runnable{
     public final int FPS =60;
     Thread gameThread;
 
+    //initiate new gamePlayer
     gamePlayer player = new gamePlayer(this,keyH);
 
 
 
-    //set player default position
-    int playerX = 100;
-    int playerY = 100;
-    int playerSpeed =4;
+
 
 
     /*
@@ -92,6 +94,8 @@ public class GatherGamePanel extends JPanel implements Runnable{
 
     super.paintComponent(g);
     Graphics2D g2 = (Graphics2D) g;// change graphic g to Graphics 2d
+
+        tileM.draw(g2); // this must be drawn before the player sprite is drawn
 
         player.draw(g2);// call draw function from [src/entity/gamePlayer.java]
 
