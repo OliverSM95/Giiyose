@@ -85,8 +85,6 @@ public class MainGame extends JFrame {
         gbc.gridy = 2;
         panel.add(minigameButton, gbc);
 
-        System.out.println(player.getInventory().getItems());
-
         return panel;
     }
 
@@ -105,9 +103,9 @@ public class MainGame extends JFrame {
 
     public static void main(String[] args) {
 
- //       MenuFunctions.creditsMenu();
+        //       MenuFunctions.creditsMenu();
 //MenuFunctions.landAcknowledgementMenu();
-   //     SwingUtilities.invokeLater(MainGame::new);
+        //     SwingUtilities.invokeLater(MainGame::new);
         /*
         Random rand = new Random();
         int randomVal = rand.nextInt(0,2);
@@ -119,7 +117,6 @@ public class MainGame extends JFrame {
 
          */
         Gathering.gatheringGame();
-
 
 
 
