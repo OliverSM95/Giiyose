@@ -67,7 +67,7 @@ public class MainGame extends JFrame {
         gbc.insets = new Insets(5, 5, 5, 5);
         gbc.fill = GridBagConstraints.HORIZONTAL;
 
-        // Add player name label
+        // Add player name labela
         JLabel nameLabel = new JLabel("Player: " + player.getName());
         gbc.gridx = 0;
         gbc.gridy = 0;
@@ -117,7 +117,7 @@ public class MainGame extends JFrame {
 
          */
         Gathering.gatheringGame();
-
+        //Hunting.bisonEncounter();
 
 
     }

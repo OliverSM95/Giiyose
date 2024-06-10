@@ -28,6 +28,9 @@ public class gamePlayer extends Entity{
         screenY = gp.screenHeight/2 - (gp.tileSize/2);
 
         hitBox = new Rectangle(8,16,32,32); // setting player hit box size
+        hitBoxDefaultX = 8;
+        hitBoxDefaultY = 16;
+
 
         setDefaultValues();
         getPlayerImage();
@@ -74,9 +77,15 @@ public class gamePlayer extends Entity{
             }else if(keyH.rightPressed){
                 direction = "right";
             }
+
             // add collisions (check tile collision)
             collisionOn = false;
             gp.cChecker.checkTile(this);
+
+            //check object collision
+            int  objIndex =  gp.cChecker.checkObject(this,true);
+            objectInteraction(objIndex);
+
             //if collision is false, player can move
             if(collisionOn ==false){
                 switch(direction){
@@ -94,7 +103,6 @@ public class gamePlayer extends Entity{
                           break;
                 }
             }
-
             spriteCounter++;
             if(spriteCounter>10){
                 if(spriteNum==1){
@@ -106,18 +114,35 @@ public class gamePlayer extends Entity{
             }
 
         }
+    }
+
+    public void objectInteraction(int i){
+
+        if(i != 999){// if 999 not object touch
+
+       // gp.object[i] = null; // deletes object when touched
+
+            /*
+            =========== object name function example
+            String objName = gp.obj[i].name;
+            switch(objName){
+            case "Bison"
+            gp.object[i] = null;
+
+            break;
+            }
+
+             */
 
 
-
-
+        }
 
     }
+
 
     public void draw(Graphics2D g2){
         //g2.setColor(Color.WHITE);
        // g2.fillRect(x, y, gp.tileSize, gp.tileSize);
-
-
 
         BufferedImage image = null;
          switch (direction) {

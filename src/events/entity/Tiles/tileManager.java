@@ -54,6 +54,10 @@ public class tileManager {
             tile[3].image = ImageIO.read(getClass().getResourceAsStream("/events/entity/backgroundTiles/treeOnGrassSprite.png"));
             tile[3].collision = true;
 
+            tile[4] = new tile();
+            tile[4].image = ImageIO.read(getClass().getResourceAsStream("/events/entity/backgroundTiles/sandSprite.png"));
+
+
 
         }catch (IOException e){
             e.printStackTrace();
@@ -106,6 +110,7 @@ public class tileManager {
 
             int tileNum = mapTileNumber[worldCol][worldRow];
 
+            //drawing location
             int worldX = worldCol * gp.tileSize;
             int worldY = worldRow * gp.tileSize;
             int screenX = worldX -gp.player.worldX + gp.player.screenX;

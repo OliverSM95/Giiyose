@@ -1,5 +1,7 @@
 package events;
 
+import events.entity.AssetSetter;
+import events.entity.Objects.superObject;
 import events.entity.Tiles.tileManager;
 import events.entity.gamePlayer;
 
@@ -37,8 +39,14 @@ public class GatherGamePanel extends JPanel implements Runnable {
     // Instantiate collision checker
     public CollisionChecker cChecker = new CollisionChecker(this);
 
-    // Initiate new gamePlayer
+    // Instantiate AssetSetter
+    public AssetSetter asSetter = new AssetSetter(this);
+
+    // Instantiate new gamePlayer
     public gamePlayer player = new gamePlayer(this, keyH);
+
+    //Instantiate superObject
+    public superObject object[] = new superObject[10];
 
     /*
     Default constructor for Game Panel
@@ -50,6 +58,10 @@ public class GatherGamePanel extends JPanel implements Runnable {
         this.setDoubleBuffered(true); // used for better rendering
         this.addKeyListener(keyH);
         this.setFocusable(true);
+    }
+
+    public void setupGame(){
+        asSetter.setObject();
     }
 
     public void startGameThread() {
@@ -88,7 +100,15 @@ public class GatherGamePanel extends JPanel implements Runnable {
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D) g; // change graphic g to Graphics 2d
 
+        //draw tiles
         tileM.draw(g2); // this must be drawn before the player sprite is drawn
+        //draw objects
+        for(int i = 0; i < object.length; i++) {
+            if(object[i] != null) {
+                object[i].draw(g2,this);
+            }
+        }
+        //draw player
         player.draw(g2); // call draw function from [src/entity/gamePlayer.java]
 
         g2.dispose(); // used to save memory

@@ -28,6 +28,7 @@ public class Gathering extends Event {
         gatheringFrame.setVisible(true);
 
         // Start the game thread
+        gamePanel.setupGame();
         gamePanel.startGameThread();
     }
 }
