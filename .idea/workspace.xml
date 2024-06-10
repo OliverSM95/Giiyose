@@ -4,23 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d61beb88-2afe-4425-ba6f-4fd74d950e33" name="Changes" comment="Finished Trading&#10;Working on fishing">
-      <change afterPath="$PROJECT_DIR$/platformer/inputs/KeyboardInputs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platformer/inputs/MouseInputs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platformer/main/Game.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platformer/main/GamePanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platformer/main/GameWindow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platformer/main/MainClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-06-03_9_07_a_m__[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-06-03_9_07_a_m___Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-06-03_9_33_a_m__[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-06-03_9_33_a_m___Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]1/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_1.xml" beforeDir="false" />
+    <list default="true" id="d61beb88-2afe-4425-ba6f-4fd74d950e33" name="Changes" comment="Added platformer root folder&#10;Created mouse and keyboard listener">
+      <change afterPath="$PROJECT_DIR$/res/player_sprites.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Giiyose.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Giiyose.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformer/inputs/MouseInputs.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/inputs/MouseInputs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformer/main/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/main/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformer/main/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/main/GamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformer/main/GameWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/main/GameWindow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +60,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "efeupdates",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "G:/My Drive/Giiyose",
+    "last_opened_file_path": "G:/My Drive/Giiyose/res",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -77,7 +68,11 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\My Drive\Giiyose\res" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\My Drive\Giiyose\res" />
       <recent name="G:\My Drive\Giiyose\src\events" />
       <recent name="G:\My Drive\Giiyose\src\imagesGathering" />
       <recent name="G:\My Drive\Giiyose\pictures" />
@@ -147,7 +142,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717981252620</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added platformer root folder&#10;Created mouse and keyboard listener">
+      <option name="closed" value="true" />
+      <created>1718033771830</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1718033771830</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -166,6 +169,7 @@
     <MESSAGE value="Working on Trading and Gathering" />
     <MESSAGE value="Basic Trading and Fishing &#10;Inventory Set with Default Constructor" />
     <MESSAGE value="Finished Trading&#10;Working on fishing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished Trading&#10;Working on fishing" />
+    <MESSAGE value="Added platformer root folder&#10;Created mouse and keyboard listener" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added platformer root folder&#10;Created mouse and keyboard listener" />
   </component>
 </project>

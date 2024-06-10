@@ -8,10 +8,12 @@ public class GameWindow {
     public GameWindow(GamePanel gamePanel){
         jframe = new JFrame();
 
-        jframe.setSize(400, 400);
-        jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Action for when clicked X
         jframe.add(gamePanel);
-        jframe.setLocationRelativeTo(null);
-        jframe.setVisible(true);
+        jframe.setResizable(false);
+        jframe.pack(); // Make window big enough to fit panel
+        jframe.setLocationRelativeTo(null); // Center panel
+        jframe.setVisible(true); // Required to see panel
     }
 }
