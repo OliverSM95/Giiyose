@@ -5,21 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d61beb88-2afe-4425-ba6f-4fd74d950e33" name="Changes" comment="Finished Trading&#10;Working on fishing">
-      <change afterPath="$PROJECT_DIR$/src/imagesGathering/blueberry.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/imagesGathering/bucket.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/imagesGathering/redberry.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Berry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Bucket.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/GatheringMinigamePanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platformer/inputs/KeyboardInputs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platformer/inputs/MouseInputs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platformer/main/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platformer/main/GamePanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platformer/main/GameWindow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platformer/main/MainClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-06-03_9_07_a_m__[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-06-03_9_07_a_m___Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-06-03_9_33_a_m__[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-06-03_9_33_a_m___Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/events/GatherGamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/GatherGamePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/events/Gathering.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/Gathering.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/MainGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/MainGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Giiyose.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Giiyose.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -48,21 +57,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Fishing.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.MainGame.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Trading.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;efeupdates&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;G:/My Drive/Giiyose&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.editor&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Fishing.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.MainClass.executor": "Run",
+    "Application.MainGame.executor": "Run",
+    "Application.Trading.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "efeupdates",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "G:/My Drive/Giiyose",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "editor.preferences.import"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="G:\My Drive\Giiyose\src\events" />
@@ -126,7 +139,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717687497142</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Finished Trading&#10;Working on fishing">
+      <option name="closed" value="true" />
+      <created>1717981252620</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1717981252620</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
