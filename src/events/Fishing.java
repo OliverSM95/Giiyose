@@ -57,7 +57,7 @@ public class Fishing extends Event {
 
     public static void main(String[] args) {
         // For testing
-        Player player = new Player("Efe");
+        Player player = new Player();
         new Fishing(player);
     }
 }

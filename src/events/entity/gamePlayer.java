@@ -2,6 +2,7 @@ package events.entity;
 
 import events.GatherGamePanel;
 import events.KeyHandler;
+import player.Player;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -15,14 +16,18 @@ public class gamePlayer extends Entity{
     GatherGamePanel gp;
     KeyHandler keyH;
 
+    Player mainPlayer;
+
     // values use to centre payer in middle of camera
     public final int screenX;
     public final int screenY;
 
-    public gamePlayer( GatherGamePanel gp, KeyHandler keyH ) {
+    public gamePlayer( GatherGamePanel gp, KeyHandler keyH, Player player) {
 
         this.gp = gp;
         this.keyH = keyH;
+        this.mainPlayer = player;
+
 
         screenX = gp.screenWidth/2 - (gp.tileSize/2);
         screenY = gp.screenHeight/2 - (gp.tileSize/2);
@@ -122,8 +127,18 @@ public class gamePlayer extends Entity{
 
        // gp.object[i] = null; // deletes object when touched
 
+            String objName = gp.object[i].name;
+            switch(objName){
+                case "Coin":
+                    gp.object[i] = null;
+                    mainPlayer.addCoins(1);
+                    System.out.println(mainPlayer.getCoins());
+
+                    break;
+            }
+
             /*
-            =========== object name function example
+            //=========== object name function example
             String objName = gp.obj[i].name;
             switch(objName){
             case "Bison"

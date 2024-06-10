@@ -31,7 +31,7 @@ public class MainGame extends JFrame {
 
     public MainGame() {
         // Initialize player and village
-        player = new Player("PlayerName");
+        player = new Player();
         village = new Village();
 
         // Get screen size and set JFrame size accordingly

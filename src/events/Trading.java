@@ -146,7 +146,7 @@ public class Trading extends Event {
 
     public static void main(String[] args) {
         // For testing
-        Player player = new Player("Efe");
+        Player player = new Player();
         player.getInventory().addItem("trash", 5); // Adding some initial items for testing
         new Trading(player);
     }

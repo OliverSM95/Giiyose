@@ -13,8 +13,10 @@ public class Hunting extends Event {
 
     private static Random rand = new Random();
 
-    public Hunting() {
+     static Player pl;
 
+    public Hunting(Player pl) {
+    this.pl = pl;
 
     }
 
@@ -104,7 +106,7 @@ public class Hunting extends Event {
                 // if attacked by the bison then remove players coins between 1-5
 
                 Player.removeCoins(coinsRemoved);
-                System.out.println("Player Coins: " + Player.getCoins());
+                System.out.println("Player Coins: " + pl.getCoins());
                 //show coins removed
                 huntPanel.add(coinsRemovedLabel);
                 // JOptionPane.showMessageDialog(null,coinsRemoved+" Coins Removed");
@@ -131,7 +133,7 @@ public class Hunting extends Event {
 
     }
 
-    public static void wolfEncounter() {
+    public void wolfEncounter() {
 
         JFrame huntingFrameWolf = new JFrame("Hunting");
 
@@ -221,7 +223,7 @@ public class Hunting extends Event {
             } else if (attackChances == 2) {
                 // if attacked by the bison then remove players coins between 1-5
                 Player.removeCoins(coinsRemoved);
-                System.out.println("Player Coins: " + Player.getCoins());
+                System.out.println("Player Coins: " + pl.getCoins());
                 //show coins removed
                 huntPanel.add(coinsRemovedLabel);
                 // JOptionPane.showMessageDialog(null,coinsRemoved+" Coins Removed");

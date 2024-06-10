@@ -2,7 +2,7 @@ package player;
 
 public class Player {
     private Inventory inventory;
-    private static int coins;
+    public static int coins;
     private int fish;
     private int trash;
     private int wood;
@@ -12,7 +12,7 @@ public class Player {
     protected int gold;
     private String name;
 
-    public Player(String name) { // Default Constructor for Player
+    public Player() { // Default Constructor for Player
         this.inventory = new Inventory();
         this.coins = 0; // or any starting amount
         this.fish = 0;
@@ -53,7 +53,7 @@ public class Player {
         return wolfMeatFur;
     }
 
-    public static int getCoins() {
+    public  int getCoins() {
         return coins;
     }
 
