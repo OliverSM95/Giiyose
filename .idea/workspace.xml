@@ -4,17 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d61beb88-2afe-4425-ba6f-4fd74d950e33" name="Changes" comment="Added fps counter&#10;Added game loop&#10;Made panel size of users screen&#10;Added image for player_sprites.png">
-      <change afterPath="$PROJECT_DIR$/platformer/entities/Entity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platformer/entities/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platformer/utilz/Constants.java" afterDir="false" />
+    <list default="true" id="d61beb88-2afe-4425-ba6f-4fd74d950e33" name="Changes" comment="Updated game loop to catch lost updates/frames&#10;Added animations for player&#10;Added player actions&#10;Added entity package&#10; - Player&#10; - Entity&#10;Added attack button">
+      <change afterPath="$PROJECT_DIR$/platformer/levels/Level.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platformer/levels/LevelManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platformer/utilz/HelpMethods.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platformer/utilz/LoadSave.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/level_one_data.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/outside_sprites.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformer/entities/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/entities/Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformer/entities/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/entities/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/platformer/inputs/KeyboardInputs.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/inputs/KeyboardInputs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformer/inputs/MouseInputs.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/inputs/MouseInputs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/platformer/main/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/main/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/platformer/main/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/main/GamePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformer/main/GameWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/main/GameWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/player_sprites.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/player_sprites.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,7 +160,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718041882704</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Updated game loop to catch lost updates/frames&#10;Added animations for player&#10;Added player actions&#10;Added entity package&#10; - Player&#10; - Entity&#10;Added attack button">
+      <option name="closed" value="true" />
+      <created>1718067950188</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1718067950188</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -179,6 +189,7 @@
     <MESSAGE value="Finished Trading&#10;Working on fishing" />
     <MESSAGE value="Added platformer root folder&#10;Created mouse and keyboard listener" />
     <MESSAGE value="Added fps counter&#10;Added game loop&#10;Made panel size of users screen&#10;Added image for player_sprites.png" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added fps counter&#10;Added game loop&#10;Made panel size of users screen&#10;Added image for player_sprites.png" />
+    <MESSAGE value="Updated game loop to catch lost updates/frames&#10;Added animations for player&#10;Added player actions&#10;Added entity package&#10; - Player&#10; - Entity&#10;Added attack button" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated game loop to catch lost updates/frames&#10;Added animations for player&#10;Added player actions&#10;Added entity package&#10; - Player&#10; - Entity&#10;Added attack button" />
   </component>
 </project>
