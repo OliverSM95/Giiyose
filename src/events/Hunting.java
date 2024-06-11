@@ -13,7 +13,10 @@ public class Hunting extends Event {
 
     private static Random rand = new Random();
 
-     static Player pl;
+     public boolean bisonAlive;
+
+      Player pl;
+
 
     public Hunting(Player pl) {
     this.pl = pl;
@@ -21,9 +24,9 @@ public class Hunting extends Event {
     }
 
 
-    public static void bisonEncounter() {
+    public void bisonEncounter() {
         JFrame huntingFrame = new JFrame("Hunting");
-
+         bisonAlive = true;
         JProgressBar healthBar = new JProgressBar();
 
         huntingFrame.setSize(600, 600);
@@ -115,6 +118,7 @@ public class Hunting extends Event {
             }
 // if bison health =0 then close hunting frame
             if (healthBar.getValue() <= 0) {
+                bisonAlive = false;
                 huntingFrame.dispose();
                 JOptionPane.showMessageDialog(null, "You Killed the Bison!");
 

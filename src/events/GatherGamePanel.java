@@ -34,12 +34,17 @@ public class GatherGamePanel extends JPanel implements Runnable {
     Sound music = new Sound();
 
 
+
     // Add key handler
     KeyHandler keyH = new KeyHandler();
 
 
     // add mainplayer
     Player mainPl = new Player();
+
+
+    //instantiate hunting minigames
+    Hunting huntGame = new Hunting(mainPl);
 
     // Add FPS and Time
     public final int FPS = 60;
@@ -55,7 +60,7 @@ public class GatherGamePanel extends JPanel implements Runnable {
     public AssetSetter asSetter = new AssetSetter(this);
 
     // Instantiate new gamePlayer
-    public gamePlayer player = new gamePlayer(this, keyH,mainPl);
+    public gamePlayer player = new gamePlayer(this, keyH,mainPl,huntGame);
 
     //Instantiate superObject
     public superObject object[] = new superObject[10];

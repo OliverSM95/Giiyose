@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d61beb88-2afe-4425-ba6f-4fd74d950e33" name="Changes" comment="started gathering">
-      <change afterPath="$PROJECT_DIR$/src/events/entity/sounds/coinSoundEffect.wav" afterDir="false" />
+    <list default="true" id="d61beb88-2afe-4425-ba6f-4fd74d950e33" name="Changes" comment="Sound Added&#10;UI added with coin object">
+      <change afterPath="$PROJECT_DIR$/src/events/entity/UtilityTool.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/events/Sound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/Sound.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/events/GatherGamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/GatherGamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/events/Hunting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/Hunting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/events/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/UI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/events/entity/Objects/superObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/entity/Objects/superObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/events/entity/Tiles/tileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/entity/Tiles/tileManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/events/entity/gamePlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/entity/gamePlayer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,26 +48,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Fishing.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.MainGame.executor": "Run",
-    "Application.Trading.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "efeupdates",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "G:/My Drive/Giiyose",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "configurable.group.editor",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Fishing.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainGame.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Trading.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;efeupdates&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;G:/My Drive/Giiyose&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.editor&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\coding\Java Projects\Giiyose\src\events\entity\sounds" />
@@ -141,7 +145,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="OliverUpdates" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>

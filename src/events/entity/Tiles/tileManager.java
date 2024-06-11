@@ -1,9 +1,11 @@
 package events.entity.Tiles;
 
 import events.GatherGamePanel;
+import events.entity.UtilityTool;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
+import java.awt.image.BufferedImage;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -35,34 +37,37 @@ public class tileManager {
 
     public void getTileImage(){
             //set tile array to specific images
-        try{
-            //grass tile
-            tile[0] = new tile();
-            tile[0].image = ImageIO.read(getClass().getResourceAsStream("/events/entity/backgroundTiles/grassSprite.png"));
 
+            // setup grass tile
+            setup(0,"/events/entity/backgroundTiles/grassSprite.png",false);
             // water tile
-            tile[1] = new tile();
-            tile[1].image = ImageIO.read(getClass().getResourceAsStream("/events/entity/backgroundTiles/waterSprite.png"));
-            tile[1].collision = true;
+            setup(1,"/events/entity/backgroundTiles/waterSprite.png",true);
+            //dirt sprite
+            setup(2,"/events/entity/backgroundTiles/dirtSprite.png",false);
+            //tree sprite
+            setup(3,"/events/entity/backgroundTiles/treeOnGrassSprite.png",true);
+            //sand sprite
+            setup(4,"/events/entity/backgroundTiles/sandSprite.png",false);
 
-            //dirt tile
-            tile[2] = new tile();
-            tile[2].image = ImageIO.read(getClass().getResourceAsStream("/events/entity/backgroundTiles/dirtSprite.png"));
 
-            //tree on grass tile
-            tile[3] = new tile();
-            tile[3].image = ImageIO.read(getClass().getResourceAsStream("/events/entity/backgroundTiles/treeOnGrassSprite.png"));
-            tile[3].collision = true;
 
-            tile[4] = new tile();
-            tile[4].image = ImageIO.read(getClass().getResourceAsStream("/events/entity/backgroundTiles/sandSprite.png"));
+    }
 
+    public void setup(int index, String imagePath,boolean collision){ // render tiles better
+        UtilityTool uTool = new UtilityTool();
+
+        try{
+            tile[index] = new tile();
+            tile[index].image = ImageIO.read(getClass().getResourceAsStream(imagePath));
+            tile[index].image = uTool.scaleImage(tile[index].image,gp.tileSize, gp.tileSize);
+            tile[index].collision =collision;
 
 
         }catch (IOException e){
             e.printStackTrace();
         }
     }
+
 
     public void loadMap(String filePath){
 
@@ -122,7 +127,7 @@ public class tileManager {
                worldY + gp.tileSize > gp.player.worldY - gp.player.screenY &&
                worldY - gp.tileSize < gp.player.worldY + gp.player.screenY){
 
-                g2.drawImage(tile[tileNum].image,screenX,screenY,gp.tileSize,gp.tileSize,null);
+                g2.drawImage(tile[tileNum].image,screenX,screenY,null);
             }
 
             worldCol++;

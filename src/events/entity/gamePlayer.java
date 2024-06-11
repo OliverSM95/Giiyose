@@ -1,6 +1,7 @@
 package events.entity;
 
 import events.GatherGamePanel;
+import events.Hunting;
 import events.KeyHandler;
 import player.Player;
 
@@ -9,6 +10,7 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.Objects;
+import java.util.Random;
 
 public class gamePlayer extends Entity{
 
@@ -18,12 +20,17 @@ public class gamePlayer extends Entity{
 
     Player mainPlayer;
 
+    Hunting huntingGames;
+
+    Random rn = new Random();
+
     // values use to centre payer in middle of camera
     public final int screenX;
     public final int screenY;
 
-    public gamePlayer( GatherGamePanel gp, KeyHandler keyH, Player player) {
+    public gamePlayer( GatherGamePanel gp, KeyHandler keyH, Player player, Hunting hg) {
 
+        this.huntingGames = hg;
         this.gp = gp;
         this.keyH = keyH;
         this.mainPlayer = player;
@@ -68,6 +75,21 @@ public class gamePlayer extends Entity{
             e.printStackTrace();
         }
     }
+
+    public BufferedImage setup(String imagePath){
+        UtilityTool uTool = new UtilityTool();
+
+        BufferedImage scaledImage = null;
+        try{
+            scaledImage = ImageIO.read(getClass().getResourceAsStream(imagePath));
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+
+
+        return scaledImage;
+    }
+
 
 
     public void update(){
@@ -132,10 +154,19 @@ public class gamePlayer extends Entity{
                 case "Coin":
                     gp.playSoundEffect(1);
                     gp.object[i] = null;
-                    mainPlayer.addCoins(1);
-                    System.out.println(mainPlayer.getCoins());
+                    int coinsGained = rn.nextInt(1,7);
+                    mainPlayer.addCoins(coinsGained);
+                    gp.ui.showMessage("You gained: "+coinsGained+" coins");
 
                     break;
+
+                case "Bison":
+                    huntingGames.bisonEncounter();
+                    gp.object[0] = null;
+                    speed = 0;
+
+
+                    speed = 4;
             }
 
             /*
