@@ -130,6 +130,7 @@ public class gamePlayer extends Entity{
             String objName = gp.object[i].name;
             switch(objName){
                 case "Coin":
+                    gp.playSoundEffect(1);
                     gp.object[i] = null;
                     mainPlayer.addCoins(1);
                     System.out.println(mainPlayer.getCoins());

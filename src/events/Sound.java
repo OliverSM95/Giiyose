@@ -13,6 +13,7 @@ public class Sound {
     public Sound(){
 
         soundURL[0] = getClass().getResource("/events/entity/sounds/Land acknowledgment.wav");
+        soundURL[1] = getClass().getResource("/events/entity/sounds/coinSoundEffect.wav");
     }
 
     public void setFile(int i){
