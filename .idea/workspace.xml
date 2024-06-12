@@ -4,19 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d61beb88-2afe-4425-ba6f-4fd74d950e33" name="Changes" comment="Added load / save&#10;Added levelmanager&#10;Added level one spritess&#10;Added collisions&#10;&#10;**NEED TO FIX JUMPING">
-      <change afterPath="$PROJECT_DIR$/platformer/gamestates/Gamestate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platformer/gamestates/Menu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platformer/gamestates/Playing.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platformer/gamestates/State.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platformer/gamestates/Statemethods.java" afterDir="false" />
+    <list default="true" id="d61beb88-2afe-4425-ba6f-4fd74d950e33" name="Changes" comment="Added load / save&#10;Added levelmanager&#10;Added level one spritess&#10;Added collisions&#10;Added very basic menu&#10;Added gamestates">
+      <change afterPath="$PROJECT_DIR$/platformer/ui/MenuButton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platformer/ui/PauseButton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platformer/ui/PauseOverlay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platformer/ui/SoundButton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/button_atlas.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/menu_background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/pause_menu.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/sound_button.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformer/entities/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/entities/Entity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/platformer/entities/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/entities/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformer/inputs/KeyboardInputs.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/inputs/KeyboardInputs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformer/gamestates/Gamestate.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/gamestates/Gamestate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformer/gamestates/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/gamestates/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformer/gamestates/Playing.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/gamestates/Playing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformer/gamestates/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/gamestates/State.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/platformer/inputs/MouseInputs.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/inputs/MouseInputs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/platformer/main/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/main/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformer/utilz/HelpMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/utilz/HelpMethods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/player_sprites.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/player_sprites.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformer/utilz/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/utilz/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformer/utilz/LoadSave.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/utilz/LoadSave.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,7 +185,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718120229495</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Added load / save&#10;Added levelmanager&#10;Added level one spritess&#10;Added collisions&#10;Added very basic menu&#10;Added gamestates">
+      <option name="closed" value="true" />
+      <created>1718141835649</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1718141835649</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -201,6 +216,7 @@
     <MESSAGE value="Added fps counter&#10;Added game loop&#10;Made panel size of users screen&#10;Added image for player_sprites.png" />
     <MESSAGE value="Updated game loop to catch lost updates/frames&#10;Added animations for player&#10;Added player actions&#10;Added entity package&#10; - Player&#10; - Entity&#10;Added attack button" />
     <MESSAGE value="Added load / save&#10;Added levelmanager&#10;Added level one spritess&#10;Added collisions&#10;&#10;**NEED TO FIX JUMPING" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added load / save&#10;Added levelmanager&#10;Added level one spritess&#10;Added collisions&#10;&#10;**NEED TO FIX JUMPING" />
+    <MESSAGE value="Added load / save&#10;Added levelmanager&#10;Added level one spritess&#10;Added collisions&#10;Added very basic menu&#10;Added gamestates" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added load / save&#10;Added levelmanager&#10;Added level one spritess&#10;Added collisions&#10;Added very basic menu&#10;Added gamestates" />
   </component>
 </project>
