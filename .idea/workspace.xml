@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d61beb88-2afe-4425-ba6f-4fd74d950e33" name="Changes" comment="Background Sprites Added">
-      <change afterPath="$PROJECT_DIR$/src/Images/Giiyose_Logo.png" afterDir="false" />
+    <list default="true" id="d61beb88-2afe-4425-ba6f-4fd74d950e33" name="Changes" comment="Main Map new image added with location based switch case&#10;Player class added location filed with affects map background based on value">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/events/entity/gamePlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/entity/gamePlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/events/GatherGamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/GatherGamePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/MainGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/MainGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/player/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/GameBoardPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/GameBoardPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/MenuFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/MenuFunctions.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +91,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1717081882095</updated>
-      <workItem from="1718206867573" duration="3533000" />
+      <workItem from="1718206867573" duration="4759000" />
     </task>
     <task id="LOCAL-00001" summary="Added packages&#10;Cleaned up">
       <option name="closed" value="true" />
@@ -137,7 +133,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717687497142</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Main Map new image added with location based switch case&#10;Player class added location filed with affects map background based on value">
+      <option name="closed" value="true" />
+      <created>1718211635193</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1718211635193</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,6 +175,7 @@
     <MESSAGE value="Working on Trading and Gathering" />
     <MESSAGE value="Basic Trading and Fishing &#10;Inventory Set with Default Constructor" />
     <MESSAGE value="Finished Trading&#10;Working on fishing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished Trading&#10;Working on fishing" />
+    <MESSAGE value="Main Map new image added with location based switch case&#10;Player class added location filed with affects map background based on value" />
+    <option name="LAST_COMMIT_MESSAGE" value="Main Map new image added with location based switch case&#10;Player class added location filed with affects map background based on value" />
   </component>
 </project>

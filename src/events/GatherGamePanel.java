@@ -65,8 +65,19 @@ public class GatherGamePanel extends JPanel implements Runnable {
     //Instantiate superObject
     public superObject object[] = new superObject[10];
 
+
+
+    //game state (to handle pause menu)
+    public int gameState;
+    public final int playState =1;
+    public final int pauseState =2;
+
+
+
     /*
+    ===============================================
     Default constructor for Game Panel
+    ===============================================
     */
     public GatherGamePanel() {
         // use inherited methods from JPanel Class
@@ -78,7 +89,11 @@ public class GatherGamePanel extends JPanel implements Runnable {
     }
 
     public void setupGame(){
+
+
         asSetter.setObject();
+        gameState = playState;
+
     }
 
     public void startGameThread() {
@@ -110,7 +125,16 @@ public class GatherGamePanel extends JPanel implements Runnable {
     }
 
     public void update() { // update player position when key pressed
-        player.update(); // call function from gamePlayer Class, located in entity package
+
+        if(gameState == playState){
+            player.update(); // call function from gamePlayer Class, located in entity package
+        }
+        if(gameState == pauseState){
+            // dont update game information while game is paused
+        }
+
+
+
     }
 
     public void paintComponent(Graphics g) {

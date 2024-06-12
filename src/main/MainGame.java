@@ -118,11 +118,11 @@ public class MainGame extends JFrame {
         }
 
          */
-       // Gathering.gatheringGame();
+       Gathering.gatheringGame();
         //Hunting.bisonEncounter();
 
 
-        mainMenu();
+        //mainMenu();
 
 
     }
