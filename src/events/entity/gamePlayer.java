@@ -161,9 +161,10 @@ public class gamePlayer extends Entity{
                     break;
 
                 case "Bison":
-                    huntingGames.bisonEncounter();
                     gp.object[0] = null;
                     speed = 0;
+                    huntingGames.bisonEncounter();
+
 
 
                     speed = 4;

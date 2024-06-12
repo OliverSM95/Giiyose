@@ -1,6 +1,8 @@
 package player;
 
 public class Player {
+
+    public String location;
     private Inventory inventory;
     public static int coins;
     private int fish;
@@ -23,7 +25,11 @@ public class Player {
         this.bisonMeatFur = 0;
         this.wolfMeatFur = 0;
         this.name = name;
+        this.location = "Ontario";
     }
+
+    public String getLocation() {return location;}
+    public void setLocation(String location) {this.location = location;}
 
     public Inventory getInventory() {
         return inventory;

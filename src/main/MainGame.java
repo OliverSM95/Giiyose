@@ -24,6 +24,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.Random;
 
+import static ui.MenuFunctions.mainMenu;
+
 public class MainGame extends JFrame {
     private Player player;
     private Village village;
@@ -116,8 +118,11 @@ public class MainGame extends JFrame {
         }
 
          */
-        Gathering.gatheringGame();
+       // Gathering.gatheringGame();
         //Hunting.bisonEncounter();
+
+
+        mainMenu();
 
 
     }

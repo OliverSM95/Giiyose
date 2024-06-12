@@ -60,38 +60,46 @@ public class MenuFunctions {
 
 
     public static void mainMenu(){
-
-
         JFrame frame = new JFrame();
-        frame.setSize(400,400);
+        frame.setSize(800,800);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        JPanel panel = new JPanel();
-        panel.setSize(400,400);
+        JPanel panel = new JPanel(){
+            final Image backgroundImage = new ImageIcon("src/Images/Giiyose_Logo.png").getImage();
+
+            @Override
+            protected void paintComponent(Graphics g) {
+                super.paintComponent(g);
+                g.drawImage(backgroundImage, 0, 0, getWidth(), getHeight(), this);
+            }
+
+        };
+        panel.setSize(800,800);
     panel.setLayout(null);
     frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
 
         JButton startButton = new JButton("Start");
 
-        startButton.setBounds(20,10,85, 30);
-
+        startButton.setBounds(200,670,160, 80);
+        startButton.setFont(new Font("Arial",Font.BOLD,30));
 
         JButton creditsButton = new JButton("Credits");// credits button
+        creditsButton.setFont(new Font("Arial",Font.BOLD,30));
 
-        creditsButton.setBounds(150,10,85, 30);
+        creditsButton.setBounds(400,670,160, 80);
 
-
-
-
-
+        // action listeners for buttons
     startButton.addActionListener(e -> {
 
         SwingUtilities.invokeLater(MainGame::new);
-        frame.setVisible(false);
+        frame.dispose();
     });
 
-    creditsButton.addActionListener(e -> {
+    creditsButton.addActionListener(e -> {// credits button action listener
         creditsMenu();
+        frame.dispose();
+
     });
 
 
@@ -104,6 +112,7 @@ public class MenuFunctions {
 
     }
 
+    // function for calling credits menu
     public static void creditsMenu(){
 
         JFrame credFrame = new JFrame();
@@ -120,18 +129,26 @@ public class MenuFunctions {
 
         JLabel creditMembers1 = new JLabel("Lead Software Designer: Oliver Simm");
 
-        creditMembers1.setFont(new Font("Arial",Font.PLAIN,10));
+        creditMembers1.setFont(new Font("Arial",Font.PLAIN,18));
 
-        creditMembers1.setBounds(20,-10,400,400);
+        creditMembers1.setBounds(20,-120,400,400);
         credPanel.add(creditMembers1);
 
         JLabel creditMembers2 = new JLabel("Lead Development Engineer: Efe Bolukbasi ");
 
-        creditMembers2.setFont(new Font("Arial",Font.PLAIN,10));
+        creditMembers2.setFont(new Font("Arial",Font.PLAIN,18));
 
-        creditMembers2.setBounds(20,10,400,400);
+        creditMembers2.setBounds(20,-100,400,400);
         credPanel.add(creditMembers2);
 
+JButton backButton = new JButton("Back");
+backButton.setFont(new Font("Arial",Font.BOLD,40));
+backButton.setBounds(110,130,150, 150);
+backButton.addActionListener(e -> {
+    mainMenu();
+    credFrame.dispose();
+});
+credPanel.add(backButton);
 
 
         credPanel.add(Title);

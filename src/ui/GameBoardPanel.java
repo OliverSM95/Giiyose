@@ -1,15 +1,48 @@
 package ui;
 
+import player.Player;
+
 import javax.swing.*;
 import java.awt.*;
 
 public class GameBoardPanel extends JPanel {
+     Image backgroundImage = new ImageIcon("src/Images/GiiyoseBackgrounds/canada blank.png").getImage();
+     Player player = new Player();
     @Override
     protected void paintComponent(Graphics g) {
-        super.paintComponent(g);
+
 
         // Set background color
-        setBackground(new Color(173, 216, 230)); // Light blue background
+//        setBackground(new Color(173, 216, 230)); // Light blue background
+        super.paintComponent(g);
+
+        switch (player.location){
+            case "Ontario":
+                backgroundImage = new ImageIcon("src/Images/GiiyoseBackgrounds/Ontario.png").getImage();
+            case "Quebec":
+                backgroundImage = new ImageIcon("src/Images/GiiyoseBackgrounds/Quebec.png").getImage();
+            case "NewfoundLand":
+                backgroundImage = new ImageIcon("src/Images/GiiyoseBackgrounds/NewfoundLand.png").getImage();
+            case "BC":
+                backgroundImage = new ImageIcon("src/Images/GiiyoseBackgrounds/BC.png").getImage();
+            case "Alberta":
+                backgroundImage = new ImageIcon("src/Images/GiiyoseBackgrounds/Alberta.png").getImage();
+            case "Saskatchewan":
+                backgroundImage = new ImageIcon("src/Images/GiiyoseBackgrounds/Saskatchewan.png").getImage();
+            case "Nunavut":
+                backgroundImage = new ImageIcon("src/Images/GiiyoseBackgrounds/Nunavut.png").getImage();
+            case "Yukon":
+                backgroundImage = new ImageIcon("src/Images/GiiyoseBackgrounds/Yukon.png").getImage();
+
+        }
+
+
+
+        g.drawImage(backgroundImage, 0, 0, getWidth(), getHeight(), this);
+
+
+
+
 
         // Draw areas for fishing, gathering, hunting, and trading
         drawAreas(g);
@@ -26,6 +59,7 @@ public class GameBoardPanel extends JPanel {
         int areaWidth = panelWidth / 4;
         int areaHeight = panelHeight / 2;
 
+        /*
         // Draw Fishing area
         g2d.setColor(new Color(70, 130, 180)); // Steel blue
         g2d.fillRect(0, 0, areaWidth, areaHeight);
@@ -49,5 +83,7 @@ public class GameBoardPanel extends JPanel {
         g2d.fillRect(3 * areaWidth, 0, areaWidth, areaHeight);
         g2d.setColor(Color.BLACK);
         g2d.drawString("Trading Area", 3 * areaWidth + areaWidth / 2 - 40, areaHeight / 2);
+
+         */
     }
 }
