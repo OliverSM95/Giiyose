@@ -1,13 +1,16 @@
 package events;
 
 import events.entity.AssetSetter;
+import events.entity.Entity;
 import events.entity.Objects.superObject;
 import events.entity.Tiles.tileManager;
 import events.entity.gamePlayer;
+import main.MainGame;
 import player.Player;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionListener;
 
 public class GatherGamePanel extends JPanel implements Runnable {
 
@@ -48,7 +51,7 @@ public class GatherGamePanel extends JPanel implements Runnable {
 
     // Add FPS and Time
     public final int FPS = 60;
-    Thread gameThread;
+   public Thread gameThread;
 
     // Instantiate collision checker
     public CollisionChecker cChecker = new CollisionChecker(this);
@@ -59,10 +62,9 @@ public class GatherGamePanel extends JPanel implements Runnable {
     // Instantiate AssetSetter
     public AssetSetter asSetter = new AssetSetter(this);
 
-    // Instantiate new gamePlayer
+    // INSTANTIATE ENTITY & OBJECTS
     public gamePlayer player = new gamePlayer(this, keyH,mainPl,huntGame);
-
-    //Instantiate superObject
+    public Entity npc[] = new Entity[10];
     public superObject object[] = new superObject[10];
 
 
@@ -71,6 +73,8 @@ public class GatherGamePanel extends JPanel implements Runnable {
     public int gameState;
     public final int playState =1;
     public final int pauseState =2;
+
+    JButton returnToMap = new JButton("Return to Map");
 
 
 
@@ -86,12 +90,22 @@ public class GatherGamePanel extends JPanel implements Runnable {
         this.setDoubleBuffered(true); // used for better rendering
         this.addKeyListener(keyH);
         this.setFocusable(true);
+
+        returnToMap.setBounds(50,50,200,100);
+        returnToMap.setFont(new Font("Arial",Font.BOLD,20));
+        returnToMap.addActionListener(e ->{
+            this.setVisible(false);
+
+            // SwingUtilities.invokeLater(MainGame::new);
+        });
+        this.add(returnToMap);
     }
 
+
+
     public void setupGame(){
-
-
         asSetter.setObject();
+        asSetter.setNPC();
         gameState = playState;
 
     }
@@ -143,12 +157,21 @@ public class GatherGamePanel extends JPanel implements Runnable {
 
         //draw tiles
         tileM.draw(g2); // this must be drawn before the player sprite is drawn
+
         //draw objects
         for(int i = 0; i < object.length; i++) {
             if(object[i] != null) {
                 object[i].draw(g2,this);
             }
         }
+
+        // DRAW NPC
+        for(int i = 0; i < npc.length; i++) {
+            if(npc[i] != null) {
+                npc[i].draw(g2);
+            }
+        }
+
         //draw player
         player.draw(g2); // call draw function from [src/entity/gamePlayer.java]
 

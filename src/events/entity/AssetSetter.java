@@ -10,6 +10,11 @@ public class AssetSetter {
     GatherGamePanel gp;
 
 
+    /*
+    Class used to create new game objects
+     */
+
+
     public AssetSetter(GatherGamePanel gp) {
         this.gp = gp;
     }
@@ -28,5 +33,13 @@ public class AssetSetter {
         gp.object[2].worldX = 10 * gp.tileSize;
         gp.object[2].worldY = 20 * gp.tileSize;
     }
+
+    public void setNPC(){
+        gp.npc[0] = new traderNPC(gp);
+        gp.npc[0].worldX = gp.tileSize *14;
+        gp.npc[0].worldY = gp.tileSize *14;
+    }
+
+
 
 }

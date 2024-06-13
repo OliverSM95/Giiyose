@@ -15,7 +15,7 @@ import java.util.Random;
 public class gamePlayer extends Entity{
 
 
-    GatherGamePanel gp;
+
     KeyHandler keyH;
 
     Player mainPlayer;
@@ -30,10 +30,13 @@ public class gamePlayer extends Entity{
 
     public gamePlayer( GatherGamePanel gp, KeyHandler keyH, Player player, Hunting hg) {
 
+        super(gp); // calling entity super classes constructor
         this.huntingGames = hg;
-        this.gp = gp;
+
         this.keyH = keyH;
         this.mainPlayer = player;
+
+
 
 
         screenX = gp.screenWidth/2 - (gp.tileSize/2);
@@ -76,19 +79,7 @@ public class gamePlayer extends Entity{
         }
     }
 
-    public BufferedImage setup(String imagePath){
-        UtilityTool uTool = new UtilityTool();
 
-        BufferedImage scaledImage = null;
-        try{
-            scaledImage = ImageIO.read(getClass().getResourceAsStream(imagePath));
-        }catch (IOException e){
-            e.printStackTrace();
-        }
-
-
-        return scaledImage;
-    }
 
 
 
@@ -162,28 +153,15 @@ public class gamePlayer extends Entity{
 
                 case "Bison":
                     gp.object[0] = null;
-                    speed = 0;
-                    huntingGames.bisonEncounter();
 
+                    Hunting bH = new Hunting(mainPlayer);
+                    bH.bisonEncounter();
 
-
+                   // huntingGames.bisonEncounter();
                     speed = 4;
             }
 
-            /*
-            //=========== object name function example
-            String objName = gp.obj[i].name;
-            switch(objName){
-            case "Bison"
-            gp.object[i] = null;
-
-            break;
             }
-
-             */
-
-
-        }
 
     }
 

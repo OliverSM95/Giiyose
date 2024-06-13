@@ -92,6 +92,7 @@ public class MenuFunctions {
         // action listeners for buttons
     startButton.addActionListener(e -> {
 
+
         SwingUtilities.invokeLater(MainGame::new);
         frame.dispose();
     });
