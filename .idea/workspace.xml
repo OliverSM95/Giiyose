@@ -4,15 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d61beb88-2afe-4425-ba6f-4fd74d950e33" name="Changes" comment="Added volume slider&#10;Added mute / unmute button&#10;Made escape key toggle pause menu">
-      <change afterPath="$PROJECT_DIR$/res/background_menu.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/level_one_data_long.png" afterDir="false" />
+    <list default="true" id="d61beb88-2afe-4425-ba6f-4fd74d950e33" name="Changes" comment="Added menu background&#10;Added moving screen&#10;Increased level length">
+      <change afterPath="$PROJECT_DIR$/res/big_clouds.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/playing_bg_img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/small_clouds.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformer/entities/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/entities/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformer/gamestates/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/gamestates/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/platformer/gamestates/Playing.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/gamestates/Playing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformer/levels/LevelManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/levels/LevelManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformer/utilz/HelpMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/utilz/HelpMethods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformer/utilz/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/utilz/Constants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/platformer/utilz/LoadSave.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/utilz/LoadSave.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -199,7 +197,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718242598312</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Added menu background&#10;Added moving screen&#10;Increased level length">
+      <option name="closed" value="true" />
+      <created>1718244439487</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1718244439487</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -225,6 +231,7 @@
     <MESSAGE value="Added load / save&#10;Added levelmanager&#10;Added level one spritess&#10;Added collisions&#10;Added very basic menu&#10;Added gamestates" />
     <MESSAGE value="Added load / save&#10;Added levelmanager&#10;Added level one spritess&#10;Added collisions&#10;Added very basic menu&#10;Added gamestates&#10;Added main menu&#10;Added pause menu&#10;Added sound buttons&#10;Added" />
     <MESSAGE value="Added volume slider&#10;Added mute / unmute button&#10;Made escape key toggle pause menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added volume slider&#10;Added mute / unmute button&#10;Made escape key toggle pause menu" />
+    <MESSAGE value="Added menu background&#10;Added moving screen&#10;Increased level length" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added menu background&#10;Added moving screen&#10;Increased level length" />
   </component>
 </project>
