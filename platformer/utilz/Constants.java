@@ -4,6 +4,9 @@ import main.Game;
 
 public class Constants {
 
+    public static final float GRAVITY = 0.04f * Game.SCALE;
+    public static final int ANI_SPEED = 25;
+
     public static class EnemyConstants {
         public static final int CRABBY = 0;
 
@@ -44,8 +47,8 @@ public class Constants {
 
         }
 
-        public static int GetMaxHealth(int enemy_type){
-            switch(enemy_type){
+        public static int GetMaxHealth(int enemy_type) {
+            switch (enemy_type) {
                 case CRABBY:
                     return 10;
                 default:
@@ -53,13 +56,14 @@ public class Constants {
             }
         }
 
-        public static int GetEnemyDmg(int enemy_type){
-            switch(enemy_type){
+        public static int GetEnemyDmg(int enemy_type) {
+            switch (enemy_type) {
                 case CRABBY:
                     return 15;
                 default:
                     return 0;
             }
+
         }
 
     }
@@ -121,7 +125,6 @@ public class Constants {
         public static final int ATTACK = 4;
         public static final int HIT = 5;
         public static final int DEAD = 6;
-
 
         public static int GetSpriteAmount(int player_action) {
             switch (player_action) {

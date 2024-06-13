@@ -4,24 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d61beb88-2afe-4425-ba6f-4fd74d950e33" name="Changes" comment="Added attacking&#10; - Crabs&#10; - Players&#10; &#10;**Need to create new sprites">
-      <change afterPath="$PROJECT_DIR$/platformer/ui/LevelCompletedOverlay.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/completed_sprite.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/lvls/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/lvls/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/lvls/3.png" afterDir="false" />
+    <list default="true" id="d61beb88-2afe-4425-ba6f-4fd74d950e33" name="Changes" comment="Added 3 levels&#10;Level completion">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/platformer/entities/Crabby.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/entities/Crabby.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformer/entities/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/entities/Enemy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/platformer/entities/EnemyManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/entities/EnemyManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformer/gamestates/Playing.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/gamestates/Playing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformer/levels/Level.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/levels/Level.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformer/levels/LevelManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/levels/LevelManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformer/main/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/main/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformer/ui/PauseOverlay.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/ui/PauseOverlay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformer/utilz/HelpMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/utilz/HelpMethods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformer/utilz/LoadSave.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/utilz/LoadSave.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/level_one_data.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/level_one_data_long.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformer/entities/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/entities/Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformer/entities/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/entities/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformer/utilz/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/utilz/Constants.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -240,7 +230,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718300626812</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Added 3 levels&#10;Level completion">
+      <option name="closed" value="true" />
+      <created>1718317288230</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1718317288230</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -270,6 +268,7 @@
     <MESSAGE value="Added moving background&#10;Added clouds to background" />
     <MESSAGE value="Added crabby enemy" />
     <MESSAGE value="Added attacking&#10; - Crabs&#10; - Players&#10; &#10;**Need to create new sprites" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added attacking&#10; - Crabs&#10; - Players&#10; &#10;**Need to create new sprites" />
+    <MESSAGE value="Added 3 levels&#10;Level completion" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added 3 levels&#10;Level completion" />
   </component>
 </project>
