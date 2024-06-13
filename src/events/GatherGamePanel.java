@@ -1,11 +1,13 @@
 package events;
 
+import com.sun.tools.javac.Main;
 import events.entity.AssetSetter;
 import events.entity.Entity;
 import events.entity.Objects.superObject;
 import events.entity.Tiles.tileManager;
 import events.entity.gamePlayer;
 import main.MainGame;
+import main.mainMapMenu;
 import player.Player;
 
 import javax.swing.*;
@@ -74,6 +76,8 @@ public class GatherGamePanel extends JPanel implements Runnable {
     public final int playState =1;
     public final int pauseState =2;
 
+    mainMapMenu mg;
+
     JButton returnToMap = new JButton("Return to Map");
 
 
@@ -83,7 +87,8 @@ public class GatherGamePanel extends JPanel implements Runnable {
     Default constructor for Game Panel
     ===============================================
     */
-    public GatherGamePanel() {
+    public GatherGamePanel(mainMapMenu mainGame) {
+        //this.mg = mainGame;
         // use inherited methods from JPanel Class
         this.setPreferredSize(new Dimension(screenWidth, screenHeight));
         this.setBackground(Color.BLACK);
@@ -94,8 +99,11 @@ public class GatherGamePanel extends JPanel implements Runnable {
         returnToMap.setBounds(50,50,200,100);
         returnToMap.setFont(new Font("Arial",Font.BOLD,20));
         returnToMap.addActionListener(e ->{
-            this.setVisible(false);
+            //this.setVisible(false);
+            mainGame.setupControlPanel();
+            mainGame.setVisible(true);
 
+            System.out.println("Button Pressed");
             // SwingUtilities.invokeLater(MainGame::new);
         });
         this.add(returnToMap);

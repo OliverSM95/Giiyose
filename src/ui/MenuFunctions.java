@@ -1,6 +1,9 @@
 package ui;
 
+import com.sun.tools.javac.Main;
 import main.MainGame;
+import main.mainMapMenu;
+import player.Player;
 
 import javax.swing.*;
 import java.awt.*;
@@ -19,7 +22,7 @@ public class MenuFunctions {
 
 
 
-
+public static MainGame mainGameInstance;
     public static void landAcknowledgementMenu(){
 
         JFrame frame = new JFrame();
@@ -93,7 +96,20 @@ public class MenuFunctions {
     startButton.addActionListener(e -> {
 
 
-        SwingUtilities.invokeLater(MainGame::new);
+       // SwingUtilities.invokeLater((Runnable) new MainGame(new Player()));
+       // SwingUtilities.invokeLater(MainGame::new);
+        /*
+        SwingUtilities.invokeLater(() -> {
+             mainGameInstance = new MainGame(new Player()); // Store the instance in the variable
+
+
+
+        });
+
+         */
+        Player player = new Player();
+        mainMapMenu canadaMap = new mainMapMenu(player);
+        canadaMap.setupControlPanel();
         frame.dispose();
     });
 

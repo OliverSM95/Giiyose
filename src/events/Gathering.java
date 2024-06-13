@@ -1,11 +1,14 @@
 package events;
 
+import main.MainGame;
+import main.mainMapMenu;
+
 import javax.swing.*;
 import java.awt.*;
 
 public class Gathering extends Event {
 
-    public static void gatheringGame() {
+    public static void gatheringGame(mainMapMenu mMM) {
         // Create frame
         JFrame gatheringFrame = new JFrame();
         gatheringFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -18,7 +21,7 @@ public class Gathering extends Event {
         gatheringFrame.setExtendedState(JFrame.MAXIMIZED_BOTH); // Optional, for full-screen effect
 
         // Create game panel
-        GatherGamePanel gamePanel = new GatherGamePanel();
+        GatherGamePanel gamePanel = new GatherGamePanel(mMM);
         gamePanel.setPreferredSize(screenSize);
         gatheringFrame.add(gamePanel);
 
