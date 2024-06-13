@@ -5,13 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d61beb88-2afe-4425-ba6f-4fd74d950e33" name="Changes" comment="Added crabby enemy">
+      <change afterPath="$PROJECT_DIR$/platformer/ui/GameOverOverlay.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/platformer/entities/Crabby.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/entities/Crabby.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/platformer/entities/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/entities/Enemy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/platformer/entities/EnemyManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/entities/EnemyManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformer/entities/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/entities/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/platformer/gamestates/Playing.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/gamestates/Playing.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/platformer/utilz/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/utilz/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformer/utilz/HelpMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/utilz/HelpMethods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformer/utilz/LoadSave.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/utilz/LoadSave.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/player_sprites.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/player_sprites.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
