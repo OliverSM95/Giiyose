@@ -8,9 +8,7 @@ import gamestates.Gamestate;
 import gamestates.Playing;
 import main.Game;
 import utilz.LoadSave;
-import static utilz.Constants.UI.PauseButtons.*;
 import static utilz.Constants.UI.URMButtons.*;
-import static utilz.Constants.UI.VolumeButtons.*;
 
 public class PauseOverlay {
 
@@ -24,9 +22,7 @@ public class PauseOverlay {
         this.playing = playing;
         loadBackground();
         audioOptions = playing.getGame().getAudioOptions();
-
         createUrmButtons();
-
     }
 
     private void createUrmButtons() {
@@ -90,7 +86,7 @@ public class PauseOverlay {
         if (isIn(e, menuB)) {
             if (menuB.isMousePressed()) {
                 playing.resetAll();
-                playing.setGameState(Gamestate.MENU);
+                playing.setGamestate(Gamestate.MENU);
                 playing.unpauseGame();
             }
         } else if (isIn(e, replayB)) {

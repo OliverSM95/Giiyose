@@ -1,9 +1,16 @@
 package audio;
 
-import javax.sound.sampled.*;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Random;
+
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.BooleanControl;
+import javax.sound.sampled.Clip;
+import javax.sound.sampled.FloatControl;
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
 
 public class AudioPlayer {
 
@@ -21,33 +28,34 @@ public class AudioPlayer {
 
     private Clip[] songs, effects;
     private int currentSongId;
-    private float volume = 1f;
+    private float volume = 0.5f;
     private boolean songMute, effectMute;
     private Random rand = new Random();
 
-    public AudioPlayer(){
+    public AudioPlayer() {
         loadSongs();
         loadEffects();
         playSong(MENU_1);
     }
 
-    private void loadSongs(){
-        String[] names = {"menu", "level1", "level2"};
+    private void loadSongs() {
+        String[] names = { "menu", "level1", "level2" };
         songs = new Clip[names.length];
         for (int i = 0; i < songs.length; i++)
             songs[i] = getClip(names[i]);
     }
 
-    private void loadEffects(){
+    private void loadEffects() {
         String[] effectNames = { "die", "jump", "gameover", "lvlcompleted", "attack1", "attack2", "attack3" };
         effects = new Clip[effectNames.length];
         for (int i = 0; i < effects.length; i++)
             effects[i] = getClip(effectNames[i]);
 
+        updateEffectsVolume();
 
     }
 
-    private Clip getClip(String name){
+    private Clip getClip(String name) {
         URL url = getClass().getResource("/audio/" + name + ".wav");
         AudioInputStream audio;
 
@@ -63,6 +71,7 @@ public class AudioPlayer {
         }
 
         return null;
+
     }
 
     public void setVolume(float volume) {
@@ -95,7 +104,8 @@ public class AudioPlayer {
     }
 
     public void playEffect(int effect) {
-        effects[effect].setMicrosecondPosition(0);
+        if (effects[effect].getMicrosecondPosition() > 0)
+            effects[effect].setMicrosecondPosition(0);
         effects[effect].start();
     }
 
@@ -143,4 +153,5 @@ public class AudioPlayer {
             gainControl.setValue(gain);
         }
     }
+
 }

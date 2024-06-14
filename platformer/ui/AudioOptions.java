@@ -1,4 +1,3 @@
-
 package ui;
 
 import static utilz.Constants.UI.PauseButtons.SOUND_SIZE;
@@ -8,13 +7,13 @@ import static utilz.Constants.UI.VolumeButtons.VOLUME_HEIGHT;
 import java.awt.Graphics;
 import java.awt.event.MouseEvent;
 
-import gamestates.Gamestate;
 import main.Game;
 
 public class AudioOptions {
 
     private VolumeButton volumeButton;
     private SoundButton musicButton, sfxButton;
+
     private Game game;
 
     public AudioOptions(Game game) {
@@ -74,13 +73,13 @@ public class AudioOptions {
 
     public void mouseReleased(MouseEvent e) {
         if (isIn(e, musicButton)) {
-            if (musicButton.isMousePressed()){
+            if (musicButton.isMousePressed()) {
                 musicButton.setMuted(!musicButton.isMuted());
                 game.getAudioPlayer().toggleSongMute();
             }
 
         } else if (isIn(e, sfxButton)) {
-            if (sfxButton.isMousePressed()){
+            if (sfxButton.isMousePressed()) {
                 sfxButton.setMuted(!sfxButton.isMuted());
                 game.getAudioPlayer().toggleEffectMute();
             }
