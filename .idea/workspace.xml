@@ -4,21 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d61beb88-2afe-4425-ba6f-4fd74d950e33" name="Changes" comment="Code cleaned up">
-      <change afterPath="$PROJECT_DIR$/platformer/objects/GameContainer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platformer/objects/GameObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platformer/objects/ObjectManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platformer/objects/Potion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/objects_sprites.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/potions_sprites.png" afterDir="false" />
+    <list default="true" id="d61beb88-2afe-4425-ba6f-4fd74d950e33" name="Changes" comment="Added objects&#10;Added potions">
+      <change afterPath="$PROJECT_DIR$/platformer/objects/Spike.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/trap_atlas.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformer/entities/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/entities/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformer/gamestates/Playing.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/gamestates/Playing.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/platformer/levels/Level.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/levels/Level.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformer/levels/LevelManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/levels/LevelManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformer/objects/ObjectManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/objects/ObjectManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/platformer/utilz/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/utilz/Constants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/platformer/utilz/HelpMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/utilz/HelpMethods.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/platformer/utilz/LoadSave.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/utilz/LoadSave.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/lvls/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/lvls/1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/lvls/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/lvls/2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/lvls/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/lvls/3.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,25 +50,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Fishing.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.MainClass.executor": "Run",
-    "Application.MainGame.executor": "Run",
-    "Application.Trading.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "efeupdates",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "G:/My Drive/Giiyose/res",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "editor.preferences.import"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Fishing.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainClass.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainGame.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Trading.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;efeupdates&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;G:/My Drive/Giiyose/res&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.import&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="G:\My Drive\Giiyose\res" />
@@ -254,7 +250,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718317731212</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Added objects&#10;Added potions">
+      <option name="closed" value="true" />
+      <created>1718318281172</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1718318281172</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -286,6 +290,7 @@
     <MESSAGE value="Added attacking&#10; - Crabs&#10; - Players&#10; &#10;**Need to create new sprites" />
     <MESSAGE value="Added 3 levels&#10;Level completion" />
     <MESSAGE value="Code cleaned up" />
-    <option name="LAST_COMMIT_MESSAGE" value="Code cleaned up" />
+    <MESSAGE value="Added objects&#10;Added potions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added objects&#10;Added potions" />
   </component>
 </project>
