@@ -140,25 +140,36 @@ public class gamePlayer extends Entity{
 
        // gp.object[i] = null; // deletes object when touched
 
-            String objName = gp.object[i].name;
+            String objName = gp.object[gp.currentMap][i].name;
             switch(objName){
                 case "Coin":
                     gp.playSoundEffect(1);
-                    gp.object[i] = null;
+                    gp.object[gp.currentMap][i] = null;
                     int coinsGained = rn.nextInt(1,7);
                     mainPlayer.addCoins(coinsGained);
                     gp.ui.showMessage("You gained: "+coinsGained+" coins");
-
+                    //gp.currentMap =1;
                     break;
 
                 case "Bison":
-                    gp.object[0] = null;
+                    gp.object[gp.currentMap][i] = null;
 
                     Hunting bH = new Hunting(mainPlayer);
                     bH.bisonEncounter();
 
                    // huntingGames.bisonEncounter();
                     speed = 4;
+                    break;
+                case "goldOre":
+                    gp.object[gp.currentMap][i] = null;
+                    mainPlayer.setGold(2);
+                    gp.ui.showMessage("You gained: "+2+" Gold");
+                    break;
+                case "wolf":
+                    gp.object[gp.currentMap][i] = null;
+                    Hunting wolf = new Hunting(mainPlayer);
+                    wolf.wolfEncounter();
+                    break;
             }
 
             }

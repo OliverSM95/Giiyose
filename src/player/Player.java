@@ -3,33 +3,28 @@ package player;
 public class Player {
 
     public String location;
-    private Inventory inventory;
+    public Inventory inventory;
     public static int coins;
-    private int fish;
-    private int trash;
-    private int wood;
-    private int stone;
-    private int bisonMeatFur;
-    private  int wolfMeatFur;
-    protected int gold;
-    private String name;
+    public int fish;
+    public int trash;
+    public int bisonMeatFur;
+    public  int wolfMeatFur;
+    public int gold;
+    public String name;
 
     public Player() { // Default Constructor for Player
         this.inventory = new Inventory();
         this.coins = 0; // or any starting amount
         this.fish = 0;
         this.trash = 0;
-        this.wood = 0;
-        this.stone = 0;
         this.gold = 0;
         this.bisonMeatFur = 0;
         this.wolfMeatFur = 0;
         this.name = name;
         this.location = "Ontario";
     }
-
-    public String getLocation() {return location;}
     public void setLocation(String location) {this.location = location;}
+    public String getLocation() {return location;}
 
     public Inventory getInventory() {
         return inventory;
@@ -39,24 +34,28 @@ public class Player {
         return name;
     }
 
+    public void setGold(int gold){
+        this.gold += gold;
+    }
+
     public int getGold(){
         return gold;
     }
 
-    public int getWood(){
-        return wood;
-    }
 
-    public int getStone(){
-        return stone;
-    }
 
     public int getBisonMeatFur(){
         return bisonMeatFur;
     }
+    public void addBisonMeatFur(int num){
+        this.bisonMeatFur+=num;
+    }
 
     public int getWolfMeatFur(){
         return wolfMeatFur;
+    }
+    public void addWolfMeatFur(int num){
+        this.wolfMeatFur+=num;
     }
 
     public  int getCoins() {

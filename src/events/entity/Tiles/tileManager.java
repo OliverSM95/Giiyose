@@ -18,9 +18,9 @@ public class tileManager {
 
     GatherGamePanel gp;
     public tile[] tile;
-    final int numTiles =10;// number of unique background sprites
+    final int numTiles =50;// number of unique background sprites
 
-    public int[][] mapTileNumber;
+    public int[][][] mapTileNumber;
 
 
 
@@ -29,25 +29,33 @@ public class tileManager {
         this.gp = gp;
 
         tile = new tile[numTiles];
-        mapTileNumber = new int[gp.maxWorldCol][gp.maxWorldRow];
+        mapTileNumber = new int[gp.maxMap][gp.maxWorldCol][gp.maxWorldRow];
 
         getTileImage();
-        loadMap("/events/entity/maps/mapTest.txt");
+        loadMap("/events/entity/maps/winterMap.txt",0);
+        loadMap("/events/entity/maps/coastalMap.txt",1);
     }
 
     public void getTileImage(){
             //set tile array to specific images
-
             // setup grass tile
             setup(0,"/events/entity/backgroundTiles/grassSprite.png",false);
             // water tile
             setup(1,"/events/entity/backgroundTiles/waterSprite.png",true);
             //dirt sprite
-            setup(2,"/events/entity/backgroundTiles/dirtSprite.png",false);
+            setup(3,"/events/entity/backgroundTiles/dirtSprite.png",false);
             //tree sprite
-            setup(3,"/events/entity/backgroundTiles/treeOnGrassSprite.png",true);
+            setup(4,"/events/entity/backgroundTiles/treeOnGrassSprite.png",true);
             //sand sprite
-            setup(4,"/events/entity/backgroundTiles/sandSprite.png",false);
+            setup(5,"/events/entity/backgroundTiles/sandSprite.png",false);
+            // add snow
+            setup(6,"/events/entity/backgroundTiles/snowSprite.png",false);
+            // add rock
+            setup(7,"/events/entity/backgroundTiles/stoneTileSprite.png",false);
+            //add wood
+            setup(8,"/events/entity/backgroundTiles/woodPlankSprite.png",false);
+            //add gold ore
+            setup(9,"/events/entity/backgroundTiles/goldOreSprite.png",true);
 
 
 
@@ -69,7 +77,7 @@ public class tileManager {
     }
 
 
-    public void loadMap(String filePath){
+    public void loadMap(String filePath, int map){
 
         try{
             InputStream inStream = getClass().getResourceAsStream(filePath);
@@ -87,7 +95,7 @@ public class tileManager {
 
                     int num = Integer.parseInt(numbers[col]);
 
-                    mapTileNumber[col][row] = num;
+                    mapTileNumber[map][col][row] = num;
                     col++;
                 }
                 if(col == gp.maxWorldCol){
@@ -113,7 +121,7 @@ public class tileManager {
 
         while(worldCol<gp.maxWorldCol && worldRow<gp.maxWorldCol){
 
-            int tileNum = mapTileNumber[worldCol][worldRow];
+            int tileNum = mapTileNumber[gp.currentMap][worldCol][worldRow];
 
             //drawing location
             int worldX = worldCol * gp.tileSize;

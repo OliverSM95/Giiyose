@@ -4,11 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d61beb88-2afe-4425-ba6f-4fd74d950e33" name="Changes" comment="working on fixing Wilds -&gt; map gameplay Loop">
-      <change afterPath="$PROJECT_DIR$/src/Images/FishingLeft.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Images/FishingRight.png" afterDir="false" />
+    <list default="true" id="d61beb88-2afe-4425-ba6f-4fd74d950e33" name="Changes" comment="added map changing system">
+      <change afterPath="$PROJECT_DIR$/src/events/entity/Objects/goldOreObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/events/entity/Objects/wolfObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/events/entity/objectImages/dungeonSprite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/events/entity/objectImages/wolfSprite.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-06-03_9_37_a_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-06-03_9_37_a_m___Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-06-03_9_03_a_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-06-03_9_03_a_m___Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-06-03_9_39_a_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-06-03_9_39_a_m___Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-06-06_10_36_a_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-06-06_10_36_a_m___Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/events/Fishing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/Fishing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/events/CollisionChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/CollisionChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/events/GatherGamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/GatherGamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/events/Hunting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/Hunting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/events/entity/AssetSetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/entity/AssetSetter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/events/entity/Tiles/tileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/entity/Tiles/tileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/events/entity/gamePlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/entity/gamePlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/MainGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/MainGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/mainMapMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/mainMapMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/player/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/GameBoardPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/GameBoardPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +41,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="efeupdates" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -53,7 +69,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;efeupdates&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;OliverUpdates&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/coding/Java Projects/Giiyose/src/Images&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -69,20 +85,12 @@
       <recent name="D:\coding\Java Projects\Giiyose\src\Images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Thomas\IdeaProjects\Giiyose\src\events\entity\objectImages" />
       <recent name="G:\My Drive\ICS3u\Projects\Giiyose\src\Images" />
       <recent name="D:\coding\Java Projects\Giiyose\src\Images" />
       <recent name="D:\coding\Java Projects\Giiyose\src\events\entity\sounds" />
       <recent name="G:\My Drive\ICS3u\Projects\Giiyose\src\events\entity\objectImages" />
-      <recent name="G:\My Drive\ICS3u\Projects\Giiyose\src\events\entity\sounds" />
     </key>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
-        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -185,6 +193,7 @@
     <MESSAGE value="Finished Trading&#10;Working on fishing" />
     <MESSAGE value="Main Map new image added with location based switch case&#10;Player class added location filed with affects map background based on value" />
     <MESSAGE value="working on fixing Wilds -&gt; map gameplay Loop" />
-    <option name="LAST_COMMIT_MESSAGE" value="working on fixing Wilds -&gt; map gameplay Loop" />
+    <MESSAGE value="added map changing system" />
+    <option name="LAST_COMMIT_MESSAGE" value="added map changing system" />
   </component>
 </project>

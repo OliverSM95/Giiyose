@@ -124,7 +124,15 @@ public class Hunting extends Event {
             if (healthBar.getValue() <= 0) {
                 this.setBisonAlive(false);
                 huntingFrame.dispose();
-                JOptionPane.showMessageDialog(null, "You Killed the Bison!");
+
+                // random loot
+                int coinReward = rand.nextInt(0,20);
+                int meatReward = rand.nextInt(0,7);
+
+
+                JOptionPane.showMessageDialog(null, "You Killed the Bison!\nRewards:\n"+coinReward+" coins\n"+meatReward+" Bison Meat");
+                pl.addBisonMeatFur(meatReward);
+                pl.addCoins(coinReward);
 
             }
         });
@@ -247,7 +255,13 @@ public class Hunting extends Event {
             if (healthBar.getValue() <= 0) {
                 huntingFrameWolf.dispose();
                 wolfAlive = false;
-                JOptionPane.showMessageDialog(null, "You Killed the Wolf!");
+                // random loot
+                int coinReward = rand.nextInt(0,20);
+                int meatReward = rand.nextInt(0,7);
+
+                JOptionPane.showMessageDialog(null, "You Killed the Wolf!\nRewards:\n"+coinReward+" coins\n"+meatReward+" Wolf Meat");
+                pl.addWolfMeatFur(meatReward);
+                pl.addCoins(coinReward);
 
             }
         });

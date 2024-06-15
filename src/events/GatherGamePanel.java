@@ -16,6 +16,10 @@ import java.awt.event.ActionListener;
 
 public class GatherGamePanel extends JPanel implements Runnable {
 
+    // add mainplayer
+    Player mainPl = new Player();
+
+
     // Screen Settings
     final int originalTileSize = 16;
     final int scale = 3; // set scale for 16x16 sprites
@@ -24,6 +28,8 @@ public class GatherGamePanel extends JPanel implements Runnable {
     // World Settings
     public final int maxWorldCol = 50;
     public final int maxWorldRow = 50;
+    public final int maxMap =10;
+    public int currentMap =1;
 
 
     // Dynamically set screen size
@@ -44,8 +50,7 @@ public class GatherGamePanel extends JPanel implements Runnable {
     KeyHandler keyH = new KeyHandler();
 
 
-    // add mainplayer
-    Player mainPl = new Player();
+
 
 
     //instantiate hunting minigames
@@ -66,8 +71,8 @@ public class GatherGamePanel extends JPanel implements Runnable {
 
     // INSTANTIATE ENTITY & OBJECTS
     public gamePlayer player = new gamePlayer(this, keyH,mainPl,huntGame);
-    public Entity npc[] = new Entity[10];
-    public superObject object[] = new superObject[10];
+    public Entity npc[][] = new Entity[maxMap][10];
+    public superObject object[][] = new superObject[maxMap][10];
 
 
 
@@ -167,16 +172,16 @@ public class GatherGamePanel extends JPanel implements Runnable {
         tileM.draw(g2); // this must be drawn before the player sprite is drawn
 
         //draw objects
-        for(int i = 0; i < object.length; i++) {
-            if(object[i] != null) {
-                object[i].draw(g2,this);
+        for(int i = 0; i < object[1].length; i++) {
+            if(object[currentMap][i] != null) {
+                object[currentMap][i].draw(g2,this);
             }
         }
 
         // DRAW NPC
-        for(int i = 0; i < npc.length; i++) {
-            if(npc[i] != null) {
-                npc[i].draw(g2);
+        for(int i = 0; i < npc[1].length; i++) {
+            if(npc[currentMap][i] != null) {
+                npc[currentMap][i].draw(g2);
             }
         }
 

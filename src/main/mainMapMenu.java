@@ -14,7 +14,7 @@ public class mainMapMenu extends JFrame {
 
     mainMapMenu mainGameInstance;
     Player player;
-    private GameBoardPanel gameBoardPanel;
+    public GameBoardPanel gameBoardPanel;
     public mainMapMenu(Player pl){
 
         // Initialize player and village
@@ -92,6 +92,7 @@ public class mainMapMenu extends JFrame {
                     } else {
                         player.setLocation(player.getLocation()); // if menu closed stay in the same location
                     }
+
                     break;
                 case "Quebec":
                     String[] locationOptionsQuebec = {"Ontario","Newfoundland"};
@@ -150,6 +151,7 @@ public class mainMapMenu extends JFrame {
                     } else {
                         player.setLocation(player.getLocation()); // if menu closed stay in the same location
                     }
+
                     break;
                 case "Nunavut":
                     String[] locationOptionsNunavut = {"Yukon","Saskatchewan"};
@@ -158,6 +160,7 @@ public class mainMapMenu extends JFrame {
                         player.setLocation("Yukon");
                     } else if (selectedOptionNunavut == 1) {
                         player.setLocation("Saskatchewan");
+
                     } else {
                         player.setLocation(player.getLocation()); // if menu closed stay in the same location
                     }
