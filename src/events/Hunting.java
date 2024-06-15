@@ -127,11 +127,10 @@ public class Hunting extends Event {
 
                 // random loot
                 int coinReward = rand.nextInt(0,20);
-                int meatReward = rand.nextInt(0,7);
 
 
-                JOptionPane.showMessageDialog(null, "You Killed the Bison!\nRewards:\n"+coinReward+" coins\n"+meatReward+" Bison Meat");
-                pl.addBisonMeatFur(meatReward);
+                JOptionPane.showMessageDialog(null, "You Killed the Bison!\nRewards:\n"+coinReward+" coins");
+
                 pl.addCoins(coinReward);
 
             }
@@ -257,10 +256,10 @@ public class Hunting extends Event {
                 wolfAlive = false;
                 // random loot
                 int coinReward = rand.nextInt(0,20);
-                int meatReward = rand.nextInt(0,7);
 
-                JOptionPane.showMessageDialog(null, "You Killed the Wolf!\nRewards:\n"+coinReward+" coins\n"+meatReward+" Wolf Meat");
-                pl.addWolfMeatFur(meatReward);
+
+                JOptionPane.showMessageDialog(null, "You Killed the Wolf!\nRewards:\n"+coinReward+" coins");
+
                 pl.addCoins(coinReward);
 
             }

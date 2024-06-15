@@ -41,7 +41,7 @@ public class UI {
 
     public void draw(Graphics2D g2){
         g2.setFont(arial_40);
-        g2.setColor(Color.WHITE);
+        g2.setColor(Color.DARK_GRAY);
         g2.drawImage(coinImage, gp.tileSize/2,gp.tileSize/2,gp.tileSize,gp.tileSize,null);
         g2.drawString("x "+  player.getCoins(),74,50);
 

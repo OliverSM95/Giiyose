@@ -5,24 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d61beb88-2afe-4425-ba6f-4fd74d950e33" name="Changes" comment="added map changing system">
-      <change afterPath="$PROJECT_DIR$/src/events/entity/Objects/goldOreObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/events/entity/Objects/wolfObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/events/entity/objectImages/dungeonSprite.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/events/entity/objectImages/wolfSprite.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-06-03_9_37_a_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-06-03_9_37_a_m___Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-06-03_9_03_a_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-06-03_9_03_a_m___Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-06-03_9_39_a_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-06-03_9_39_a_m___Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-06-06_10_36_a_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-06-06_10_36_a_m___Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Images/giiyose background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/events/entity/Objects/canoeObj.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/events/entity/Objects/dungeonObj.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/events/entity/objectImages/cannoeSprite.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/events/CollisionChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/CollisionChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Giiyose.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Giiyose.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/events/GatherGamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/GatherGamePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/events/Hunting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/Hunting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/events/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/UI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/events/entity/AssetSetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/entity/AssetSetter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/events/entity/Tiles/tileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/entity/Tiles/tileManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/events/entity/gamePlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/entity/gamePlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/MainGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/MainGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/mainMapMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/mainMapMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/events/entity/maps/cantralMap.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/events/entity/maps/cantralMap.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/player/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/GameBoardPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/GameBoardPanel.java" afterDir="false" />
     </list>
@@ -60,36 +55,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Fishing.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.MainGame.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Trading.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;OliverUpdates&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/coding/Java Projects/Giiyose/src/Images&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.editor&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Fishing.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.MainGame.executor": "Run",
+    "Application.Trading.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "OliverUpdates",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/coding/Java Projects/Giiyose/src/Images",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "configurable.group.editor",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\coding\Java Projects\Giiyose\src\Images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Thomas\IdeaProjects\Giiyose\src\events\entity\objectImages" />
+      <recent name="C:\Users\Thomas\IdeaProjects\Giiyose\src\Images" />
+      <recent name="C:\Users\Thomas\IdeaProjects\Giiyose" />
       <recent name="G:\My Drive\ICS3u\Projects\Giiyose\src\Images" />
       <recent name="D:\coding\Java Projects\Giiyose\src\Images" />
-      <recent name="D:\coding\Java Projects\Giiyose\src\events\entity\sounds" />
-      <recent name="G:\My Drive\ICS3u\Projects\Giiyose\src\events\entity\objectImages" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

@@ -152,23 +152,55 @@ public class gamePlayer extends Entity{
                     break;
 
                 case "Bison":
+
                     gp.object[gp.currentMap][i] = null;
 
                     Hunting bH = new Hunting(mainPlayer);
                     bH.bisonEncounter();
+                    keyH.upPressed=false;
+                    keyH.downPressed=false;
+                    keyH.leftPressed=false;
+                    keyH.rightPressed=false;
 
                    // huntingGames.bisonEncounter();
                     speed = 4;
                     break;
                 case "goldOre":
                     gp.object[gp.currentMap][i] = null;
-                    mainPlayer.setGold(2);
-                    gp.ui.showMessage("You gained: "+2+" Gold");
+                    int getGold = rn.nextInt(5,21);
+                    mainPlayer.addCoins(getGold);
+                    gp.ui.showMessage("You gained: "+getGold+" Gold");
                     break;
                 case "wolf":
+
                     gp.object[gp.currentMap][i] = null;
                     Hunting wolf = new Hunting(mainPlayer);
                     wolf.wolfEncounter();
+                    keyH.upPressed=false;
+                    keyH.downPressed=false;
+                    keyH.leftPressed=false;
+                    keyH.rightPressed=false;
+                    break;
+                case "dungeon":
+                    // call platformed
+                    gp.object[gp.currentMap][i] = null;// remove object
+                    System.out.println("Dungeon Test");
+                    mainPlayer.increaseDungeonCounter();
+                    break;
+
+                case "canoe":
+                    gp.object[gp.currentMap][i] = null;// remove object
+                    gp.currentMap++;
+                    gp.player.worldX = 27*gp.tileSize;
+                    gp.player.worldY = 23*gp.tileSize;
+
+                    if(gp.currentMap ==1){
+                        gp.ui.showMessage("Welcome to the Canadian Cordillera");
+                    }else{
+                        gp.ui.showMessage("Welcome to the Canadian Arctic");
+                    }
+
+
                     break;
             }
 

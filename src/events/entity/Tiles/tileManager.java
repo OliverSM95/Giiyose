@@ -32,8 +32,9 @@ public class tileManager {
         mapTileNumber = new int[gp.maxMap][gp.maxWorldCol][gp.maxWorldRow];
 
         getTileImage();
-        loadMap("/events/entity/maps/winterMap.txt",0);
+        loadMap("/events/entity/maps/cantralMap.txt",0);
         loadMap("/events/entity/maps/coastalMap.txt",1);
+        loadMap("/events/entity/maps/winterMap.txt",2);
     }
 
     public void getTileImage(){

@@ -29,7 +29,7 @@ public class GatherGamePanel extends JPanel implements Runnable {
     public final int maxWorldCol = 50;
     public final int maxWorldRow = 50;
     public final int maxMap =10;
-    public int currentMap =1;
+    public int currentMap =0;
 
 
     // Dynamically set screen size
@@ -72,7 +72,7 @@ public class GatherGamePanel extends JPanel implements Runnable {
     // INSTANTIATE ENTITY & OBJECTS
     public gamePlayer player = new gamePlayer(this, keyH,mainPl,huntGame);
     public Entity npc[][] = new Entity[maxMap][10];
-    public superObject object[][] = new superObject[maxMap][10];
+    public superObject object[][] = new superObject[maxMap][50];
 
 
 
@@ -83,7 +83,7 @@ public class GatherGamePanel extends JPanel implements Runnable {
 
     mainMapMenu mg;
 
-    JButton returnToMap = new JButton("Return to Map");
+    //JButton returnToMap = new JButton("Return to Map");
 
 
 
@@ -101,17 +101,17 @@ public class GatherGamePanel extends JPanel implements Runnable {
         this.addKeyListener(keyH);
         this.setFocusable(true);
 
-        returnToMap.setBounds(50,50,200,100);
-        returnToMap.setFont(new Font("Arial",Font.BOLD,20));
-        returnToMap.addActionListener(e ->{
+       // returnToMap.setBounds(50,50,200,100);
+       // returnToMap.setFont(new Font("Arial",Font.BOLD,20));
+       // returnToMap.addActionListener(e ->{
             //this.setVisible(false);
-            mainGame.setupControlPanel();
-            mainGame.setVisible(true);
+            //mainGame.setupControlPanel();
+          //  mainGame.setVisible(true);
 
-            System.out.println("Button Pressed");
+         //  System.out.println("Button Pressed");
             // SwingUtilities.invokeLater(MainGame::new);
-        });
-        this.add(returnToMap);
+      //  });
+       // this.add(returnToMap);
     }
 
 

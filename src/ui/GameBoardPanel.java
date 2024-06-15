@@ -47,6 +47,10 @@ public class GameBoardPanel extends JPanel {
                 backgroundImage = new ImageIcon("src/Images/GiiyoseBackgrounds/Yukon.png").getImage();
 
                 break;
+
+            case "basic":
+                backgroundImage = new ImageIcon("src/Images/giiyose background.png").getImage();
+                break;
             default:
                 backgroundImage = new ImageIcon("src/Images/GiiyoseBackgrounds/Ontario.png").getImage();
                 System.out.println(player.getLocation());
