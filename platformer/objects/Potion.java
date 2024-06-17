@@ -2,12 +2,12 @@ package objects;
 
 import main.Game;
 
-public class Potion extends GameObject {
+public class Potion extends GameObject { // Child class for potions
 
 	private float hoverOffset;
 	private int maxHoverOffset, hoverDir = 1;
 
-	public Potion(int x, int y, int objType) {
+	public Potion(int x, int y, int objType) { // Creating potions
 		super(x, y, objType);
 		doAnimation = true;
 
@@ -19,12 +19,12 @@ public class Potion extends GameObject {
 		maxHoverOffset = (int) (10 * Game.SCALE);
 	}
 
-	public void update() {
+	public void update() { // Updating potions
 		updateAnimationTick();
 		updateHover();
 	}
 
-	private void updateHover() {
+	private void updateHover() { // Hovering potions
 		hoverOffset += (0.075f * Game.SCALE * hoverDir);
 
 		if (hoverOffset >= maxHoverOffset)

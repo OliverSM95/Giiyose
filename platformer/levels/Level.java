@@ -21,9 +21,11 @@ import static utilz.Constants.ObjectConstants.*;
 
 public class Level {
 
+    // Initializing bufferedimg, and lvlData
     private BufferedImage img;
     private int[][] lvlData;
 
+    // Initializing ArrayLists for enemies, containers, grass, etc.
     private ArrayList<Crabby> crabs = new ArrayList<>();
     private ArrayList<Pinkstar> pinkstars = new ArrayList<>();
     private ArrayList<Shark> sharks = new ArrayList<>();
@@ -34,11 +36,13 @@ public class Level {
     private ArrayList<BackgroundTree> trees = new ArrayList<>();
     private ArrayList<Grass> grass = new ArrayList<>();
 
+    // Initializing offets / playerSpawn
     private int lvlTilesWide;
     private int maxTilesOffset;
     private int maxLvlOffsetX;
     private Point playerSpawn;
 
+    // Constructor for levels
     public Level(BufferedImage img) {
         this.img = img;
         lvlData = new int[img.getHeight()][img.getWidth()];
@@ -46,6 +50,8 @@ public class Level {
         calcLvlOffsets();
     }
 
+
+    // Load level
     private void loadLevel() {
 
         // Looping through the image colors just once. Instead of one per
@@ -65,21 +71,24 @@ public class Level {
             }
     }
 
+    // Loading the level data
     private void loadLevelData(int redValue, int x, int y) {
         if (redValue >= 50)
             lvlData[y][x] = 0;
         else
             lvlData[y][x] = redValue;
-        switch (redValue) {
+        switch (redValue) { // Using colours to draw/ load the level
             case 0, 1, 2, 3, 30, 31, 33, 34, 35, 36, 37, 38, 39 ->
                     grass.add(new Grass((int) (x * Game.TILES_SIZE), (int) (y * Game.TILES_SIZE) - Game.TILES_SIZE, getRndGrassType(x)));
         }
     }
 
+    // Randomizing grass type to make the game not repetitive
     private int getRndGrassType(int xPos) {
         return xPos % 2;
     }
 
+    // Loading entities on the levels
     private void loadEntities(int greenValue, int x, int y) {
         switch (greenValue) {
             case CRABBY -> crabs.add(new Crabby(x * Game.TILES_SIZE, y * Game.TILES_SIZE));
@@ -89,6 +98,7 @@ public class Level {
         }
     }
 
+    // Loading objects for each level, generally objects
     private void loadObjects(int blueValue, int x, int y) {
         switch (blueValue) {
             case RED_POTION, BLUE_POTION -> potions.add(new Potion(x * Game.TILES_SIZE, y * Game.TILES_SIZE, blueValue));
@@ -99,12 +109,15 @@ public class Level {
         }
     }
 
+    // Calculating offsets for moving screen
     private void calcLvlOffsets() {
         lvlTilesWide = img.getWidth();
         maxTilesOffset = lvlTilesWide - Game.TILES_IN_WIDTH;
         maxLvlOffsetX = Game.TILES_SIZE * maxTilesOffset;
     }
 
+
+    // Getter / setters for levels
     public int getSpriteIndex(int x, int y) {
         return lvlData[y][x];
     }

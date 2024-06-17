@@ -22,6 +22,7 @@ public class GameWindow {
 
             }
 
+            // When window is out of focus or alt-tabbed
             @Override
             public void windowLostFocus(WindowEvent e) {
                 gamePanel.getGame().windowFocusLost();

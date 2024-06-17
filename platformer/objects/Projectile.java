@@ -5,13 +5,14 @@ import main.Game;
 import java.awt.geom.Rectangle2D;
 import static utilz.Constants.Projectiles.*;
 
-public class Projectile {
+public class Projectile { // Class for projectiles
     private Rectangle2D.Float hitbox;
     private int dir;
     private boolean active = true;
 
 
-    public Projectile(int x, int y, int dir){
+
+    public Projectile(int x, int y, int dir){ // Creating projectiles / setting hitbox
 
         int xOffset = (int)(-3 * Game.SCALE);
         int yOffset = (int)(5 * Game.SCALE);
@@ -24,16 +25,17 @@ public class Projectile {
         this.dir = dir;
     }
 
-    public void updatePos(){
+    public void updatePos(){ // Updating projectile speed
         hitbox.x += dir * SPEED;
     }
 
-    public void setPos(int x, int y){
+    public void setPos(int x, int y){ // Setter for position, future use
         hitbox.x = x;
         hitbox.y = y;
 
     }
 
+    // Getter / setter hitbox, hitbox
     public Rectangle2D.Float getHitbox(){
         return hitbox;
     }

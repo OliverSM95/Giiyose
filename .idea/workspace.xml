@@ -4,30 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d61beb88-2afe-4425-ba6f-4fd74d950e33" name="Changes" comment="Changed credits_list.png">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-06-03_9_37_a_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-06-03_9_37_a_m___Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-06-03_9_03_a_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-06-03_9_03_a_m___Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-06-03_9_39_a_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-06-03_9_39_a_m___Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-06-06_10_36_a_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-06-06_10_36_a_m___Changes_.xml" afterDir="false" />
+    <list default="true" id="d61beb88-2afe-4425-ba6f-4fd74d950e33" name="Changes" comment="Added comments for UI">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformer/audio/AudioPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/audio/AudioPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformer/effects/DialogueEffect.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/effects/DialogueEffect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformer/effects/Rain.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/effects/Rain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformer/entities/Crabby.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/entities/Crabby.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformer/entities/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/entities/Enemy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformer/entities/EnemyManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/entities/EnemyManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformer/entities/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/entities/Entity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformer/entities/Pinkstar.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/entities/Pinkstar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformer/entities/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/entities/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformer/entities/Shark.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/entities/Shark.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformer/gamestates/Credits.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/gamestates/Credits.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformer/gamestates/GameOptions.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/gamestates/GameOptions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformer/gamestates/Gamestate.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/gamestates/Gamestate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformer/gamestates/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/gamestates/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformer/gamestates/Playing.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/gamestates/Playing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformer/gamestates/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/gamestates/State.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformer/gamestates/Statemethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/gamestates/Statemethods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformer/ui/AudioOptions.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/ui/AudioOptions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformer/ui/GameCompletedOverlay.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/ui/GameCompletedOverlay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformer/ui/GameOverOverlay.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/ui/GameOverOverlay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformer/ui/LevelCompletedOverlay.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/ui/LevelCompletedOverlay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformer/ui/MenuButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/ui/MenuButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformer/ui/PauseButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/ui/PauseButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformer/ui/PauseOverlay.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/ui/PauseOverlay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformer/ui/SoundButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/ui/SoundButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformer/ui/UrmButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/ui/UrmButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformer/ui/VolumeButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/ui/VolumeButton.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,22 +64,16 @@
     "git-widget-placeholder": "efeupdates",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "G:/My Drive/Giiyose/res/audio",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "editor.preferences.import",
-    "vue.rearranger.settings.migration": "true"
+    "settings.editor.selected.configurable": "editor.preferences.import"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="G:\My Drive\Giiyose\res" />
       <recent name="G:\My Drive\Giiyose\res\audio" />
+      <recent name="G:\My Drive\Giiyose\res" />
       <recent name="G:\My Drive\Giiyose\res\lvls" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -105,8 +87,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
-        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
       </set>
     </attachedChunks>
   </component>
@@ -118,7 +99,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1717081882095</updated>
-      <workItem from="1718593410216" duration="5703000" />
     </task>
     <task id="LOCAL-00001" summary="Added packages&#10;Cleaned up">
       <option name="closed" value="true" />
@@ -344,11 +324,24 @@
       <option name="project" value="LOCAL" />
       <updated>1718394920340</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Added land_acknowledgements&#10;Added indigenous songs">
+      <option name="closed" value="true" />
+      <created>1718593053966</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1718593053966</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Added comments for inputs and down">
+      <option name="closed" value="true" />
+      <created>1718598951785</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1718598951785</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -362,9 +355,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Working on Trading and Gathering" />
-    <MESSAGE value="Basic Trading and Fishing &#10;Inventory Set with Default Constructor" />
-    <MESSAGE value="Finished Trading&#10;Working on fishing" />
     <MESSAGE value="Added platformer root folder&#10;Created mouse and keyboard listener" />
     <MESSAGE value="Added fps counter&#10;Added game loop&#10;Made panel size of users screen&#10;Added image for player_sprites.png" />
     <MESSAGE value="Updated game loop to catch lost updates/frames&#10;Added animations for player&#10;Added player actions&#10;Added entity package&#10; - Player&#10; - Entity&#10;Added attack button" />
@@ -387,6 +377,9 @@
     <MESSAGE value="Fixed bugs" />
     <MESSAGE value="FINAL PUSH BEFORE SPRITE AND MAP CHANGES&#10;&#10;Added shark&#10;Added pinkstar&#10;Added ship&#10;Added water&#10;Added chance of rain" />
     <MESSAGE value="Changed credits_list.png" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed credits_list.png" />
+    <MESSAGE value="Added land_acknowledgements&#10;Added indigenous songs" />
+    <MESSAGE value="Added comments for inputs and down" />
+    <MESSAGE value="Added comments for UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added comments for UI" />
   </component>
 </project>

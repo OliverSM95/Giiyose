@@ -7,14 +7,16 @@ import java.util.ArrayList;
 import main.Game;
 import utilz.LoadSave;
 
-public class LevelManager {
+public class LevelManager { // Level manager class
 
+    // Initializing basics
     private Game game;
     private BufferedImage[] levelSprite;
     private BufferedImage[] waterSprite;
     private ArrayList<Level> levels;
     private int lvlIndex = 0, aniTick, aniIndex;
 
+    // Constructor
     public LevelManager(Game game) {
         this.game = game;
         importOutsideSprites();
@@ -23,6 +25,7 @@ public class LevelManager {
         buildAllLevels();
     }
 
+    // Creating the water
     private void createWater() {
         waterSprite = new BufferedImage[5];
         BufferedImage img = LoadSave.GetSpriteAtlas(LoadSave.WATER_TOP);
@@ -31,6 +34,7 @@ public class LevelManager {
         waterSprite[4] = LoadSave.GetSpriteAtlas(LoadSave.WATER_BOTTOM);
     }
 
+    // Loading the next level
     public void loadNextLevel() {
         Level newLevel = levels.get(lvlIndex);
         game.getPlaying().getEnemyManager().loadEnemies(newLevel);
@@ -39,12 +43,14 @@ public class LevelManager {
         game.getPlaying().getObjectManager().loadObjects(newLevel);
     }
 
+    // building levels from the img files
     private void buildAllLevels() {
         BufferedImage[] allLevels = LoadSave.GetAllLevels();
         for (BufferedImage img : allLevels)
             levels.add(new Level(img));
     }
 
+    // Importing the outside sprites
     private void importOutsideSprites() {
         BufferedImage img = LoadSave.GetSpriteAtlas(LoadSave.LEVEL_ATLAS);
         levelSprite = new BufferedImage[48];
@@ -55,6 +61,7 @@ public class LevelManager {
             }
     }
 
+    // Drawing levels / sprites
     public void draw(Graphics g, int lvlOffset) {
         for (int j = 0; j < Game.TILES_IN_HEIGHT; j++)
             for (int i = 0; i < levels.get(lvlIndex).getLevelData()[0].length; i++) {
@@ -70,10 +77,12 @@ public class LevelManager {
             }
     }
 
+    // Calling water update animations
     public void update() {
         updateWaterAnimation();
     }
 
+    // Updating water animations
     private void updateWaterAnimation() {
         aniTick++;
         if (aniTick >= 40) {
@@ -84,6 +93,8 @@ public class LevelManager {
                 aniIndex = 0;
         }
     }
+
+    // Getters / setters for levels
 
     public Level getCurrentLevel() {
         return levels.get(lvlIndex);
