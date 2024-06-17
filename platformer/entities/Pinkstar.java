@@ -10,11 +10,12 @@ import gamestates.Playing;
 
 public class Pinkstar extends Enemy {
 
+    // Star enemy variables
     private boolean preRoll = true;
     private int tickSinceLastDmgToPlayer;
     private int tickAfterRollInIdle;
     private int rollDurationTick, rollDuration = 300;
-
+    // Star enemy constructor
     public Pinkstar(float x, float y) {
         super(x, y, PINKSTAR_WIDTH, PINKSTAR_HEIGHT, PINKSTAR);
         initHitbox(17, 21);
@@ -24,7 +25,7 @@ public class Pinkstar extends Enemy {
         updateBehavior(lvlData, playing);
         updateAnimationTick();
     }
-
+    // Star enemy behavior
     private void updateBehavior(int[][] lvlData, Playing playing) {
         if (firstUpdate)
             firstUpdateCheck(lvlData);
@@ -124,7 +125,7 @@ public class Pinkstar extends Enemy {
         }
     }
 
-    private void rollOver(Playing playing) {
+    private void rollOver(Playing playing) {// roll attack
         newState(IDLE);
         playing.addDialogue((int) hitbox.x, (int) hitbox.y, QUESTION);
     }

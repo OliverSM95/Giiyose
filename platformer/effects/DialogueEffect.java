@@ -6,17 +6,19 @@ import static utilz.Constants.Dialogue.*;
 
 public class DialogueEffect {
 
+    // class variables
     private int x, y, type;
     private int aniIndex, aniTick;
     private boolean active = true;
 
+    // class constructor
     public DialogueEffect(int x, int y, int type) {
         this.x = x;
         this.y = y;
         this.type = type;
     }
 
-    public void update() {
+    public void update() {// update  dialogue effects
         aniTick++;
         if (aniTick >= ANI_SPEED) {
             aniTick = 0;
@@ -38,6 +40,8 @@ public class DialogueEffect {
         active = true;
     }
 
+
+    // Set and get effects
     public int getAniIndex() {
         return aniIndex;
     }

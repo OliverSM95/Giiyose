@@ -13,6 +13,7 @@ import main.Game;
 
 public abstract class Entity {
 
+    // class variables
     protected float x, y;
     protected int width, height;
     protected Rectangle2D.Float hitbox;
@@ -25,16 +26,18 @@ public abstract class Entity {
     protected Rectangle2D.Float attackBox;
     protected float walkSpeed;
 
-    protected int pushBackDir;
+    protected int pushBackDir;// push enemy when hit
     protected float pushDrawOffset;
     protected int pushBackOffsetDir = UP;
 
+    // class constructor
     public Entity(float x, float y, int width, int height) {
         this.x = x;
         this.y = y;
         this.width = width;
         this.height = height;
     }
+
 
     protected void updatePushBackDrawOffset() {
         float speed = 0.95f;
@@ -61,12 +64,13 @@ public abstract class Entity {
         if (CanMoveHere(hitbox.x + xSpeed * speedMulti, hitbox.y, hitbox.width, hitbox.height, lvlData))
             hitbox.x += xSpeed * speedMulti;
     }
-
+    // draw attack box (unused unless needed)
     protected void drawAttackBox(Graphics g, int xLvlOffset) {
         g.setColor(Color.red);
         g.drawRect((int) (attackBox.x - xLvlOffset), (int) attackBox.y, (int) attackBox.width, (int) attackBox.height);
     }
 
+    // draw hitbox (unused unless needed)
     protected void drawHitbox(Graphics g, int xLvlOffset) {
         g.setColor(Color.PINK);
         g.drawRect((int) hitbox.x - xLvlOffset, (int) hitbox.y, (int) hitbox.width, (int) hitbox.height);
@@ -76,6 +80,7 @@ public abstract class Entity {
         hitbox = new Rectangle2D.Float(x, y, (int) (width * Game.SCALE), (int) (height * Game.SCALE));
     }
 
+    // Set and Get methods
     public Rectangle2D.Float getHitbox() {
         return hitbox;
     }

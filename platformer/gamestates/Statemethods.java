@@ -6,6 +6,8 @@ import java.awt.event.MouseMotionListener;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 
+
+// create Interface methods
 public interface Statemethods {
     public void update();
     public void draw(Graphics g);

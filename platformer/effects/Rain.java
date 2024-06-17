@@ -10,6 +10,7 @@ import utilz.LoadSave;
 
 public class Rain {
 
+    // class variables
     private Point2D.Float[] drops;
     private Random rand;
     private float rainSpeed = 1.25f;
@@ -33,6 +34,7 @@ public class Rain {
         return new Point2D.Float((int) getNewX(0), rand.nextInt(Game.GAME_HEIGHT));
     }
 
+    // update rain movement on screen
     public void update(int xLvlOffset) {
         for (Point2D.Float p : drops) {
             p.y += rainSpeed;
@@ -48,6 +50,7 @@ public class Rain {
         return value;
     }
 
+    //draw rain method
     public void draw(Graphics g, int xLvlOffset) {
         for (Point2D.Float p : drops)
             g.drawImage(rainParticle, (int) p.getX() - xLvlOffset, (int) p.getY(), 3, 12, null);

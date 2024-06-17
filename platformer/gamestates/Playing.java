@@ -27,10 +27,13 @@ import static utilz.Constants.Dialogue.*;
 
 public class Playing extends State implements Statemethods {
 
+    // class variables
     private Player player;
+    // Entity Manager Initialization
     private LevelManager levelManager;
     private EnemyManager enemyManager;
     private ObjectManager objectManager;
+    // overlay variables
     private PauseOverlay pauseOverlay;
     private GameOverOverlay gameOverOverlay;
     private GameCompletedOverlay gameCompletedOverlay;
@@ -39,18 +42,20 @@ public class Playing extends State implements Statemethods {
 
     private boolean paused = false;
 
-    private int xLvlOffset;
+    private int xLvlOffset;// x offset
+    // set game borders
     private int leftBorder = (int) (0.25 * Game.GAME_WIDTH);
     private int rightBorder = (int) (0.75 * Game.GAME_WIDTH);
-    private int maxLvlOffsetX;
+    private int maxLvlOffsetX;// Set maximum offset
 
-    private BufferedImage backgroundImg, bigCloud, smallCloud, shipImgs[];
+    private BufferedImage backgroundImg, bigCloud, smallCloud, shipImgs[];// Create images for background
     private BufferedImage[] questionImgs, exclamationImgs;
-    private ArrayList<DialogueEffect> dialogEffects = new ArrayList<>();
+    private ArrayList<DialogueEffect> dialogEffects = new ArrayList<>();// Create array list for dialogs
 
-    private int[] smallCloudsPos;
+    private int[] smallCloudsPos;// array for cloud positions
     private Random rnd = new Random();
 
+    // game state booleans
     private boolean gameOver;
     private boolean lvlCompleted;
     private boolean gameCompleted;
@@ -71,22 +76,25 @@ public class Playing extends State implements Statemethods {
     private int shipAni, shipTick, shipDir = 1;
     private float shipHeightDelta, shipHeightChange = 0.05f * Game.SCALE;
 
+    // class constructor
     public Playing(Game game) {
         super(game);
         initClasses();
 
+        // set background images
         backgroundImg = LoadSave.GetSpriteAtlas(LoadSave.PLAYING_BG_IMG);
         bigCloud = LoadSave.GetSpriteAtlas(LoadSave.BIG_CLOUDS);
         smallCloud = LoadSave.GetSpriteAtlas(LoadSave.SMALL_CLOUDS);
         smallCloudsPos = new int[8];
         for (int i = 0; i < smallCloudsPos.length; i++)
-            smallCloudsPos[i] = (int) (90 * Game.SCALE) + rnd.nextInt((int) (100 * Game.SCALE));
+            smallCloudsPos[i] = (int) (90 * Game.SCALE) + rnd.nextInt((int) (100 * Game.SCALE));// Scale background clouds and place them randomly
 
         shipImgs = new BufferedImage[4];
         BufferedImage temp = LoadSave.GetSpriteAtlas(LoadSave.SHIP);
         for (int i = 0; i < shipImgs.length; i++)
             shipImgs[i] = temp.getSubimage(i * 78, 0, 78, 72);
 
+        // load assets
         loadDialogue();
         calcLvlOffset();
         loadStartLevel();
@@ -110,10 +118,10 @@ public class Playing extends State implements Statemethods {
             de.deactive();
     }
 
-    private void loadDialogueImgs() {
+    private void loadDialogueImgs() {// load images containing dialogue
         BufferedImage qtemp = LoadSave.GetSpriteAtlas(LoadSave.QUESTION_ATLAS);
         questionImgs = new BufferedImage[5];
-        for (int i = 0; i < questionImgs.length; i++)
+        for (int i = 0; i < questionImgs.length; i++)// iterate though dialogue array
             questionImgs[i] = qtemp.getSubimage(i * 14, 0, 14, 12);
 
         BufferedImage etemp = LoadSave.GetSpriteAtlas(LoadSave.EXCLAMATION_ATLAS);
@@ -122,15 +130,15 @@ public class Playing extends State implements Statemethods {
             exclamationImgs[i] = etemp.getSubimage(i * 14, 0, 14, 12);
     }
 
-    public void loadNextLevel() {
-        levelManager.setLevelIndex(levelManager.getLevelIndex() + 1);
-        levelManager.loadNextLevel();
-        player.setSpawn(levelManager.getCurrentLevel().getPlayerSpawn());
+    public void loadNextLevel() {// load next level function
+        levelManager.setLevelIndex(levelManager.getLevelIndex() + 1);// increase the maps completed by 1
+        levelManager.loadNextLevel();// load next level
+        player.setSpawn(levelManager.getCurrentLevel().getPlayerSpawn());//reset player spawn
         resetAll();
-        drawShip = false;
+        drawShip = false;// remove ship sprite once level 1 is passed
     }
 
-    private void loadStartLevel() {
+    private void loadStartLevel() {// load starting level
         enemyManager.loadEnemies(levelManager.getCurrentLevel());
         objectManager.loadObjects(levelManager.getCurrentLevel());
     }
@@ -140,14 +148,16 @@ public class Playing extends State implements Statemethods {
     }
 
     private void initClasses() {
+        // create entity managers
         levelManager = new LevelManager(game);
         enemyManager = new EnemyManager(this);
         objectManager = new ObjectManager(this);
 
-        player = new Player(200, 200, (int) (64 * Game.SCALE), (int) (40 * Game.SCALE), this);
-        player.loadLvlData(levelManager.getCurrentLevel().getLevelData());
-        player.setSpawn(levelManager.getCurrentLevel().getPlayerSpawn());
+        player = new Player(200, 200, (int) (64 * Game.SCALE), (int) (40 * Game.SCALE), this);// scale the player
+        player.loadLvlData(levelManager.getCurrentLevel().getLevelData());// load level data
+        player.setSpawn(levelManager.getCurrentLevel().getPlayerSpawn());// set player spawn
 
+        // create overlay objects
         pauseOverlay = new PauseOverlay(this);
         gameOverOverlay = new GameOverOverlay(this);
         levelCompletedOverlay = new LevelCompletedOverlay(this);
@@ -157,20 +167,20 @@ public class Playing extends State implements Statemethods {
     }
 
     @Override
-    public void update() {
+    public void update() {// update entity objects
         if (paused)
-            pauseOverlay.update();
+            pauseOverlay.update();// update pause overlay
         else if (lvlCompleted)
-            levelCompletedOverlay.update();
+            levelCompletedOverlay.update(); // update level completed overlay
         else if (gameCompleted)
-            gameCompletedOverlay.update();
+            gameCompletedOverlay.update();// update game finished overlay
         else if (gameOver)
-            gameOverOverlay.update();
+            gameOverOverlay.update(); // update game over overlay
         else if (playerDying)
-            player.update();
+            player.update();// if player takes damage update sprite
         else {
             updateDialogue();
-            if (drawRain)
+            if (drawRain)/// draw rain
                 rain.update(xLvlOffset);
             levelManager.update();
             objectManager.update(levelManager.getCurrentLevel().getLevelData(), player);
@@ -183,7 +193,7 @@ public class Playing extends State implements Statemethods {
     }
 
     private void updateShipAni() {
-        shipTick++;
+        shipTick++;// animate starting ship to bob in water based on set tick speed
         if (shipTick >= 35) {
             shipTick = 0;
             shipAni++;
@@ -195,25 +205,25 @@ public class Playing extends State implements Statemethods {
         shipHeightDelta = Math.max(Math.min(10 * Game.SCALE, shipHeightDelta), 0);
 
         if (shipHeightDelta == 0)
-            shipDir = 1;
-        else if (shipHeightDelta == 10 * Game.SCALE)
-            shipDir = -1;
+            shipDir = 1;// bob ship up
+        else if (shipHeightDelta == 10 * Game.SCALE)// check if ship has reached animation "apex" and start lowing height
+            shipDir = -1;// bob ship down
 
     }
 
     private void updateDialogue() {
-        for (DialogueEffect de : dialogEffects)
+        for (DialogueEffect de : dialogEffects)// update entity dialogue
             if (de.isActive())
                 de.update();
     }
 
-    private void drawDialogue(Graphics g, int xLvlOffset) {
+    private void drawDialogue(Graphics g, int xLvlOffset) {// draw entity dialogue
         for (DialogueEffect de : dialogEffects)
-            if (de.isActive()) {
+            if (de.isActive()) {//If dialogue active
                 if (de.getType() == QUESTION)
-                    g.drawImage(questionImgs[de.getAniIndex()], de.getX() - xLvlOffset, de.getY(), DIALOGUE_WIDTH, DIALOGUE_HEIGHT, null);
+                    g.drawImage(questionImgs[de.getAniIndex()], de.getX() - xLvlOffset, de.getY(), DIALOGUE_WIDTH, DIALOGUE_HEIGHT, null);// draw question mark
                 else
-                    g.drawImage(exclamationImgs[de.getAniIndex()], de.getX() - xLvlOffset, de.getY(), DIALOGUE_WIDTH, DIALOGUE_HEIGHT, null);
+                    g.drawImage(exclamationImgs[de.getAniIndex()], de.getX() - xLvlOffset, de.getY(), DIALOGUE_WIDTH, DIALOGUE_HEIGHT, null);// draw exclamation mark
             }
     }
 
@@ -228,7 +238,7 @@ public class Playing extends State implements Statemethods {
                 }
     }
 
-    private void checkCloseToBorder() {
+    private void checkCloseToBorder() {//check if player is close to game border
         int playerX = (int) player.getHitbox().x;
         int diff = playerX - xLvlOffset;
 
@@ -237,20 +247,21 @@ public class Playing extends State implements Statemethods {
         else if (diff < leftBorder)
             xLvlOffset += diff - leftBorder;
 
-        xLvlOffset = Math.max(Math.min(xLvlOffset, maxLvlOffsetX), 0);
+        xLvlOffset = Math.max(Math.min(xLvlOffset, maxLvlOffsetX), 0);// offset player location if they approach the game border
     }
 
     @Override
-    public void draw(Graphics g) {
-        g.drawImage(backgroundImg, 0, 0, Game.GAME_WIDTH, Game.GAME_HEIGHT, null);
+    public void draw(Graphics g) {// draw method ( ordered in terms of layers)
+        g.drawImage(backgroundImg, 0, 0, Game.GAME_WIDTH, Game.GAME_HEIGHT, null);// draw background
 
-        drawClouds(g);
-        if (drawRain)
+        drawClouds(g);// draw clounds
+        if (drawRain)// if rain is active then draw it
             rain.draw(g, xLvlOffset);
 
-        if (drawShip)
+        if (drawShip)// draw ship if map is level 1
             g.drawImage(shipImgs[shipAni], (int) (100 * Game.SCALE) - xLvlOffset, (int) ((288 * Game.SCALE) + shipHeightDelta), (int) (78 * Game.SCALE), (int) (72 * Game.SCALE), null);
 
+        /// draw entities
         levelManager.draw(g, xLvlOffset);
         objectManager.draw(g, xLvlOffset);
         enemyManager.draw(g, xLvlOffset);
@@ -271,12 +282,12 @@ public class Playing extends State implements Statemethods {
 
     }
 
-    private void drawClouds(Graphics g) {
+    private void drawClouds(Graphics g) {// draw cloud method
         for (int i = 0; i < 4; i++)
-            g.drawImage(bigCloud, i * BIG_CLOUD_WIDTH - (int) (xLvlOffset * 0.3), (int) (204 * Game.SCALE), BIG_CLOUD_WIDTH, BIG_CLOUD_HEIGHT, null);
+            g.drawImage(bigCloud, i * BIG_CLOUD_WIDTH - (int) (xLvlOffset * 0.3), (int) (204 * Game.SCALE), BIG_CLOUD_WIDTH, BIG_CLOUD_HEIGHT, null);// draw big cloud
 
         for (int i = 0; i < smallCloudsPos.length; i++)
-            g.drawImage(smallCloud, SMALL_CLOUD_WIDTH * 4 * i - (int) (xLvlOffset * 0.7), smallCloudsPos[i], SMALL_CLOUD_WIDTH, SMALL_CLOUD_HEIGHT, null);
+            g.drawImage(smallCloud, SMALL_CLOUD_WIDTH * 4 * i - (int) (xLvlOffset * 0.7), smallCloudsPos[i], SMALL_CLOUD_WIDTH, SMALL_CLOUD_HEIGHT, null);// Draw Small Cloud
     }
 
     public void setGameCompleted() {
@@ -287,7 +298,7 @@ public class Playing extends State implements Statemethods {
         gameCompleted = false;
     }
 
-    public void resetAll() {
+    public void resetAll() {//reset all game attributes
         gameOver = false;
         paused = false;
         lvlCompleted = false;
@@ -308,6 +319,7 @@ public class Playing extends State implements Statemethods {
             drawRain = true;
     }
 
+    //Set & Get Methods
     public void setGameOver(boolean gameOver) {
         this.gameOver = gameOver;
     }
@@ -342,18 +354,18 @@ public class Playing extends State implements Statemethods {
     public void keyPressed(KeyEvent e) {
         if (!gameOver && !gameCompleted && !lvlCompleted)
             switch (e.getKeyCode()) {
-                case KeyEvent.VK_A:
-                    player.setLeft(true);
+                case KeyEvent.VK_A:// if player presses 'a'
+                    player.setLeft(true);// move left
                     break;
-                case KeyEvent.VK_D:
+                case KeyEvent.VK_D:// if player presses 'd'
 
-                    player.setRight(true);
+                    player.setRight(true);// move right
                     break;
-                case KeyEvent.VK_SPACE:
-                    player.setJump(true);
+                case KeyEvent.VK_SPACE:// if player presses ' space '
+                    player.setJump(true);// jump
                     break;
-                case KeyEvent.VK_ESCAPE:
-                    paused = !paused;
+                case KeyEvent.VK_ESCAPE:// if player presses 'escape'
+                    paused = !paused;// pause game
             }
     }
 
@@ -361,13 +373,13 @@ public class Playing extends State implements Statemethods {
     public void keyReleased(KeyEvent e) {
         if (!gameOver && !gameCompleted && !lvlCompleted)
             switch (e.getKeyCode()) {
-                case KeyEvent.VK_A:
+                case KeyEvent.VK_A:// if 'a' key released
                     player.setLeft(false);
                     break;
-                case KeyEvent.VK_D:
+                case KeyEvent.VK_D:// if 'd' key released
                     player.setRight(false);
                     break;
-                case KeyEvent.VK_SPACE:
+                case KeyEvent.VK_SPACE:// if 'space' key released
                     player.setJump(false);
                     break;
             }
@@ -416,7 +428,7 @@ public class Playing extends State implements Statemethods {
             gameCompletedOverlay.mouseMoved(e);
     }
 
-    public void setLevelCompleted(boolean levelCompleted) {
+    public void setLevelCompleted(boolean levelCompleted) {// set level as completed
         game.getAudioPlayer().lvlCompleted();
         if (levelManager.getLevelIndex() + 1 >= levelManager.getAmountOfLevels()) {
             // No more levels
@@ -428,6 +440,8 @@ public class Playing extends State implements Statemethods {
         }
         this.lvlCompleted = levelCompleted;
     }
+
+    // Set and get methods
 
     public void setMaxLvlOffset(int lvlOffset) {
         this.maxLvlOffsetX = lvlOffset;

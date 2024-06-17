@@ -10,18 +10,21 @@ import gamestates.Playing;
 
 public class Shark extends Enemy {
 
+    // class constructor
     public Shark(float x, float y) {
         super(x, y, SHARK_WIDTH, SHARK_HEIGHT, SHARK);
         initHitbox(18, 22);
         initAttackBox(20, 20, 20);
     }
 
+    // update shark entity stats
     public void update(int[][] lvlData, Playing playing) {
         updateBehavior(lvlData, playing);
         updateAnimationTick();
         updateAttackBoxFlip();
     }
 
+    // update shark behavior
     private void updateBehavior(int[][] lvlData, Playing playing) {
         if (firstUpdate)
             firstUpdateCheck(lvlData);
@@ -64,6 +67,7 @@ public class Shark extends Enemy {
         }
     }
 
+    // attack player
     protected void attackMove(int[][] lvlData, Playing playing) {
         float xSpeed = 0;
 

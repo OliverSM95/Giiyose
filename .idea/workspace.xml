@@ -5,63 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d61beb88-2afe-4425-ba6f-4fd74d950e33" name="Changes" comment="Changed credits_list.png">
-      <change afterPath="$PROJECT_DIR$/res/Giiyose_Logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/LandAck.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-06-03_9_37_a_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-06-03_9_37_a_m___Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-06-03_9_03_a_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-06-03_9_03_a_m___Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-06-03_9_39_a_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-06-03_9_39_a_m___Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-06-06_10_36_a_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-06-06_10_36_a_m___Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pictures/fishing_village.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformer/audio/AudioPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/audio/AudioPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformer/effects/DialogueEffect.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/effects/DialogueEffect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformer/effects/Rain.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/effects/Rain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformer/entities/Crabby.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/entities/Crabby.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformer/entities/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/entities/Enemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformer/entities/EnemyManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/entities/EnemyManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformer/entities/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/entities/Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformer/entities/Pinkstar.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/entities/Pinkstar.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/platformer/entities/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/entities/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformer/main/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/main/MainClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformer/utilz/LoadSave.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/utilz/LoadSave.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/audio/level1.wav" beforeDir="false" afterPath="$PROJECT_DIR$/res/audio/level1.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/audio/level2.wav" beforeDir="false" afterPath="$PROJECT_DIR$/res/audio/level2.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/credits_list.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/player_sprites.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/player_sprites.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Images/bison.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Images/bisonbackground.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Images/wolf.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Images/wolfbackground.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Land acknowledgment.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Land acknowledgment.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/events/CollisionChecker.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/events/Event.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/events/Fishing.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/events/GatherGamePanel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/events/Gathering.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/events/Hunting.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/events/KeyHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/events/Trading.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/events/entity/BoImages/BoSpriteDown1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/events/entity/BoImages/BoSpriteDown2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/events/entity/BoImages/BoSpriteDown3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/events/entity/BoImages/BoSpriteLeft2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/events/entity/BoImages/BoSpriteLeft3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/events/entity/BoImages/BoSpriteLeftIdle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/events/entity/BoImages/BoSpriteRight2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/events/entity/BoImages/BoSpriteRight2Fixed.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/events/entity/BoImages/BoSpriteRight3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/events/entity/BoImages/BoSpriteRightIde.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/events/entity/BoImages/BoSpriteUp1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/events/entity/BoImages/BoSpriteUp2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/events/entity/BoImages/BoSpriteUp3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/events/entity/Entity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/events/entity/Tiles/tile.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/events/entity/Tiles/tileManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/events/entity/backgroundTiles/dirtSprite.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/events/entity/backgroundTiles/grassSprite.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/events/entity/backgroundTiles/treeOnGrassSprite.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/events/entity/backgroundTiles/waterSprite.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/events/entity/gamePlayer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/events/entity/maps/mapTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imagesGathering/blueberry.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imagesGathering/bucket.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imagesGathering/redberry.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/MainGame.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/player/Inventory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/player/Player.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/GameBoardPanel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/MenuFunctions.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/UtilityClass.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/village/Village.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformer/entities/Shark.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/entities/Shark.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformer/gamestates/Credits.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/gamestates/Credits.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformer/gamestates/GameOptions.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/gamestates/GameOptions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformer/gamestates/Gamestate.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/gamestates/Gamestate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformer/gamestates/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/gamestates/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformer/gamestates/Playing.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/gamestates/Playing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformer/gamestates/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/gamestates/State.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformer/gamestates/Statemethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/gamestates/Statemethods.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,10 +76,16 @@
     "git-widget-placeholder": "efeupdates",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "G:/My Drive/Giiyose/res/audio",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "editor.preferences.import"
+    "settings.editor.selected.configurable": "editor.preferences.import",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -133,7 +105,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
       </set>
     </attachedChunks>
   </component>
@@ -145,6 +118,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1717081882095</updated>
+      <workItem from="1718593410216" duration="5703000" />
     </task>
     <task id="LOCAL-00001" summary="Added packages&#10;Cleaned up">
       <option name="closed" value="true" />
@@ -372,6 +346,9 @@
     </task>
     <option name="localTasksCounter" value="29" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

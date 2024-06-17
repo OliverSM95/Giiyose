@@ -13,6 +13,7 @@ import static utilz.Constants.*;
 import main.Game;
 
 public abstract class Enemy extends Entity {
+    // class variables
     protected int enemyType;
     protected boolean firstUpdate = true;
     protected int walkDir = LEFT;
@@ -22,16 +23,17 @@ public abstract class Enemy extends Entity {
     protected boolean attackChecked;
     protected int attackBoxOffsetX;
 
+    // class constructor
     public Enemy(float x, float y, int width, int height, int enemyType) {
         super(x, y, width, height);
         this.enemyType = enemyType;
 
         maxHealth = GetMaxHealth(enemyType);
-        currentHealth = maxHealth;
-        walkSpeed = Game.SCALE * 0.35f;
+        currentHealth = maxHealth;// set health
+        walkSpeed = Game.SCALE * 0.35f;// set movement speed
     }
 
-    protected void updateAttackBox() {
+    protected void updateAttackBox() {// update attack hit box
         attackBox.x = hitbox.x - attackBoxOffsetX;
         attackBox.y = hitbox.y;
     }
@@ -46,7 +48,7 @@ public abstract class Enemy extends Entity {
     }
 
     protected void initAttackBox(int w, int h, int attackBoxOffsetX) {
-        attackBox = new Rectangle2D.Float(x, y, (int) (w * Game.SCALE), (int) (h * Game.SCALE));
+        attackBox = new Rectangle2D.Float(x, y, (int) (w * Game.SCALE), (int) (h * Game.SCALE));// scale mob hit box
         this.attackBoxOffsetX = (int) (Game.SCALE * attackBoxOffsetX);
     }
 
@@ -56,7 +58,7 @@ public abstract class Enemy extends Entity {
         firstUpdate = false;
     }
 
-    protected void inAirChecks(int[][] lvlData, Playing playing) {
+    protected void inAirChecks(int[][] lvlData, Playing playing) {// check if mob is in air
         if (state != HIT && state != DEAD) {
             updateInAir(lvlData);
             playing.getObjectManager().checkSpikesTouched(this);
@@ -65,7 +67,7 @@ public abstract class Enemy extends Entity {
         }
     }
 
-    protected void updateInAir(int[][] lvlData) {
+    protected void updateInAir(int[][] lvlData) {// make entity fall if in air
         if (CanMoveHere(hitbox.x, hitbox.y + airSpeed, hitbox.width, hitbox.height, lvlData)) {
             hitbox.y += airSpeed;
             airSpeed += GRAVITY;
@@ -76,7 +78,7 @@ public abstract class Enemy extends Entity {
         }
     }
 
-    protected void move(int[][] lvlData) {
+    protected void move(int[][] lvlData) {/// movement behavior
         float xSpeed = 0;
 
         if (walkDir == LEFT)
@@ -93,14 +95,14 @@ public abstract class Enemy extends Entity {
         changeWalkDir();
     }
 
-    protected void turnTowardsPlayer(Player player) {
+    protected void turnTowardsPlayer(Player player) {// move towards player
         if (player.hitbox.x > hitbox.x)
             walkDir = RIGHT;
         else
             walkDir = LEFT;
     }
 
-    protected boolean canSeePlayer(int[][] lvlData, Player player) {
+    protected boolean canSeePlayer(int[][] lvlData, Player player) {// check if mob can see player
         int playerTileY = (int) (player.getHitbox().y / Game.TILES_SIZE);
         if (playerTileY == tileY)
             if (isPlayerInRange(player)) {
@@ -110,12 +112,12 @@ public abstract class Enemy extends Entity {
         return false;
     }
 
-    protected boolean isPlayerInRange(Player player) {
+    protected boolean isPlayerInRange(Player player) {// check if player is in range of mob
         int absValue = (int) Math.abs(player.hitbox.x - hitbox.x);
         return absValue <= attackDistance * 5;
     }
 
-    protected boolean isPlayerCloseForAttack(Player player) {
+    protected boolean isPlayerCloseForAttack(Player player) {// check if player is in range for attack
         int absValue = (int) Math.abs(player.hitbox.x - hitbox.x);
         switch (enemyType) {
             case CRABBY -> {
@@ -128,7 +130,7 @@ public abstract class Enemy extends Entity {
         return false;
     }
 
-    public void hurt(int amount) {
+    public void hurt(int amount) {// if attacked by player lower health
         currentHealth -= amount;
         if (currentHealth <= 0)
             newState(DEAD);
@@ -143,7 +145,7 @@ public abstract class Enemy extends Entity {
         }
     }
 
-    protected void checkPlayerHit(Rectangle2D.Float attackBox, Player player) {
+    protected void checkPlayerHit(Rectangle2D.Float attackBox, Player player) {// check if mob has attacked the player
         if (attackBox.intersects(player.hitbox))
             player.changeHealth(-GetEnemyDmg(enemyType), this);
         else {
@@ -153,7 +155,7 @@ public abstract class Enemy extends Entity {
         attackChecked = true;
     }
 
-    protected void updateAnimationTick() {
+    protected void updateAnimationTick() {// change mob animation
         aniTick++;
         if (aniTick >= ANI_SPEED) {
             aniTick = 0;
@@ -182,14 +184,14 @@ public abstract class Enemy extends Entity {
         }
     }
 
-    protected void changeWalkDir() {
+    protected void changeWalkDir() {// change walking direction
         if (walkDir == LEFT)
             walkDir = RIGHT;
         else
             walkDir = LEFT;
     }
 
-    public void resetEnemy() {
+    public void resetEnemy() {// reset enemy stats to default
         hitbox.x = x;
         hitbox.y = y;
         firstUpdate = true;

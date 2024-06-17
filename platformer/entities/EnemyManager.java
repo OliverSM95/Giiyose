@@ -11,34 +11,37 @@ import static utilz.Constants.EnemyConstants.*;
 
 public class EnemyManager {
 
+    // class variables
     private Playing playing;
     private BufferedImage[][] crabbyArr, pinkstarArr, sharkArr;
     private Level currentLevel;
 
+    // class constructor
     public EnemyManager(Playing playing) {
         this.playing = playing;
         loadEnemyImgs();
     }
 
+    // load enemies for given level
     public void loadEnemies(Level level) {
         this.currentLevel = level;
     }
 
     public void update(int[][] lvlData) {
         boolean isAnyActive = false;
-        for (Crabby c : currentLevel.getCrabs())
+        for (Crabby c : currentLevel.getCrabs())//load all crab enemies
             if (c.isActive()) {
                 c.update(lvlData, playing);
                 isAnyActive = true;
             }
 
-        for (Pinkstar p : currentLevel.getPinkstars())
+        for (Pinkstar p : currentLevel.getPinkstars())//load all star enemies
             if (p.isActive()) {
                 p.update(lvlData, playing);
                 isAnyActive = true;
             }
 
-        for (Shark s : currentLevel.getSharks())
+        for (Shark s : currentLevel.getSharks())//load all shark enemies
             if (s.isActive()) {
                 s.update(lvlData, playing);
                 isAnyActive = true;
@@ -48,13 +51,13 @@ public class EnemyManager {
             playing.setLevelCompleted(true);
     }
 
-    public void draw(Graphics g, int xLvlOffset) {
+    public void draw(Graphics g, int xLvlOffset) {// draw all mobs
         drawCrabs(g, xLvlOffset);
         drawPinkstars(g, xLvlOffset);
         drawSharks(g, xLvlOffset);
     }
 
-    private void drawSharks(Graphics g, int xLvlOffset) {
+    private void drawSharks(Graphics g, int xLvlOffset) {// draw shark
         for (Shark s : currentLevel.getSharks())
             if (s.isActive()) {
                 g.drawImage(sharkArr[s.getState()][s.getAniIndex()], (int) s.getHitbox().x - xLvlOffset - SHARK_DRAWOFFSET_X + s.flipX(),
@@ -64,7 +67,7 @@ public class EnemyManager {
             }
     }
 
-    private void drawPinkstars(Graphics g, int xLvlOffset) {
+    private void drawPinkstars(Graphics g, int xLvlOffset) {// draw star
         for (Pinkstar p : currentLevel.getPinkstars())
             if (p.isActive()) {
                 g.drawImage(pinkstarArr[p.getState()][p.getAniIndex()], (int) p.getHitbox().x - xLvlOffset - PINKSTAR_DRAWOFFSET_X + p.flipX(),
@@ -73,7 +76,7 @@ public class EnemyManager {
             }
     }
 
-    private void drawCrabs(Graphics g, int xLvlOffset) {
+    private void drawCrabs(Graphics g, int xLvlOffset) { // draw crab
         for (Crabby c : currentLevel.getCrabs())
             if (c.isActive()) {
 

@@ -14,19 +14,23 @@ import static utilz.Constants.UI.URMButtons.*;
 
 public class GameOptions extends State implements Statemethods {
 
+    // class comments
     private AudioOptions audioOptions;
     private BufferedImage backgroundImg, optionsBackgroundImg;
     private int bgX, bgY, bgW, bgH;
     private UrmButton menuB;
 
+    //class constructor
     public GameOptions(Game game) {
         super(game);
+        // load images and buttons
         loadImgs();
         loadButton();
         audioOptions = game.getAudioOptions();
     }
 
     private void loadButton() {
+        // scale menu to screen scale
         int menuX = (int) (387 * Game.SCALE);
         int menuY = (int) (325 * Game.SCALE);
 
@@ -34,9 +38,10 @@ public class GameOptions extends State implements Statemethods {
     }
 
     private void loadImgs() {
+        // load background images
         backgroundImg = LoadSave.GetSpriteAtlas(LoadSave.MENU_BACKGROUND_IMG);
         optionsBackgroundImg = LoadSave.GetSpriteAtlas(LoadSave.OPTIONS_MENU);
-
+        // set background width, height and screen positions
         bgW = (int) (optionsBackgroundImg.getWidth() * Game.SCALE);
         bgH = (int) (optionsBackgroundImg.getHeight() * Game.SCALE);
         bgX = Game.GAME_WIDTH / 2 - bgW / 2;
@@ -45,12 +50,14 @@ public class GameOptions extends State implements Statemethods {
 
     @Override
     public void update() {
+        // update menu
         menuB.update();
         audioOptions.update();
     }
 
     @Override
     public void draw(Graphics g) {
+        // draw background image and options background
         g.drawImage(backgroundImg, 0, 0, Game.GAME_WIDTH, Game.GAME_HEIGHT, null);
         g.drawImage(optionsBackgroundImg, bgX, bgY, bgW, bgH, null);
 
@@ -60,10 +67,10 @@ public class GameOptions extends State implements Statemethods {
 
     public void mouseDragged(MouseEvent e) {
         audioOptions.mouseDragged(e);
-    }
+    }//check if mouse dragged
 
     @Override
-    public void mousePressed(MouseEvent e) {
+    public void mousePressed(MouseEvent e) {//check if mouse pressed
         if (isIn(e, menuB)) {
             menuB.setMousePressed(true);
         } else
@@ -71,10 +78,10 @@ public class GameOptions extends State implements Statemethods {
     }
 
     @Override
-    public void mouseReleased(MouseEvent e) {
+    public void mouseReleased(MouseEvent e) {//check if mouse released
         if (isIn(e, menuB)) {
             if (menuB.isMousePressed())
-                Gamestate.state = Gamestate.MENU;
+                Gamestate.state = Gamestate.MENU;// set the game state to the menu (pause game and open menu)
         } else
             audioOptions.mouseReleased(e);
         menuB.resetBools();
@@ -96,16 +103,14 @@ public class GameOptions extends State implements Statemethods {
             Gamestate.state = Gamestate.MENU;
     }
 
+    // FUNCTIONS FOR MENU ACTIONS
     @Override
     public void keyReleased(KeyEvent e) {
         // TODO Auto-generated method stub
-
     }
-
     @Override
     public void mouseClicked(MouseEvent e) {
         // TODO Auto-generated method stub
-
     }
 
     private boolean isIn(MouseEvent e, PauseButton b) {

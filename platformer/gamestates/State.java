@@ -8,8 +8,10 @@ import ui.MenuButton;
 
 public class State {
 
+    // class variables
     protected Game game;
 
+    //class constructor
     public State(Game game) {
         this.game = game;
     }

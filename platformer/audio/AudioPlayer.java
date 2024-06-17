@@ -14,6 +14,7 @@ import javax.sound.sampled.UnsupportedAudioFileException;
 
 public class AudioPlayer {
 
+    // class variables
     public static int MENU_1 = 0;
     public static int LEVEL_1 = 1;
     public static int LEVEL_2 = 2;
@@ -26,19 +27,19 @@ public class AudioPlayer {
     public static int ATTACK_TWO = 5;
     public static int ATTACK_THREE = 6;
 
-    private Clip[] songs, effects;
+    private Clip[] songs, effects;//
     private int currentSongId;
     private float volume = 0.5f;
     private boolean songMute, effectMute;
     private Random rand = new Random();
 
-    public AudioPlayer() {
-        loadSongs();
+    public AudioPlayer() {// class constructor
+        loadSongs();// load sound effects
         loadEffects();
         playSong(MENU_1);
     }
 
-    private void loadSongs() {
+    private void loadSongs() {// load game songs
         String[] names = { "menu", "level1", "level2" };
         songs = new Clip[names.length];
         for (int i = 0; i < songs.length; i++)
@@ -73,18 +74,20 @@ public class AudioPlayer {
         return null;
 
     }
-
+    // set game volume
     public void setVolume(float volume) {
         this.volume = volume;
         updateSongVolume();
         updateEffectsVolume();
     }
 
+    // stop audio
     public void stopSong() {
         if (songs[currentSongId].isActive())
             songs[currentSongId].stop();
     }
 
+    // set song based on game level
     public void setLevelSong(int lvlIndex) {
         if (lvlIndex % 2 == 0)
             playSong(LEVEL_1);
@@ -92,23 +95,27 @@ public class AudioPlayer {
             playSong(LEVEL_2);
     }
 
+    // play sound when level complete
     public void lvlCompleted() {
         stopSong();
         playEffect(LVL_COMPLETED);
     }
 
+    //play attack sound
     public void playAttackSound() {
         int start = 4;
         start += rand.nextInt(3);
         playEffect(start);
     }
 
+    // play effect
     public void playEffect(int effect) {
         if (effects[effect].getMicrosecondPosition() > 0)
             effects[effect].setMicrosecondPosition(0);
         effects[effect].start();
     }
 
+    // play song
     public void playSong(int song) {
         stopSong();
 

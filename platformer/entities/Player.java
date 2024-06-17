@@ -17,6 +17,7 @@ import utilz.LoadSave;
 
 public class Player extends Entity {
 
+    // player variables
     private BufferedImage[][] animations;
     private boolean moving = false, attacking = false;
     private boolean left, right, jump;
@@ -30,18 +31,20 @@ public class Player extends Entity {
 
     // StatusBarUI
     private BufferedImage statusBarImg;
-
+    //player health and mana stats
     private int statusBarWidth = (int) (192 * Game.SCALE);
     private int statusBarHeight = (int) (58 * Game.SCALE);
     private int statusBarX = (int) (10 * Game.SCALE);
     private int statusBarY = (int) (10 * Game.SCALE);
 
+    //player health
     private int healthBarWidth = (int) (150 * Game.SCALE);
     private int healthBarHeight = (int) (4 * Game.SCALE);
     private int healthBarXStart = (int) (34 * Game.SCALE);
     private int healthBarYStart = (int) (14 * Game.SCALE);
     private int healthWidth = healthBarWidth;
 
+    // power bar stats
     private int powerBarWidth = (int) (104 * Game.SCALE);
     private int powerBarHeight = (int) (2 * Game.SCALE);
     private int powerBarXStart = (int) (44 * Game.SCALE);
@@ -63,6 +66,7 @@ public class Player extends Entity {
     private int powerGrowSpeed = 15;
     private int powerGrowTick;
 
+    // class constructor
     public Player(float x, float y, int width, int height, Playing playing) {
         super(x, y, width, height);
         this.playing = playing;
@@ -75,6 +79,7 @@ public class Player extends Entity {
         initAttackBox();
     }
 
+    // set player spawn method
     public void setSpawn(Point spawn) {
         this.x = spawn.x;
         this.y = spawn.y;
@@ -87,6 +92,7 @@ public class Player extends Entity {
         resetAttackBox();
     }
 
+    // update player attributes
     public void update() {
         updateHealthBar();
         updatePowerBar();
@@ -206,9 +212,9 @@ public class Player extends Entity {
 
     private void updateHealthBar() {
         healthWidth = (int) ((currentHealth / (float) maxHealth) * healthBarWidth);
-    }
+    }// update player health
 
-    private void updatePowerBar() {
+    private void updatePowerBar() {// update power bar
         powerWidth = (int) ((powerValue / (float) powerMaxValue) * powerBarWidth);
 
         powerGrowTick++;
@@ -225,7 +231,7 @@ public class Player extends Entity {
         drawUI(g);
     }
 
-    private void drawUI(Graphics g) {
+    private void drawUI(Graphics g) {// draw player UI
         // Background ui
         g.drawImage(statusBarImg, statusBarX, statusBarY, statusBarWidth, statusBarHeight, null);
 
@@ -238,7 +244,7 @@ public class Player extends Entity {
         g.fillRect(powerBarXStart + statusBarX, powerBarYStart + statusBarY, powerWidth, powerBarHeight);
     }
 
-    private void updateAnimationTick() {
+    private void updateAnimationTick() {// update player animations
         aniTick++;
         if (aniTick >= ANI_SPEED) {
             aniTick = 0;
@@ -432,10 +438,12 @@ public class Player extends Entity {
             inAir = true;
     }
 
-    public void resetDirBooleans() {
+    public void resetDirBooleans() {// reset direction
         left = false;
         right = false;
     }
+
+    //Set and get methods
 
     public void setAttacking(boolean attacking) {
         this.attacking = attacking;
@@ -461,7 +469,7 @@ public class Player extends Entity {
         this.jump = jump;
     }
 
-    public void resetAll() {
+    public void resetAll() {// reset all stats/attributes
         resetDirBooleans();
         inAir = false;
         attacking = false;
@@ -481,7 +489,7 @@ public class Player extends Entity {
             inAir = true;
     }
 
-    private void resetAttackBox() {
+    private void resetAttackBox() {// reset attack box
         if (flipW == 1)
             setAttackBoxOnRightSide();
         else
@@ -492,7 +500,7 @@ public class Player extends Entity {
         return tileY;
     }
 
-    public void powerAttack() {
+    public void powerAttack() {// activate player power attack
         if (powerAttackActive)
             return;
         if (powerValue >= 60) {
