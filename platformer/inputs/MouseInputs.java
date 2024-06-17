@@ -11,11 +11,13 @@ public class MouseInputs implements MouseListener, MouseMotionListener {
 
     private GamePanel gamePanel;
 
+    // MouseInputs Constructor
     public MouseInputs(GamePanel gamePanel) {
         this.gamePanel = gamePanel;
     }
 
     @SuppressWarnings("incomplete-switch")
+    // Switch statements to see if playing or if in options menu for mouseDragged
     @Override
     public void mouseDragged(MouseEvent e) {
         switch (Gamestate.state) {
@@ -24,7 +26,9 @@ public class MouseInputs implements MouseListener, MouseMotionListener {
         }
     }
 
+
     @SuppressWarnings("incomplete-switch")
+    // Switch statements to see if playing, in menu, or in options for mouseMoved
     @Override
     public void mouseMoved(MouseEvent e) {
         switch (Gamestate.state) {
@@ -35,6 +39,7 @@ public class MouseInputs implements MouseListener, MouseMotionListener {
     }
 
     @SuppressWarnings("incomplete-switch")
+    // Switch statements to see if playing for mouseClicking
     @Override
     public void mouseClicked(MouseEvent e) {
         switch (Gamestate.state) {
@@ -43,6 +48,7 @@ public class MouseInputs implements MouseListener, MouseMotionListener {
     }
 
     @SuppressWarnings("incomplete-switch")
+    // Switch statements to see if in menu, playing, or in options for mousePressed
     @Override
     public void mousePressed(MouseEvent e) {
         switch (Gamestate.state) {
@@ -53,6 +59,7 @@ public class MouseInputs implements MouseListener, MouseMotionListener {
     }
 
     @SuppressWarnings("incomplete-switch")
+    // Switch statements to see if in menu, playing or in options for mouseReleasing
     @Override
     public void mouseReleased(MouseEvent e) {
         switch (Gamestate.state) {

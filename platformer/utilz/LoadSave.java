@@ -11,6 +11,7 @@ import javax.imageio.ImageIO;
 
 public class LoadSave {
 
+    // All images constant files (VERY EASY TO CHANGE / REMOVE)
     public static final String PLAYER_ATLAS = "player_sprites.png";
     public static final String LEVEL_ATLAS = "outside_sprites.png";
     public static final String MENU_BUTTONS = "button_atlas.png";
@@ -48,7 +49,8 @@ public class LoadSave {
     public static final String SHIP = "ship.png";
     public static final String GIIYOSE_LOGO = "Giiyose_Logo.png";
 
-
+    // Very easy method implementation here, creating buffered images for other classes
+    // To use: BufferedImage img = LoadSave.GetSpriteAtlas(LoadSave.FILENAME);
     public static BufferedImage GetSpriteAtlas(String fileName) {
         BufferedImage img = null;
         InputStream is = LoadSave.class.getResourceAsStream("/" + fileName);
@@ -67,36 +69,64 @@ public class LoadSave {
         return img;
     }
 
+    // Using insertion sort to go through each level, all levels are named 1.png, 2.png, etc.
     public static BufferedImage[] GetAllLevels() {
         URL url = LoadSave.class.getResource("/lvls");
         File file = null;
 
-        try {
+        try { // Try catch for getting file name to URL
             file = new File(url.toURI());
         } catch (URISyntaxException e) {
             e.printStackTrace();
         }
 
         File[] files = file.listFiles();
-        File[] filesSorted = new File[files.length];
+        insertionSort(files); // sort the files using insertion sort
 
-        for (int i = 0; i < filesSorted.length; i++)
-            for (int j = 0; j < files.length; j++) {
-                if (files[j].getName().equals((i + 1) + ".png"))
-                    filesSorted[i] = files[j];
+        BufferedImage[] imgs = new BufferedImage[files.length];
 
-            }
-
-        BufferedImage[] imgs = new BufferedImage[filesSorted.length];
-
-        for (int i = 0; i < imgs.length; i++)
+        for (int i = 0; i < imgs.length; i++) {
             try {
-                imgs[i] = ImageIO.read(filesSorted[i]);
+                imgs[i] = ImageIO.read(files[i]);
             } catch (IOException e) {
                 e.printStackTrace();
             }
+        }
 
         return imgs;
+    }
+
+    /**
+     * Sorts an array of lvl files using the insertion sort algorithm.
+     * The files are sorted based on the numeric value in their filenames.
+     *
+     * @param files the array of files to be sorted
+     */
+    private static void insertionSort(File[] files) {
+        for (int i = 1; i < files.length; i++) {
+            File key = files[i];
+            int j = i - 1;
+
+            // Move elements of files[0..i-1] that are greater than the key
+            // to one position ahead of their current position
+            while (j >= 0 && getNumericValue(files[j]) > getNumericValue(key)) {
+                files[j + 1] = files[j];
+                j = j - 1;
+            }
+            files[j + 1] = key;
+        }
+    }
+
+    /**
+     * Extracts the numeric value from a filename.
+     * The filename is expected to be in the format "number.png".
+     *
+     * @param file the file whose numeric value is to be extracted
+     * @return the numeric value extracted from the filename
+     */
+    private static int getNumericValue(File file) {
+        String name = file.getName().replace(".png", "");
+        return Integer.parseInt(name);
     }
 
 }

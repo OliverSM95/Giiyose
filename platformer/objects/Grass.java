@@ -1,6 +1,6 @@
 package objects;
 
-public class Grass {
+public class Grass { // Grass class
 
     private int x, y, type;
 

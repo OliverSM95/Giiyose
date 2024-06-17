@@ -23,6 +23,7 @@ public class GameObject {
 		this.objType = objType;
 	}
 
+	// Update the animation ticks
 	protected void updateAnimationTick() {
 		aniTick++;
 		if (aniTick >= ANI_SPEED) {
@@ -40,6 +41,7 @@ public class GameObject {
 		}
 	}
 
+	// Reset animations / activity
 	public void reset() {
 		aniIndex = 0;
 		aniTick = 0;
@@ -51,15 +53,18 @@ public class GameObject {
 			doAnimation = true;
 	}
 
+	// Initializing the hitbox
 	protected void initHitbox(int width, int height) {
 		hitbox = new Rectangle2D.Float(x, y, (int) (width * Game.SCALE), (int) (height * Game.SCALE));
 	}
 
+	// This can be used if you want to draw the hitbox
 	public void drawHitbox(Graphics g, int xLvlOffset) {
 		g.setColor(Color.PINK);
 		g.drawRect((int) hitbox.x - xLvlOffset, (int) hitbox.y, (int) hitbox.width, (int) hitbox.height);
 	}
 
+	// Getters / Setters for objects
 	public int getObjType() {
 		return objType;
 	}

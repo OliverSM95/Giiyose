@@ -1,4 +1,16 @@
+/*
+===========================================
+ Giiyose
+ ---------------
+ Created by Oliver Simm & Efe Bolukbasi
+ Grade 12 ICS4U1 - Lawrence Park Collegiate Institute
+ Mrs. Zheng
+===========================================
+ */
+
+
 package main;
+
 
 import utilz.LoadSave;
 
@@ -7,18 +19,23 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 
 public class MainClass {
+
+    // Run the main game
     public static void main(String[] args){
 
         mainMenu();
 
     }
 
+    // Start with Giiyose main menu
     public static void mainMenu() {
         JFrame frame = new JFrame();
         frame.setSize(800, 800);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         JPanel panel = new JPanel() {
+
+            // Load Giiyose logo image
             BufferedImage img = LoadSave.GetSpriteAtlas(LoadSave.GIIYOSE_LOGO);
 
             @Override
@@ -67,6 +84,8 @@ public class MainClass {
 
     public static void creditsMenu(){
 
+        // Create jframe
+
         JFrame credFrame = new JFrame();
         credFrame.setSize(400,400);
         credFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -100,6 +119,8 @@ public class MainClass {
             mainMenu();
             credFrame.dispose();
         });
+
+        // Adding the option to go back
         credPanel.add(backButton);
 
 

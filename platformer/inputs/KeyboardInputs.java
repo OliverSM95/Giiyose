@@ -10,11 +10,12 @@ public class KeyboardInputs implements KeyListener {
 
     private GamePanel gamePanel;
 
-    public KeyboardInputs(GamePanel gamePanel) {
+    public KeyboardInputs(GamePanel gamePanel) { // Creating constructor for keyboardInputs
         this.gamePanel = gamePanel;
     }
 
     @SuppressWarnings("incomplete-switch")
+    // Switch statements to see if in menu, playing or in options for keyReleased
     @Override
     public void keyReleased(KeyEvent e) {
         switch (Gamestate.state) {
@@ -25,6 +26,7 @@ public class KeyboardInputs implements KeyListener {
     }
 
     @SuppressWarnings("incomplete-switch")
+    // Switch statements to see if in menu, playing or in options for keyPressed
     @Override
     public void keyPressed(KeyEvent e) {
         switch (Gamestate.state) {

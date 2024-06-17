@@ -28,6 +28,8 @@ public class BackgroundTree {
         }
     }
 
+    // Getters / setters for background trees
+
     public int getAniIndex() {
         return aniIndex;
     }

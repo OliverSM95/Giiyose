@@ -4,14 +4,14 @@ import static utilz.Constants.ObjectConstants.*;
 
 import main.Game;
 
-public class GameContainer extends GameObject {
+public class GameContainer extends GameObject { // Container class
 
-	public GameContainer(int x, int y, int objType) {
+	public GameContainer(int x, int y, int objType) { // Constructor
 		super(x, y, objType);
 		createHitbox();
 	}
 
-	private void createHitbox() {
+	private void createHitbox() { // Creating hitboxes
 		if (objType == BOX) {
 			initHitbox(25, 18);
 
@@ -28,7 +28,7 @@ public class GameContainer extends GameObject {
 		hitbox.x += xDrawOffset / 2;
 	}
 
-	public void update() {
+	public void update() { // Updating animations
 		if (doAnimation)
 			updateAnimationTick();
 	}
