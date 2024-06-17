@@ -37,7 +37,7 @@ public class LoadSave {
     public static final String QUESTION_ATLAS = "question_atlas.png";
     public static final String EXCLAMATION_ATLAS = "exclamation_atlas.png";
     public static final String SHARK_ATLAS = "shark_atlas.png";
-    public static final String CREDITS = "credits_list.png";
+    public static final String CREDITS = "LandAck.png";
     public static final String GRASS_ATLAS = "grass_atlas.png";
     public static final String TREE_ONE_ATLAS = "tree_one_atlas.png";
     public static final String TREE_TWO_ATLAS = "tree_two_atlas.png";
@@ -46,6 +46,8 @@ public class LoadSave {
     public static final String WATER_TOP = "water_atlas_animation.png";
     public static final String WATER_BOTTOM = "water.png";
     public static final String SHIP = "ship.png";
+    public static final String GIIYOSE_LOGO = "Giiyose_Logo.png";
+
 
     public static BufferedImage GetSpriteAtlas(String fileName) {
         BufferedImage img = null;
